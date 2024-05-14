@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		742727D92BF3C617006DE29C /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742727D82BF3C617006DE29C /* RaceViewController.swift */; };
+		742727DC2BF3C8F9006DE29C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742727DB2BF3C8F9006DE29C /* CalendarViewController.swift */; };
 		749E18FE2BEA8B5A00BE6555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */; };
 		749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */; };
-		749E19022BEA8B5A00BE6555 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19012BEA8B5A00BE6555 /* ViewController.swift */; };
 		749E19072BEA8B5D00BE6555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 749E19062BEA8B5D00BE6555 /* Assets.xcassets */; };
 		749E190A2BEA8B5D00BE6555 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 749E19092BEA8B5D00BE6555 /* Base */; };
+		749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19122BEA8FD900BE6555 /* AppCoordinator.swift */; };
+		749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19142BEA912B00BE6555 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		742727D82BF3C617006DE29C /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
+		742727DB2BF3C8F9006DE29C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		749E18FA2BEA8B5A00BE6555 /* Formula 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Formula 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		749E19012BEA8B5A00BE6555 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		749E19062BEA8B5D00BE6555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		749E19092BEA8B5D00BE6555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		749E190B2BEA8B5D00BE6555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		749E19122BEA8FD900BE6555 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		749E19142BEA912B00BE6555 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		742727DA2BF3C8E2006DE29C /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				742727DB2BF3C8F9006DE29C /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		742B88A32BF3BA3500A1E496 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				749E19142BEA912B00BE6555 /* Coordinator.swift */,
+				749E19122BEA8FD900BE6555 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		742B88A82BF3BFE500A1E496 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				742B88A92BF3C0EA00A1E496 /* Race Screen */,
+				742727DA2BF3C8E2006DE29C /* Calendar */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		742B88A92BF3C0EA00A1E496 /* Race Screen */ = {
+			isa = PBXGroup;
+			children = (
+				742727D82BF3C617006DE29C /* RaceViewController.swift */,
+			);
+			path = "Race Screen";
+			sourceTree = "<group>";
+		};
 		749E18F12BEA8B5A00BE6555 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +94,23 @@
 		749E18FC2BEA8B5A00BE6555 /* Formula 1 */ = {
 			isa = PBXGroup;
 			children = (
-				749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */,
-				749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */,
-				749E19012BEA8B5A00BE6555 /* ViewController.swift */,
+				749E19112BEA8FBD00BE6555 /* Application */,
+				742B88A82BF3BFE500A1E496 /* Presentation */,
 				749E19062BEA8B5D00BE6555 /* Assets.xcassets */,
 				749E19082BEA8B5D00BE6555 /* LaunchScreen.storyboard */,
 				749E190B2BEA8B5D00BE6555 /* Info.plist */,
 			);
 			path = "Formula 1";
+			sourceTree = "<group>";
+		};
+		749E19112BEA8FBD00BE6555 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				742B88A32BF3BA3500A1E496 /* Coordinators */,
+				749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */,
+				749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +183,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				749E19022BEA8B5A00BE6555 /* ViewController.swift in Sources */,
+				742727DC2BF3C8F9006DE29C /* CalendarViewController.swift in Sources */,
+				749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */,
+				749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */,
+				742727D92BF3C617006DE29C /* RaceViewController.swift in Sources */,
 				749E18FE2BEA8B5A00BE6555 /* AppDelegate.swift in Sources */,
 				749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */,
 			);
