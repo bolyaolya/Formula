@@ -17,35 +17,52 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        setupNavBarAppearance()
+//        setupNavBarAppearance()
+        setupTabBarAppearance()
         
         let tabBarController = makeRootTabBar()
         navigationController.setViewControllers([tabBarController], animated: true)
     }
     
-    private func setupNavBarAppearance() {
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.backgroundColor = .black
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        
-        navigationController.navigationBar.standardAppearance = navBarAppearance
-        navigationController.navigationBar.scrollEdgeAppearance = navBarAppearance
-        
-        navigationController.navigationBar.isHidden = false
+//    private func setupNavBarAppearance() {
+//        let navBarAppearance = UINavigationBarAppearance()
+//        navBarAppearance.backgroundColor = .darkColor
+//        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+//        
+//        navigationController.navigationBar.standardAppearance = navBarAppearance
+//        navigationController.navigationBar.scrollEdgeAppearance = navBarAppearance
+//        
+//        navigationController.navigationBar.isHidden = true
+//    }
+    
+    private func setupTabBarAppearance() {
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.backgroundColor = .tabBar
+        tabBarAppearance.tintColor = .lightColor
+        tabBarAppearance.barTintColor = .lightGray
     }
     
     private func makeRootTabBar() -> UITabBarController {
         let raceVC = RaceViewController()
-        let calendarVC = CalendarViewController()
+        let podiumVC = PodiumViewController()
         
-        let raceTabBarItem = UITabBarItem(title: "Race", image: UIImage(named: "race_icon"), tag: 0)
-        let calendarTabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendar_icon"), tag: 1)
+        let raceTabBarItem = UITabBarItem(title: "Гонка", image: .carImage, tag: 0)
+        let podiumTabBarItem = UITabBarItem(title: "Чемпионат", image: .podiumImage, tag: 1)
+//        let calendarTabBarItem = UITabBarItem(title: "Календарь", image: .circleImage, tag: 2)
+        
+        let raceSelectedTab = UIImage.carBoldImage.withRenderingMode(.alwaysOriginal)
+        let podiumSelectedTab = UIImage.podiumBoldImage.withRenderingMode(.alwaysOriginal)
         
         raceVC.tabBarItem = raceTabBarItem
-            calendarVC.tabBarItem = calendarTabBarItem
+        podiumVC.tabBarItem = podiumTabBarItem
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [raceVC, calendarVC]
+        tabBarController.viewControllers = [raceVC, podiumVC]
+        
+        if let tabBarItems = tabBarController.tabBar.items {
+            tabBarItems[0].selectedImage = raceSelectedTab
+            tabBarItems[1].selectedImage = podiumSelectedTab
+        }
         
         return tabBarController
     }

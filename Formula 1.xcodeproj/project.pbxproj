@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		742727D92BF3C617006DE29C /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742727D82BF3C617006DE29C /* RaceViewController.swift */; };
-		742727DC2BF3C8F9006DE29C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742727DB2BF3C8F9006DE29C /* CalendarViewController.swift */; };
+		742727DC2BF3C8F9006DE29C /* PodiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742727DB2BF3C8F9006DE29C /* PodiumViewController.swift */; };
 		749E18FE2BEA8B5A00BE6555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */; };
 		749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */; };
 		749E19072BEA8B5D00BE6555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 749E19062BEA8B5D00BE6555 /* Assets.xcassets */; };
 		749E190A2BEA8B5D00BE6555 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 749E19092BEA8B5D00BE6555 /* Base */; };
 		749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19122BEA8FD900BE6555 /* AppCoordinator.swift */; };
 		749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19142BEA912B00BE6555 /* Coordinator.swift */; };
+		74E17C0F2BF502F700FEDA30 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 74E17C0E2BF502F700FEDA30 /* SnapKit */; };
+		74E17C112BF502F700FEDA30 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 74E17C102BF502F700FEDA30 /* SnapKit-Dynamic */; };
+		74EFB65D2BF66A9800EFD8A1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74EFB65C2BF66A9800EFD8A1 /* Colors.xcassets */; };
+		74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6602BF66B9700EFD8A1 /* UIColor.swift */; };
+		74EFB6632BF66C9500EFD8A1 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6622BF66C9500EFD8A1 /* UIImage.swift */; };
+		74EFB6652BF6820F00EFD8A1 /* AppRootTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6642BF6820F00EFD8A1 /* AppRootTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		742727D82BF3C617006DE29C /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
-		742727DB2BF3C8F9006DE29C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		742727DB2BF3C8F9006DE29C /* PodiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodiumViewController.swift; sourceTree = "<group>"; };
 		749E18FA2BEA8B5A00BE6555 /* Formula 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Formula 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +34,10 @@
 		749E190B2BEA8B5D00BE6555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		749E19122BEA8FD900BE6555 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		749E19142BEA912B00BE6555 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		74EFB65C2BF66A9800EFD8A1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		74EFB6602BF66B9700EFD8A1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		74EFB6622BF66C9500EFD8A1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		74EFB6642BF6820F00EFD8A1 /* AppRootTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E17C0F2BF502F700FEDA30 /* SnapKit in Frameworks */,
+				74E17C112BF502F700FEDA30 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,7 +56,7 @@
 		742727DA2BF3C8E2006DE29C /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				742727DB2BF3C8F9006DE29C /* CalendarViewController.swift */,
+				742727DB2BF3C8F9006DE29C /* PodiumViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -63,6 +75,7 @@
 			children = (
 				742B88A92BF3C0EA00A1E496 /* Race Screen */,
 				742727DA2BF3C8E2006DE29C /* Calendar */,
+				74EFB6642BF6820F00EFD8A1 /* AppRootTabBar.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -96,7 +109,8 @@
 			children = (
 				749E19112BEA8FBD00BE6555 /* Application */,
 				742B88A82BF3BFE500A1E496 /* Presentation */,
-				749E19062BEA8B5D00BE6555 /* Assets.xcassets */,
+				74EFB65E2BF66AE800EFD8A1 /* Resources */,
+				74EFB65F2BF66B5900EFD8A1 /* Utils */,
 				749E19082BEA8B5D00BE6555 /* LaunchScreen.storyboard */,
 				749E190B2BEA8B5D00BE6555 /* Info.plist */,
 			);
@@ -111,6 +125,24 @@
 				749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		74EFB65E2BF66AE800EFD8A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				749E19062BEA8B5D00BE6555 /* Assets.xcassets */,
+				74EFB65C2BF66A9800EFD8A1 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		74EFB65F2BF66B5900EFD8A1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				74EFB6602BF66B9700EFD8A1 /* UIColor.swift */,
+				74EFB6622BF66C9500EFD8A1 /* UIImage.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +161,10 @@
 			dependencies = (
 			);
 			name = "Formula 1";
+			packageProductDependencies = (
+				74E17C0E2BF502F700FEDA30 /* SnapKit */,
+				74E17C102BF502F700FEDA30 /* SnapKit-Dynamic */,
+			);
 			productName = "Formula 1";
 			productReference = 749E18FA2BEA8B5A00BE6555 /* Formula 1.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +193,9 @@
 				Base,
 			);
 			mainGroup = 749E18F12BEA8B5A00BE6555;
+			packageReferences = (
+				74E17C0D2BF502F700FEDA30 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 749E18FB2BEA8B5A00BE6555 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -171,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74EFB65D2BF66A9800EFD8A1 /* Colors.xcassets in Resources */,
 				749E19072BEA8B5D00BE6555 /* Assets.xcassets in Resources */,
 				749E190A2BEA8B5D00BE6555 /* Base in Resources */,
 			);
@@ -183,7 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742727DC2BF3C8F9006DE29C /* CalendarViewController.swift in Sources */,
+				742727DC2BF3C8F9006DE29C /* PodiumViewController.swift in Sources */,
+				74EFB6632BF66C9500EFD8A1 /* UIImage.swift in Sources */,
+				74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */,
+				74EFB6652BF6820F00EFD8A1 /* AppRootTabBar.swift in Sources */,
 				749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */,
 				749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */,
 				742727D92BF3C617006DE29C /* RaceViewController.swift in Sources */,
@@ -401,6 +444,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74E17C0D2BF502F700FEDA30 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = exactVersion;
+				version = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		74E17C0E2BF502F700FEDA30 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74E17C0D2BF502F700FEDA30 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		74E17C102BF502F700FEDA30 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74E17C0D2BF502F700FEDA30 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 749E18F22BEA8B5A00BE6555 /* Project object */;
 }

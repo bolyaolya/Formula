@@ -15,7 +15,7 @@ class RaceViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .darkColor
 
         let label = UILabel()
         label.text = "Это главный экран"
