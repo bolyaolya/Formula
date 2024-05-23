@@ -15,12 +15,20 @@
 		749E190A2BEA8B5D00BE6555 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 749E19092BEA8B5D00BE6555 /* Base */; };
 		749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19122BEA8FD900BE6555 /* AppCoordinator.swift */; };
 		749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19142BEA912B00BE6555 /* Coordinator.swift */; };
+		74DBC3702BF7824300C563E4 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DBC36F2BF7824300C563E4 /* RaceView.swift */; };
 		74E17C0F2BF502F700FEDA30 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 74E17C0E2BF502F700FEDA30 /* SnapKit */; };
 		74E17C112BF502F700FEDA30 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 74E17C102BF502F700FEDA30 /* SnapKit-Dynamic */; };
 		74EFB65D2BF66A9800EFD8A1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74EFB65C2BF66A9800EFD8A1 /* Colors.xcassets */; };
 		74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6602BF66B9700EFD8A1 /* UIColor.swift */; };
 		74EFB6632BF66C9500EFD8A1 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6622BF66C9500EFD8A1 /* UIImage.swift */; };
-		74EFB6652BF6820F00EFD8A1 /* AppRootTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6642BF6820F00EFD8A1 /* AppRootTabBar.swift */; };
+		74F06F5B2BF7C76800834823 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 74F06F5A2BF7C76800834823 /* Alamofire */; };
+		74F06F5D2BF7C76800834823 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 74F06F5C2BF7C76800834823 /* AlamofireDynamic */; };
+		74F06F602BF7C8B500834823 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F06F5F2BF7C8B500834823 /* Entities.swift */; };
+		74F06F622BF7C91A00834823 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F06F612BF7C91A00834823 /* NetworkService.swift */; };
+		74FDC02F2BFF54970009502E /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC02E2BFF54960009502E /* CountdownView.swift */; };
+		74FDC0312BFF5AFA0009502E /* PracticeTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */; };
+		74FDC0332BFF69440009502E /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0322BFF69440009502E /* PaddedLabel.swift */; };
+		74FDC0352BFF6D590009502E /* RaceTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0342BFF6D590009502E /* RaceTimetable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +42,16 @@
 		749E190B2BEA8B5D00BE6555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		749E19122BEA8FD900BE6555 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		749E19142BEA912B00BE6555 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		74DBC36F2BF7824300C563E4 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		74EFB65C2BF66A9800EFD8A1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		74EFB6602BF66B9700EFD8A1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		74EFB6622BF66C9500EFD8A1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		74EFB6642BF6820F00EFD8A1 /* AppRootTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootTabBar.swift; sourceTree = "<group>"; };
+		74F06F5F2BF7C8B500834823 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		74F06F612BF7C91A00834823 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		74FDC02E2BFF54960009502E /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimetable.swift; sourceTree = "<group>"; };
+		74FDC0322BFF69440009502E /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
+		74FDC0342BFF6D590009502E /* RaceTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTimetable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F06F5B2BF7C76800834823 /* Alamofire in Frameworks */,
+				74F06F5D2BF7C76800834823 /* AlamofireDynamic in Frameworks */,
 				74E17C0F2BF502F700FEDA30 /* SnapKit in Frameworks */,
 				74E17C112BF502F700FEDA30 /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -53,12 +69,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		742727DA2BF3C8E2006DE29C /* Calendar */ = {
+		742727DA2BF3C8E2006DE29C /* Podium */ = {
 			isa = PBXGroup;
 			children = (
 				742727DB2BF3C8F9006DE29C /* PodiumViewController.swift */,
 			);
-			path = Calendar;
+			path = Podium;
 			sourceTree = "<group>";
 		};
 		742B88A32BF3BA3500A1E496 /* Coordinators */ = {
@@ -74,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				742B88A92BF3C0EA00A1E496 /* Race Screen */,
-				742727DA2BF3C8E2006DE29C /* Calendar */,
-				74EFB6642BF6820F00EFD8A1 /* AppRootTabBar.swift */,
+				742727DA2BF3C8E2006DE29C /* Podium */,
+				74DBC36E2BF7817500C563E4 /* Calendar */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -84,6 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				742727D82BF3C617006DE29C /* RaceViewController.swift */,
+				74DBC36F2BF7824300C563E4 /* RaceView.swift */,
+				74FDC02E2BFF54960009502E /* CountdownView.swift */,
+				74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */,
+				74FDC0342BFF6D590009502E /* RaceTimetable.swift */,
 			);
 			path = "Race Screen";
 			sourceTree = "<group>";
@@ -108,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				749E19112BEA8FBD00BE6555 /* Application */,
+				74F06F5E2BF7C8A400834823 /* Data */,
 				742B88A82BF3BFE500A1E496 /* Presentation */,
 				74EFB65E2BF66AE800EFD8A1 /* Resources */,
 				74EFB65F2BF66B5900EFD8A1 /* Utils */,
@@ -127,6 +148,13 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		74DBC36E2BF7817500C563E4 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		74EFB65E2BF66AE800EFD8A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,8 +169,18 @@
 			children = (
 				74EFB6602BF66B9700EFD8A1 /* UIColor.swift */,
 				74EFB6622BF66C9500EFD8A1 /* UIImage.swift */,
+				74FDC0322BFF69440009502E /* PaddedLabel.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		74F06F5E2BF7C8A400834823 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				74F06F5F2BF7C8B500834823 /* Entities.swift */,
+				74F06F612BF7C91A00834823 /* NetworkService.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +202,8 @@
 			packageProductDependencies = (
 				74E17C0E2BF502F700FEDA30 /* SnapKit */,
 				74E17C102BF502F700FEDA30 /* SnapKit-Dynamic */,
+				74F06F5A2BF7C76800834823 /* Alamofire */,
+				74F06F5C2BF7C76800834823 /* AlamofireDynamic */,
 			);
 			productName = "Formula 1";
 			productReference = 749E18FA2BEA8B5A00BE6555 /* Formula 1.app */;
@@ -195,6 +235,7 @@
 			mainGroup = 749E18F12BEA8B5A00BE6555;
 			packageReferences = (
 				74E17C0D2BF502F700FEDA30 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				74F06F592BF7C76800834823 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 749E18FB2BEA8B5A00BE6555 /* Products */;
 			projectDirPath = "";
@@ -223,11 +264,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F06F622BF7C91A00834823 /* NetworkService.swift in Sources */,
+				74F06F602BF7C8B500834823 /* Entities.swift in Sources */,
+				74FDC0332BFF69440009502E /* PaddedLabel.swift in Sources */,
+				74FDC02F2BFF54970009502E /* CountdownView.swift in Sources */,
 				742727DC2BF3C8F9006DE29C /* PodiumViewController.swift in Sources */,
+				74FDC0312BFF5AFA0009502E /* PracticeTimetable.swift in Sources */,
+				74FDC0352BFF6D590009502E /* RaceTimetable.swift in Sources */,
 				74EFB6632BF66C9500EFD8A1 /* UIImage.swift in Sources */,
 				74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */,
-				74EFB6652BF6820F00EFD8A1 /* AppRootTabBar.swift in Sources */,
 				749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */,
+				74DBC3702BF7824300C563E4 /* RaceView.swift in Sources */,
 				749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */,
 				742727D92BF3C617006DE29C /* RaceViewController.swift in Sources */,
 				749E18FE2BEA8B5A00BE6555 /* AppDelegate.swift in Sources */,
@@ -454,6 +501,14 @@
 				version = 5.7.1;
 			};
 		};
+		74F06F592BF7C76800834823 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -466,6 +521,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 74E17C0D2BF502F700FEDA30 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		74F06F5A2BF7C76800834823 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74F06F592BF7C76800834823 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		74F06F5C2BF7C76800834823 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74F06F592BF7C76800834823 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

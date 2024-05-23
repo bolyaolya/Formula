@@ -6,26 +6,25 @@
 //
 
 import UIKit
+import SnapKit
 
-class RaceViewController: UIViewController {
+final class RaceViewController: UIViewController {
+    
+    //MARK: Properties
+    
+    private lazy var raceView = RaceView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
+    
+    override func loadView() {
+        super.loadView()
+        view = raceView
+    }
 
     private func setupUI() {
         view.backgroundColor = .darkColor
-
-        let label = UILabel()
-        label.text = "Это главный экран"
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label)
-
-        NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
     }
 }

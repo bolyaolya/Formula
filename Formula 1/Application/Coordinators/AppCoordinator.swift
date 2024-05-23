@@ -17,23 +17,23 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-//        setupNavBarAppearance()
+        setupNavBarAppearance()
         setupTabBarAppearance()
         
         let tabBarController = makeRootTabBar()
         navigationController.setViewControllers([tabBarController], animated: true)
     }
     
-//    private func setupNavBarAppearance() {
+    private func setupNavBarAppearance() {
 //        let navBarAppearance = UINavigationBarAppearance()
 //        navBarAppearance.backgroundColor = .darkColor
 //        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
 //        
 //        navigationController.navigationBar.standardAppearance = navBarAppearance
 //        navigationController.navigationBar.scrollEdgeAppearance = navBarAppearance
-//        
-//        navigationController.navigationBar.isHidden = true
-//    }
+        
+        navigationController.navigationBar.isHidden = true
+    }
     
     private func setupTabBarAppearance() {
         let tabBarAppearance = UITabBar.appearance()
