@@ -7,8 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		742727D92BF3C617006DE29C /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742727D82BF3C617006DE29C /* RaceViewController.swift */; };
-		742727DC2BF3C8F9006DE29C /* PodiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742727DB2BF3C8F9006DE29C /* PodiumViewController.swift */; };
+		74845C402C3FD58400295919 /* UnownedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C3F2C3FD58400295919 /* UnownedRouter.swift */; };
+		74845C422C3FD5A800295919 /* Unowned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C412C3FD5A800295919 /* Unowned.swift */; };
+		74845C452C3FD5E800295919 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C442C3FD5E800295919 /* Destination.swift */; };
+		74845C472C3FD60300295919 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C462C3FD60300295919 /* Router.swift */; };
+		74845C492C3FD62400295919 /* ViewControlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C482C3FD62400295919 /* ViewControlling.swift */; };
+		74845C4B2C3FD63B00295919 /* Coordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C4A2C3FD63B00295919 /* Coordinating.swift */; };
+		74845C4E2C3FD66400295919 /* ReferenceCounting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C4D2C3FD66400295919 /* ReferenceCounting.swift */; };
+		74845C512C3FD68700295919 /* ReferenceCounterListening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C502C3FD68700295919 /* ReferenceCounterListening.swift */; };
+		74845C532C3FD7BB00295919 /* ReferenceCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C522C3FD7BB00295919 /* ReferenceCounter.swift */; };
+		74845C552C3FD7D600295919 /* ReferenceOperatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C542C3FD7D600295919 /* ReferenceOperatable.swift */; };
+		74845C572C3FD80C00295919 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C562C3FD80C00295919 /* Routing.swift */; };
+		74845C592C3FD82700295919 /* DetachedTransitionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C582C3FD82700295919 /* DetachedTransitionHandling.swift */; };
+		74845C5B2C3FD84500295919 /* DetachedContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C5A2C3FD84500295919 /* DetachedContext.swift */; };
+		74845C5D2C3FD85D00295919 /* Reason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C5C2C3FD85D00295919 /* Reason.swift */; };
+		74845C5F2C3FD89700295919 /* NavigationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C5E2C3FD89700295919 /* NavigationTransition.swift */; };
+		74845C622C3FD8BB00295919 /* NavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C612C3FD8BB00295919 /* NavigationType.swift */; };
+		74845C642C3FD90900295919 /* RaceViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C632C3FD90900295919 /* RaceViewCoordinator.swift */; };
+		74845C662C3FD94800295919 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C652C3FD94800295919 /* NavigationCoordinator.swift */; };
+		74845C682C3FD95E00295919 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C672C3FD95E00295919 /* BaseCoordinator.swift */; };
+		74845C6B2C3FD98C00295919 /* ModuleDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C6A2C3FD98C00295919 /* ModuleDependencyContainer.swift */; };
+		74845C6D2C3FDAC100295919 /* ReferenceCounted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C6C2C3FDAC100295919 /* ReferenceCounted.swift */; };
+		74845C6F2C3FDD2A00295919 /* FAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C6E2C3FDD2A00295919 /* FAppCoordinator.swift */; };
+		74845C712C3FDD9E00295919 /* RootFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C702C3FDD9E00295919 /* RootFlow.swift */; };
+		74845C732C3FDDB800295919 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C722C3FDDB800295919 /* SharedStore.swift */; };
+		74845C752C3FDE0F00295919 /* ProxyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C742C3FDE0F00295919 /* ProxyViewController.swift */; };
+		74845C772C3FDE2200295919 /* ProxyingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C762C3FDE2200295919 /* ProxyingViewController.swift */; };
+		74845C792C3FDE5600295919 /* GlobalDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C782C3FDE5600295919 /* GlobalDependencyContainer.swift */; };
+		74845C7F2C3FDF3B00295919 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C7E2C3FDF3B00295919 /* AuthenticationCoordinator.swift */; };
+		74845C812C3FDF6200295919 /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C802C3FDF6200295919 /* AuthenticationUseCase.swift */; };
+		74845C832C3FE12000295919 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C822C3FE12000295919 /* RootCoordinator.swift */; };
+		74845C852C3FE58E00295919 /* TabsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C842C3FE58E00295919 /* TabsCoordinator.swift */; };
+		74845C882C3FE8A500295919 /* UINavigationController+Proxying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C872C3FE8A500295919 /* UINavigationController+Proxying.swift */; };
+		74845C8B2C3FEFDD00295919 /* FCustomHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C8A2C3FEFDD00295919 /* FCustomHostingController.swift */; };
+		74845C8D2C3FF20700295919 /* ChampionshipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C8C2C3FF20700295919 /* ChampionshipViewModel.swift */; };
+		74845C8F2C3FF20C00295919 /* ChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C8E2C3FF20C00295919 /* ChampionshipView.swift */; };
+		74845C912C3FF21300295919 /* ChampionshipAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C902C3FF21300295919 /* ChampionshipAssembler.swift */; };
+		74845C932C3FF24700295919 /* ChampionshipCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C922C3FF24700295919 /* ChampionshipCoordinator.swift */; };
+		74914EE62C1878C5001F62E4 /* RaceViewAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74914EE52C1878C5001F62E4 /* RaceViewAssembler.swift */; };
 		749E18FE2BEA8B5A00BE6555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */; };
 		749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */; };
 		749E19072BEA8B5D00BE6555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 749E19062BEA8B5D00BE6555 /* Assets.xcassets */; };
@@ -16,15 +52,11 @@
 		749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19122BEA8FD900BE6555 /* AppCoordinator.swift */; };
 		749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19142BEA912B00BE6555 /* Coordinator.swift */; };
 		74DBC3702BF7824300C563E4 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DBC36F2BF7824300C563E4 /* RaceView.swift */; };
-		74E17C0F2BF502F700FEDA30 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 74E17C0E2BF502F700FEDA30 /* SnapKit */; };
-		74E17C112BF502F700FEDA30 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 74E17C102BF502F700FEDA30 /* SnapKit-Dynamic */; };
+		74DBF2382C10CC9900313693 /* RaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DBF2372C10CC9900313693 /* RaceViewModel.swift */; };
 		74EFB65D2BF66A9800EFD8A1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74EFB65C2BF66A9800EFD8A1 /* Colors.xcassets */; };
 		74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6602BF66B9700EFD8A1 /* UIColor.swift */; };
 		74EFB6632BF66C9500EFD8A1 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6622BF66C9500EFD8A1 /* UIImage.swift */; };
-		74F06F5B2BF7C76800834823 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 74F06F5A2BF7C76800834823 /* Alamofire */; };
-		74F06F5D2BF7C76800834823 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 74F06F5C2BF7C76800834823 /* AlamofireDynamic */; };
-		74F06F602BF7C8B500834823 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F06F5F2BF7C8B500834823 /* Entities.swift */; };
-		74F06F622BF7C91A00834823 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F06F612BF7C91A00834823 /* NetworkService.swift */; };
+		74F06F602BF7C8B500834823 /* UpcomingRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F06F5F2BF7C8B500834823 /* UpcomingRace.swift */; };
 		74FDC02F2BFF54970009502E /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC02E2BFF54960009502E /* CountdownView.swift */; };
 		74FDC0312BFF5AFA0009502E /* PracticeTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */; };
 		74FDC0332BFF69440009502E /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0322BFF69440009502E /* PaddedLabel.swift */; };
@@ -32,8 +64,44 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		742727D82BF3C617006DE29C /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
-		742727DB2BF3C8F9006DE29C /* PodiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodiumViewController.swift; sourceTree = "<group>"; };
+		74845C3F2C3FD58400295919 /* UnownedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnownedRouter.swift; sourceTree = "<group>"; };
+		74845C412C3FD5A800295919 /* Unowned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unowned.swift; sourceTree = "<group>"; };
+		74845C442C3FD5E800295919 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		74845C462C3FD60300295919 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		74845C482C3FD62400295919 /* ViewControlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControlling.swift; sourceTree = "<group>"; };
+		74845C4A2C3FD63B00295919 /* Coordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinating.swift; sourceTree = "<group>"; };
+		74845C4D2C3FD66400295919 /* ReferenceCounting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceCounting.swift; sourceTree = "<group>"; };
+		74845C502C3FD68700295919 /* ReferenceCounterListening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceCounterListening.swift; sourceTree = "<group>"; };
+		74845C522C3FD7BB00295919 /* ReferenceCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceCounter.swift; sourceTree = "<group>"; };
+		74845C542C3FD7D600295919 /* ReferenceOperatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceOperatable.swift; sourceTree = "<group>"; };
+		74845C562C3FD80C00295919 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		74845C582C3FD82700295919 /* DetachedTransitionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetachedTransitionHandling.swift; sourceTree = "<group>"; };
+		74845C5A2C3FD84500295919 /* DetachedContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetachedContext.swift; sourceTree = "<group>"; };
+		74845C5C2C3FD85D00295919 /* Reason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reason.swift; sourceTree = "<group>"; };
+		74845C5E2C3FD89700295919 /* NavigationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTransition.swift; sourceTree = "<group>"; };
+		74845C612C3FD8BB00295919 /* NavigationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationType.swift; sourceTree = "<group>"; };
+		74845C632C3FD90900295919 /* RaceViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewCoordinator.swift; sourceTree = "<group>"; };
+		74845C652C3FD94800295919 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		74845C672C3FD95E00295919 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		74845C6A2C3FD98C00295919 /* ModuleDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDependencyContainer.swift; sourceTree = "<group>"; };
+		74845C6C2C3FDAC100295919 /* ReferenceCounted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceCounted.swift; sourceTree = "<group>"; };
+		74845C6E2C3FDD2A00295919 /* FAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAppCoordinator.swift; sourceTree = "<group>"; };
+		74845C702C3FDD9E00295919 /* RootFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFlow.swift; sourceTree = "<group>"; };
+		74845C722C3FDDB800295919 /* SharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
+		74845C742C3FDE0F00295919 /* ProxyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyViewController.swift; sourceTree = "<group>"; };
+		74845C762C3FDE2200295919 /* ProxyingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyingViewController.swift; sourceTree = "<group>"; };
+		74845C782C3FDE5600295919 /* GlobalDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDependencyContainer.swift; sourceTree = "<group>"; };
+		74845C7E2C3FDF3B00295919 /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
+		74845C802C3FDF6200295919 /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
+		74845C822C3FE12000295919 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		74845C842C3FE58E00295919 /* TabsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsCoordinator.swift; sourceTree = "<group>"; };
+		74845C872C3FE8A500295919 /* UINavigationController+Proxying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Proxying.swift"; sourceTree = "<group>"; };
+		74845C8A2C3FEFDD00295919 /* FCustomHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCustomHostingController.swift; sourceTree = "<group>"; };
+		74845C8C2C3FF20700295919 /* ChampionshipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipViewModel.swift; sourceTree = "<group>"; };
+		74845C8E2C3FF20C00295919 /* ChampionshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipView.swift; sourceTree = "<group>"; };
+		74845C902C3FF21300295919 /* ChampionshipAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipAssembler.swift; sourceTree = "<group>"; };
+		74845C922C3FF24700295919 /* ChampionshipCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipCoordinator.swift; sourceTree = "<group>"; };
+		74914EE52C1878C5001F62E4 /* RaceViewAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewAssembler.swift; sourceTree = "<group>"; };
 		749E18FA2BEA8B5A00BE6555 /* Formula 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Formula 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,11 +111,11 @@
 		749E19122BEA8FD900BE6555 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		749E19142BEA912B00BE6555 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		74DBC36F2BF7824300C563E4 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
+		74DBF2372C10CC9900313693 /* RaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewModel.swift; sourceTree = "<group>"; };
 		74EFB65C2BF66A9800EFD8A1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		74EFB6602BF66B9700EFD8A1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		74EFB6622BF66C9500EFD8A1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		74F06F5F2BF7C8B500834823 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
-		74F06F612BF7C91A00834823 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		74F06F5F2BF7C8B500834823 /* UpcomingRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingRace.swift; sourceTree = "<group>"; };
 		74FDC02E2BFF54960009502E /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimetable.swift; sourceTree = "<group>"; };
 		74FDC0322BFF69440009502E /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
@@ -59,22 +127,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74F06F5B2BF7C76800834823 /* Alamofire in Frameworks */,
-				74F06F5D2BF7C76800834823 /* AlamofireDynamic in Frameworks */,
-				74E17C0F2BF502F700FEDA30 /* SnapKit in Frameworks */,
-				74E17C112BF502F700FEDA30 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		742727DA2BF3C8E2006DE29C /* Podium */ = {
+		742727DA2BF3C8E2006DE29C /* Championship */ = {
 			isa = PBXGroup;
 			children = (
-				742727DB2BF3C8F9006DE29C /* PodiumViewController.swift */,
+				74845C8C2C3FF20700295919 /* ChampionshipViewModel.swift */,
+				74845C8E2C3FF20C00295919 /* ChampionshipView.swift */,
+				74845C902C3FF21300295919 /* ChampionshipAssembler.swift */,
+				74845C922C3FF24700295919 /* ChampionshipCoordinator.swift */,
 			);
-			path = Podium;
+			path = Championship;
 			sourceTree = "<group>";
 		};
 		742B88A32BF3BA3500A1E496 /* Coordinators */ = {
@@ -82,6 +149,7 @@
 			children = (
 				749E19142BEA912B00BE6555 /* Coordinator.swift */,
 				749E19122BEA8FD900BE6555 /* AppCoordinator.swift */,
+				74845C6E2C3FDD2A00295919 /* FAppCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -89,9 +157,9 @@
 		742B88A82BF3BFE500A1E496 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				742B88A92BF3C0EA00A1E496 /* Race Screen */,
-				742727DA2BF3C8E2006DE29C /* Podium */,
-				74DBC36E2BF7817500C563E4 /* Calendar */,
+				74845C7D2C3FDF2A00295919 /* NavigationFlows */,
+				74845C892C3FEFCC00295919 /* Common */,
+				74845C7A2C3FDF1300295919 /* Authentication */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -99,13 +167,129 @@
 		742B88A92BF3C0EA00A1E496 /* Race Screen */ = {
 			isa = PBXGroup;
 			children = (
-				742727D82BF3C617006DE29C /* RaceViewController.swift */,
+				74845C632C3FD90900295919 /* RaceViewCoordinator.swift */,
+				74DBF2372C10CC9900313693 /* RaceViewModel.swift */,
 				74DBC36F2BF7824300C563E4 /* RaceView.swift */,
-				74FDC02E2BFF54960009502E /* CountdownView.swift */,
-				74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */,
-				74FDC0342BFF6D590009502E /* RaceTimetable.swift */,
+				74914EE52C1878C5001F62E4 /* RaceViewAssembler.swift */,
+				74FDC0362BFF6F8F0009502E /* Subviews */,
 			);
 			path = "Race Screen";
+			sourceTree = "<group>";
+		};
+		74845C3D2C3FD55F00295919 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		74845C3E2C3FD56E00295919 /* Coordination */ = {
+			isa = PBXGroup;
+			children = (
+				74845C862C3FE89600295919 /* Extensions */,
+				74845C692C3FD97B00295919 /* DependencyHandling */,
+				74845C602C3FD8AE00295919 /* Parameters */,
+				74845C4C2C3FD65300295919 /* ReferenceHandling */,
+				74845C432C3FD5D900295919 /* Interfaces */,
+				74845C3F2C3FD58400295919 /* UnownedRouter.swift */,
+				74845C412C3FD5A800295919 /* Unowned.swift */,
+				74845C462C3FD60300295919 /* Router.swift */,
+				74845C5A2C3FD84500295919 /* DetachedContext.swift */,
+				74845C5E2C3FD89700295919 /* NavigationTransition.swift */,
+				74845C652C3FD94800295919 /* NavigationCoordinator.swift */,
+				74845C672C3FD95E00295919 /* BaseCoordinator.swift */,
+				74845C722C3FDDB800295919 /* SharedStore.swift */,
+				74845C742C3FDE0F00295919 /* ProxyViewController.swift */,
+				74845C842C3FE58E00295919 /* TabsCoordinator.swift */,
+			);
+			path = Coordination;
+			sourceTree = "<group>";
+		};
+		74845C432C3FD5D900295919 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				74845C442C3FD5E800295919 /* Destination.swift */,
+				74845C482C3FD62400295919 /* ViewControlling.swift */,
+				74845C4A2C3FD63B00295919 /* Coordinating.swift */,
+				74845C562C3FD80C00295919 /* Routing.swift */,
+				74845C582C3FD82700295919 /* DetachedTransitionHandling.swift */,
+				74845C5C2C3FD85D00295919 /* Reason.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		74845C4C2C3FD65300295919 /* ReferenceHandling */ = {
+			isa = PBXGroup;
+			children = (
+				74845C4F2C3FD67400295919 /* Interfaces */,
+				74845C4D2C3FD66400295919 /* ReferenceCounting.swift */,
+				74845C522C3FD7BB00295919 /* ReferenceCounter.swift */,
+				74845C6C2C3FDAC100295919 /* ReferenceCounted.swift */,
+			);
+			path = ReferenceHandling;
+			sourceTree = "<group>";
+		};
+		74845C4F2C3FD67400295919 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				74845C502C3FD68700295919 /* ReferenceCounterListening.swift */,
+				74845C542C3FD7D600295919 /* ReferenceOperatable.swift */,
+				74845C702C3FDD9E00295919 /* RootFlow.swift */,
+				74845C762C3FDE2200295919 /* ProxyingViewController.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		74845C602C3FD8AE00295919 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				74845C612C3FD8BB00295919 /* NavigationType.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		74845C692C3FD97B00295919 /* DependencyHandling */ = {
+			isa = PBXGroup;
+			children = (
+				74845C6A2C3FD98C00295919 /* ModuleDependencyContainer.swift */,
+				74845C782C3FDE5600295919 /* GlobalDependencyContainer.swift */,
+			);
+			path = DependencyHandling;
+			sourceTree = "<group>";
+		};
+		74845C7A2C3FDF1300295919 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				74845C7E2C3FDF3B00295919 /* AuthenticationCoordinator.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		74845C7D2C3FDF2A00295919 /* NavigationFlows */ = {
+			isa = PBXGroup;
+			children = (
+				742B88A92BF3C0EA00A1E496 /* Race Screen */,
+				742727DA2BF3C8E2006DE29C /* Championship */,
+				74DBC36E2BF7817500C563E4 /* Calendar */,
+				74845C822C3FE12000295919 /* RootCoordinator.swift */,
+			);
+			path = NavigationFlows;
+			sourceTree = "<group>";
+		};
+		74845C862C3FE89600295919 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				74845C872C3FE8A500295919 /* UINavigationController+Proxying.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		74845C892C3FEFCC00295919 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				74845C8A2C3FEFDD00295919 /* FCustomHostingController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		749E18F12BEA8B5A00BE6555 = {
@@ -127,6 +311,7 @@
 		749E18FC2BEA8B5A00BE6555 /* Formula 1 */ = {
 			isa = PBXGroup;
 			children = (
+				74845C3D2C3FD55F00295919 /* New Group */,
 				749E19112BEA8FBD00BE6555 /* Application */,
 				74F06F5E2BF7C8A400834823 /* Data */,
 				742B88A82BF3BFE500A1E496 /* Presentation */,
@@ -167,6 +352,7 @@
 		74EFB65F2BF66B5900EFD8A1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				74845C3E2C3FD56E00295919 /* Coordination */,
 				74EFB6602BF66B9700EFD8A1 /* UIColor.swift */,
 				74EFB6622BF66C9500EFD8A1 /* UIImage.swift */,
 				74FDC0322BFF69440009502E /* PaddedLabel.swift */,
@@ -177,10 +363,20 @@
 		74F06F5E2BF7C8A400834823 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				74F06F5F2BF7C8B500834823 /* Entities.swift */,
-				74F06F612BF7C91A00834823 /* NetworkService.swift */,
+				74F06F5F2BF7C8B500834823 /* UpcomingRace.swift */,
+				74845C802C3FDF6200295919 /* AuthenticationUseCase.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		74FDC0362BFF6F8F0009502E /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				74FDC02E2BFF54960009502E /* CountdownView.swift */,
+				74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */,
+				74FDC0342BFF6D590009502E /* RaceTimetable.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,10 +396,6 @@
 			);
 			name = "Formula 1";
 			packageProductDependencies = (
-				74E17C0E2BF502F700FEDA30 /* SnapKit */,
-				74E17C102BF502F700FEDA30 /* SnapKit-Dynamic */,
-				74F06F5A2BF7C76800834823 /* Alamofire */,
-				74F06F5C2BF7C76800834823 /* AlamofireDynamic */,
 			);
 			productName = "Formula 1";
 			productReference = 749E18FA2BEA8B5A00BE6555 /* Formula 1.app */;
@@ -234,8 +426,6 @@
 			);
 			mainGroup = 749E18F12BEA8B5A00BE6555;
 			packageReferences = (
-				74E17C0D2BF502F700FEDA30 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				74F06F592BF7C76800834823 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 749E18FB2BEA8B5A00BE6555 /* Products */;
 			projectDirPath = "";
@@ -264,21 +454,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74F06F622BF7C91A00834823 /* NetworkService.swift in Sources */,
-				74F06F602BF7C8B500834823 /* Entities.swift in Sources */,
+				74845C852C3FE58E00295919 /* TabsCoordinator.swift in Sources */,
+				74F06F602BF7C8B500834823 /* UpcomingRace.swift in Sources */,
+				74845C4B2C3FD63B00295919 /* Coordinating.swift in Sources */,
+				74845C592C3FD82700295919 /* DetachedTransitionHandling.swift in Sources */,
+				74845C572C3FD80C00295919 /* Routing.swift in Sources */,
+				74845C932C3FF24700295919 /* ChampionshipCoordinator.swift in Sources */,
+				74845C8D2C3FF20700295919 /* ChampionshipViewModel.swift in Sources */,
+				74845C662C3FD94800295919 /* NavigationCoordinator.swift in Sources */,
 				74FDC0332BFF69440009502E /* PaddedLabel.swift in Sources */,
+				74845C6D2C3FDAC100295919 /* ReferenceCounted.swift in Sources */,
+				74845C882C3FE8A500295919 /* UINavigationController+Proxying.swift in Sources */,
+				74845C832C3FE12000295919 /* RootCoordinator.swift in Sources */,
 				74FDC02F2BFF54970009502E /* CountdownView.swift in Sources */,
-				742727DC2BF3C8F9006DE29C /* PodiumViewController.swift in Sources */,
+				74845C7F2C3FDF3B00295919 /* AuthenticationCoordinator.swift in Sources */,
+				74845C622C3FD8BB00295919 /* NavigationType.swift in Sources */,
+				74845C422C3FD5A800295919 /* Unowned.swift in Sources */,
+				74845C6F2C3FDD2A00295919 /* FAppCoordinator.swift in Sources */,
+				74845C4E2C3FD66400295919 /* ReferenceCounting.swift in Sources */,
+				74DBF2382C10CC9900313693 /* RaceViewModel.swift in Sources */,
+				74845C472C3FD60300295919 /* Router.swift in Sources */,
+				74845C642C3FD90900295919 /* RaceViewCoordinator.swift in Sources */,
+				74845C6B2C3FD98C00295919 /* ModuleDependencyContainer.swift in Sources */,
+				74845C5B2C3FD84500295919 /* DetachedContext.swift in Sources */,
+				74845C8F2C3FF20C00295919 /* ChampionshipView.swift in Sources */,
 				74FDC0312BFF5AFA0009502E /* PracticeTimetable.swift in Sources */,
+				74845C792C3FDE5600295919 /* GlobalDependencyContainer.swift in Sources */,
+				74845C812C3FDF6200295919 /* AuthenticationUseCase.swift in Sources */,
+				74845C512C3FD68700295919 /* ReferenceCounterListening.swift in Sources */,
 				74FDC0352BFF6D590009502E /* RaceTimetable.swift in Sources */,
+				74845C752C3FDE0F00295919 /* ProxyViewController.swift in Sources */,
 				74EFB6632BF66C9500EFD8A1 /* UIImage.swift in Sources */,
+				74845C772C3FDE2200295919 /* ProxyingViewController.swift in Sources */,
+				74845C492C3FD62400295919 /* ViewControlling.swift in Sources */,
+				74845C732C3FDDB800295919 /* SharedStore.swift in Sources */,
+				74914EE62C1878C5001F62E4 /* RaceViewAssembler.swift in Sources */,
 				74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */,
+				74845C532C3FD7BB00295919 /* ReferenceCounter.swift in Sources */,
+				74845C682C3FD95E00295919 /* BaseCoordinator.swift in Sources */,
+				74845C5F2C3FD89700295919 /* NavigationTransition.swift in Sources */,
+				74845C5D2C3FD85D00295919 /* Reason.swift in Sources */,
 				749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */,
 				74DBC3702BF7824300C563E4 /* RaceView.swift in Sources */,
+				74845C552C3FD7D600295919 /* ReferenceOperatable.swift in Sources */,
 				749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */,
-				742727D92BF3C617006DE29C /* RaceViewController.swift in Sources */,
+				74845C8B2C3FEFDD00295919 /* FCustomHostingController.swift in Sources */,
+				74845C452C3FD5E800295919 /* Destination.swift in Sources */,
+				74845C912C3FF21300295919 /* ChampionshipAssembler.swift in Sources */,
 				749E18FE2BEA8B5A00BE6555 /* AppDelegate.swift in Sources */,
+				74845C712C3FDD9E00295919 /* RootFlow.swift in Sources */,
 				749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */,
+				74845C402C3FD58400295919 /* UnownedRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,48 +717,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		74E17C0D2BF502F700FEDA30 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				kind = exactVersion;
-				version = 5.7.1;
-			};
-		};
-		74F06F592BF7C76800834823 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = exactVersion;
-				version = 5.9.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		74E17C0E2BF502F700FEDA30 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 74E17C0D2BF502F700FEDA30 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		74E17C102BF502F700FEDA30 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 74E17C0D2BF502F700FEDA30 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-		74F06F5A2BF7C76800834823 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 74F06F592BF7C76800834823 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		74F06F5C2BF7C76800834823 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 74F06F592BF7C76800834823 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 749E18F22BEA8B5A00BE6555 /* Project object */;
 }

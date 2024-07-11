@@ -7,63 +7,80 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator {
-    var parentCoordinator: Coordinator?
-    var childCoordinators = [Coordinator]()
-    var navigationController: UINavigationController
+public enum AppCoordinatorType {
+    case navigating
+    case proxy
+    case custom(ProxyingViewController)
+}
+
+/// This class is encouraged to be instantiated in SceneDelegate (AppDelegate) and to stay alive while
+/// app is running.
+open class AppCoordinator<RootFlowType: RootFlow>: BaseCoordinator {
     
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    public static var shared: AppCoordinator<RootFlowType> {
+        SharedStore.get(String(describing: RootFlowType.self))
     }
     
-    func start() {
-        setupNavBarAppearance()
-        setupTabBarAppearance()
-        
-        let tabBarController = makeRootTabBar()
-        navigationController.setViewControllers([tabBarController], animated: true)
-    }
+    public private(set) var rootViewController: ProxyingViewController
     
-    private func setupNavBarAppearance() {
-//        let navBarAppearance = UINavigationBarAppearance()
-//        navBarAppearance.backgroundColor = .darkColor
-//        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-//        
-//        navigationController.navigationBar.standardAppearance = navBarAppearance
-//        navigationController.navigationBar.scrollEdgeAppearance = navBarAppearance
-        
-        navigationController.navigationBar.isHidden = true
-    }
+    // MARK: Private properties
     
-    private func setupTabBarAppearance() {
-        let tabBarAppearance = UITabBar.appearance()
-        tabBarAppearance.backgroundColor = .tabBar
-        tabBarAppearance.tintColor = .lightColor
-        tabBarAppearance.barTintColor = .lightGray
-    }
+    private let window: UIWindow?
     
-    private func makeRootTabBar() -> UITabBarController {
-        let raceVC = RaceViewController()
-        let podiumVC = PodiumViewController()
-        
-        let raceTabBarItem = UITabBarItem(title: "Гонка", image: .carImage, tag: 0)
-        let podiumTabBarItem = UITabBarItem(title: "Чемпионат", image: .podiumImage, tag: 1)
-//        let calendarTabBarItem = UITabBarItem(title: "Календарь", image: .circleImage, tag: 2)
-        
-        let raceSelectedTab = UIImage.carBoldImage.withRenderingMode(.alwaysOriginal)
-        let podiumSelectedTab = UIImage.podiumBoldImage.withRenderingMode(.alwaysOriginal)
-        
-        raceVC.tabBarItem = raceTabBarItem
-        podiumVC.tabBarItem = podiumTabBarItem
-        
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [raceVC, podiumVC]
-        
-        if let tabBarItems = tabBarController.tabBar.items {
-            tabBarItems[0].selectedImage = raceSelectedTab
-            tabBarItems[1].selectedImage = podiumSelectedTab
+    // MARK: Init
+    
+    public init(window: UIWindow?, type: AppCoordinatorType) {
+        self.window = window
+        self.rootViewController = switch type {
+        case .navigating:
+            UINavigationController()
+        case .proxy:
+            ProxyViewController()
+        case .custom(let proxyingViewController):
+            proxyingViewController
         }
-        
-        return tabBarController
+        super.init()
+        SharedStore.add(self, forKey: String(describing: RootFlowType.self))
+    }
+    
+    // MARK: Override
+    
+    public final override func start() {
+        window?.rootViewController = self.rootViewController
+        window?.makeKeyAndVisible()
+        appCoordinatorDidStart()
+    }
+    
+    // MARK: Open methods
+    
+    /// Do any additional setup by overriding this method.
+    ///
+    /// A good example of using this method is to call some methods needed
+    /// a the very beginning of an app's lifecycle, before next coordinators
+    /// will start, so the app can decide what to do next.
+    open func appCoordinatorDidStart() {
+        return
+    }
+    
+    open func prepareCoordinator(for rootFlow: RootFlowType) -> any AnyCoordinator {
+        fatalError("Please implement \(#function) method for setting up coordinators for app's root flows.")
+    }
+    // MARK: Public methods
+    
+    public final func shouldStartCoordinatedRootFlow(_ rootFlow: RootFlowType,
+                                                     withOptions options: UIView.AnimationOptions? = nil,
+                                                     clearingGlobalDependencies: Bool = false) {
+        childCoordinators.forEach { childCoordinator in
+            childCoordinator.stop()
+        }
+        let newRootCoordinator = prepareCoordinator(for: rootFlow)
+        if clearingGlobalDependencies { GlobalDependencyContainer.clearAll() }
+        addChild(newRootCoordinator)
+        let newRootViewController = newRootCoordinator.rootViewController
+        rootViewController.switchCurrent(to: newRootViewController, withOptions: options)
+    }
+    
+    deinit {
+        print("did deinit app coordinator where shouldn't")
     }
 }

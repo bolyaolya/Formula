@@ -7,47 +7,43 @@
 
 import UIKit
 
-// MARK: - Coordinator
-
-protocol Coordinator: AnyObject {
-    var parentCoordinator: (Coordinator)? { get set }
-    var childCoordinators: [Coordinator] { get set }
+protocol Coordinator {
+    
     var navigationController: UINavigationController { get }
-    
+    func pushViewController(_ viewController: UIViewController)
+    func presentViewController(_ viewController: UIViewController)
+    func showAlert(title: String, message: String)
+    func dismiss()
+    func popViewController()
     func start()
-    func stop()
-    
-    func addChild(_ childCoordinator: Coordinator)
-    func removeChild(_ childCoordinator: Coordinator)
-    
-    func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?)
-    func dismiss(animated flag: Bool, completion: (() -> Void)?)
 }
 
 extension Coordinator {
-    
-    var currentViewController: UIViewController? {
-        return navigationController.topViewController
+    func pushViewController(_ viewController: UIViewController) {
+        navigationController.pushViewController(viewController, animated: true)
     }
     
-    func stop() {
-        parentCoordinator?.removeChild(self)
+    func presentViewController(_ viewController: UIViewController) {
+        let presentedNavigationController = UINavigationController(rootViewController: viewController)
+        navigationController.present(presentedNavigationController, animated: true)
     }
     
-    func addChild(_ childCoordinator: any Coordinator) {
-        childCoordinators.append(childCoordinator)
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(.init(title: "OK", style: .default))
+        navigationController.present(alert, animated: true)
     }
     
-    func removeChild(_ childCoordinator: Coordinator) {
-        childCoordinators.removeAll { $0 === childCoordinator }
+    func dismiss() {
+        navigationController.dismiss(animated: true)
     }
     
-    func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-        navigationController.present(viewControllerToPresent, animated: true, completion: completion)
-    }
-    
-    func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        navigationController.dismiss(animated: flag, completion: completion)
+    func popViewController() {
+        navigationController.popViewController(animated: true)
     }
 }
-
