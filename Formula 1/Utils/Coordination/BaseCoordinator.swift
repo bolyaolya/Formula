@@ -12,13 +12,9 @@ open class BaseCoordinator: Coordinating, DetachedTransitionHandling {
     // MARK: Public properties
     
     public weak var parentCoordinator: Coordinating?
-    
     public private(set) var sharedDependencyContainer: ModuleDependencyContainer?
-    
     public private(set) var dependencyContainer = ModuleDependencyContainer()
-    
     public private(set) var referenceCounter = ReferenceCounter()
-    
     open var detachedReason: Reason.Type?
     
     // MARK: Internal properties
@@ -29,18 +25,15 @@ open class BaseCoordinator: Coordinating, DetachedTransitionHandling {
     
     public init(sharedDependencyContainer: ModuleDependencyContainer? = nil, with preconditionData: [String: Any] = [:]) {
         self.sharedDependencyContainer = sharedDependencyContainer
+        
         preconditionData.isEmpty ? prepareToStart() : prepareToStart(with: preconditionData)
         referenceCounter.listener = self
     }
     
     // MARK: Public methods
     
-    // --- Overridable ---
-    
     /// Override this method to implement custom starting behavior for specific coordinator.
-    open func start() {
-        return
-    }
+    open func start() { return }
     
     /// Is called when **some** precondition data was passed to initializer of this
     /// coordinator.
@@ -64,8 +57,6 @@ open class BaseCoordinator: Coordinating, DetachedTransitionHandling {
         return
     }
     
-    // --- Final ---
-    
     public final func addChild(_ childCoordinator: some Coordinating, shouldStartImmediately: Bool = true) {
         (childCoordinator as? BaseCoordinator)?.parentCoordinator = self
         childCoordinators.append(childCoordinator)
@@ -73,9 +64,7 @@ open class BaseCoordinator: Coordinating, DetachedTransitionHandling {
         didAddChild()
     }
     
-    func didAddChild() {
-        return
-    }
+    func didAddChild() { return }
     
     public final func removeChild(_ childCoordinator: some Coordinating) {
         for (index, coordinator) in childCoordinators.enumerated() {
@@ -87,15 +76,12 @@ open class BaseCoordinator: Coordinating, DetachedTransitionHandling {
         }
     }
     
-    func didRemoveChild() {
-        return
-    }
+    func didRemoveChild() { return }
     
     public func stop() {
         parentCoordinator?.removeChild(self)
         childCoordinators = []
     }
-    
 }
 
 extension BaseCoordinator: ReferenceCounterListening {
@@ -103,5 +89,4 @@ extension BaseCoordinator: ReferenceCounterListening {
     public func onCountDidReachZero() {
         parentCoordinator?.removeChild(self)
     }
-    
 }

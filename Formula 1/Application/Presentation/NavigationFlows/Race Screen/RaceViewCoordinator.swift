@@ -47,10 +47,9 @@ final class RaceViewCoordinator: NavigationCoordinator<RaceViewDestination> {
     }
     
     private func setupTabBarItem() {
-        let profileTabTitle = "Гонка"
-        let profileTabBarItem = UITabBarItem(title: profileTabTitle, image: UIImage.carImage, selectedImage: UIImage.carBoldImage)
-        profileTabBarItem.tag = 0
-        rootViewController.tabBarItem = profileTabBarItem
+        let raceTabBarItem = UITabBarItem(title: "Гонка", image: .carImage, selectedImage: .carBoldImage)
+        raceTabBarItem.tag = 0
+        rootViewController.tabBarItem = raceTabBarItem
     }
 }
 

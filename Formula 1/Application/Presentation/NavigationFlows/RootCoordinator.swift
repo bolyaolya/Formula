@@ -10,31 +10,15 @@ import UIKit
 final class RootCoordinator: TabsCoordinator {
     
     override func prepareToStart(with preconditionData: [String : Any]) {
-        do {
-//            guard let playerUserProfile = preconditionData[PlayerRootPreconditionDataKey.playerUserProfile.rawValue] as? UserProfile else {
-//                throw PlayerRootCoordinatorError.noUserProfileWasPassed
-//            }
-//            guard let player = try DataConverter().convert(playerUserProfile) as? Player else {
-//                throw PlayerRootCoordinatorError.failedToDecodeUserProfile
-//            }
-//            let stateKeeper = PlayerStateKeeper(player: player)
-//            GlobalDependencyContainer.register(type: PlayerStateKeeper.self, stateKeeper)
-//            
-//            let playerRepository = UserRepository(playerUserProfile)
-//            GlobalDependencyContainer.register(type: UserRepository.self, playerRepository)
-        } catch {
-            preconditionFailure("---> \(#function): \(error)")
-            // TODO: Здесь обработать ошибку!! Возможно сделать, чтобы презентовался алерт.
-        }
+        //TODO: добавить подгрузку профиля пользователя
     }
     
     override func start() {
         rootViewController.tabBar.tintColor = .white
         let mainCoordinator = RaceViewCoordinator()
-//        let podiumCoordinator = PlayerCollectionsCoordinator()
-//        let profileCoordinator = PlayerProfileCoordinator()
+        let championshipCoordinator = ChampionshipCoordinator()
         setupTabBarAppearance()
-        setCoordinatedTabs([mainCoordinator])
+        setCoordinatedTabs([mainCoordinator, championshipCoordinator])
     }
     
     private func setupTabBarAppearance() {

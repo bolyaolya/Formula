@@ -33,7 +33,7 @@ extension GlobalDependencyContainer {
     ///
     ///  - Parameter type: a type of a dependency being resolved
     ///
-    ///  - Warning: Attemting to resolve a dependency that was never registered
+    ///  - Warning: Attempting to resolve a dependency that was never registered
     ///  before (as well as if it was previously unregistered) leads to crash.
     public static func resolve<T>(_ type: T.Type) -> T? {
         let key = String(describing: T.self)
@@ -51,7 +51,7 @@ extension GlobalDependencyContainer {
     ///  - Important: Make sure that unregistered dependency will never be
     ///  attempted to resolve again (unless it is re-registered).
     ///
-    ///  - Warning: Attemting to resolve a  previously unregistered dependency
+    ///  - Warning: Attempting to resolve a  previously unregistered dependency
     /// leads to crash.
     public static func unregister<T>(_ type: T.Type) {
         let key = String(describing: T.self)
@@ -64,12 +64,10 @@ extension GlobalDependencyContainer {
     ///  - Important: Make sure that unregistered dependency will never be
     ///  attempted to resolve again (unless it is re-registered).
     ///
-    ///  - Warning: Attemting to resolve a  previously unregistered dependency
+    ///  - Warning: Attempting to resolve a  previously unregistered dependency
     /// leads to crash.
     public static func clearAll() {
         assemblers = [:]
         cache = [:]
     }
-    
-  
 }

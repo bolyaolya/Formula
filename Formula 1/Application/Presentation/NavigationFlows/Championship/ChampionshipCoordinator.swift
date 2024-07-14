@@ -47,10 +47,9 @@ final class ChampionshipCoordinator: NavigationCoordinator<ChampionshipDestinati
     }
     
     private func setupTabBarItem() {
-        let profileTabTitle = "Чемпионат"
-        let profileTabBarItem = UITabBarItem(title: profileTabTitle, image: UIImage.podiumImage, selectedImage: UIImage.podiumBoldImage)
-        profileTabBarItem.tag = 1
-        rootViewController.tabBarItem = profileTabBarItem
+        let champTabBarItem = UITabBarItem(title: "Чемпионат", image: UIImage.podiumImage, selectedImage: UIImage.podiumBoldImage)
+        champTabBarItem.tag = 1
+        rootViewController.tabBarItem = champTabBarItem
     }
 }
 

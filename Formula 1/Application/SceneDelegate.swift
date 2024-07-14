@@ -17,7 +17,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UIApplicationDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        window?.overrideUserInterfaceStyle = .dark
         let appCoordinator = FAppCoordinator(window: window, type: .navigating)
         appCoordinator.start()
        

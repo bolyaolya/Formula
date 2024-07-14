@@ -8,7 +8,6 @@
 import UIKit
 
 protocol Coordinator {
-    
     var navigationController: UINavigationController { get }
     func pushViewController(_ viewController: UIViewController)
     func presentViewController(_ viewController: UIViewController)

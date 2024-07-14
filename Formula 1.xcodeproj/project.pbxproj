@@ -44,6 +44,9 @@
 		74845C8F2C3FF20C00295919 /* ChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C8E2C3FF20C00295919 /* ChampionshipView.swift */; };
 		74845C912C3FF21300295919 /* ChampionshipAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C902C3FF21300295919 /* ChampionshipAssembler.swift */; };
 		74845C932C3FF24700295919 /* ChampionshipCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C922C3FF24700295919 /* ChampionshipCoordinator.swift */; };
+		74845C952C3FF37800295919 /* RaceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C942C3FF37800295919 /* RaceInfoView.swift */; };
+		74845C972C3FFA6800295919 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C962C3FFA6800295919 /* NetworkManager.swift */; };
+		74845C992C3FFD7400295919 /* DependencyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C982C3FFD7400295919 /* DependencyWrapper.swift */; };
 		74914EE62C1878C5001F62E4 /* RaceViewAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74914EE52C1878C5001F62E4 /* RaceViewAssembler.swift */; };
 		749E18FE2BEA8B5A00BE6555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */; };
 		749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */; };
@@ -51,12 +54,29 @@
 		749E190A2BEA8B5D00BE6555 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 749E19092BEA8B5D00BE6555 /* Base */; };
 		749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19122BEA8FD900BE6555 /* AppCoordinator.swift */; };
 		749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19142BEA912B00BE6555 /* Coordinator.swift */; };
+		74C9D7CE2C43B2E7008176E0 /* Seasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7CD2C43B2E7008176E0 /* Seasons.swift */; };
+		74C9D7D02C43B49D008176E0 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7CF2C43B49D008176E0 /* Race.swift */; };
+		74C9D7D22C43C3BB008176E0 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7D12C43C3BB008176E0 /* DateFormatter+Extension.swift */; };
+		74C9D7D62C43CA25008176E0 /* RaceResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7D52C43CA25008176E0 /* RaceResults.swift */; };
+		74C9D7D82C43CA3E008176E0 /* QualifyingResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7D72C43CA3E008176E0 /* QualifyingResults.swift */; };
+		74C9D7DA2C43CA5B008176E0 /* Laps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7D92C43CA5B008176E0 /* Laps.swift */; };
+		74C9D7DC2C43CA6F008176E0 /* Drivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7DB2C43CA6F008176E0 /* Drivers.swift */; };
+		74C9D7DE2C43CA7F008176E0 /* DriverStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7DD2C43CA7F008176E0 /* DriverStandings.swift */; };
+		74C9D7E02C43CA8F008176E0 /* Constructors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7DF2C43CA8F008176E0 /* Constructors.swift */; };
+		74C9D7E22C43CA9D008176E0 /* Circuits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7E12C43CA9D008176E0 /* Circuits.swift */; };
+		74C9D7E42C43CABA008176E0 /* Decodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7E32C43CABA008176E0 /* Decodable+Extension.swift */; };
+		74C9D7E62C43CAD2008176E0 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7E52C43CAD2008176E0 /* URLSession+Extension.swift */; };
+		74C9D7E92C43CB23008176E0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7E82C43CB23008176E0 /* APIError.swift */; };
+		74C9D7EB2C43CB97008176E0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7EA2C43CB97008176E0 /* Endpoint.swift */; };
+		74C9D7ED2C43CBAE008176E0 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7EC2C43CBAE008176E0 /* Path.swift */; };
+		74C9D7EF2C43CBCC008176E0 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7EE2C43CBCC008176E0 /* Season.swift */; };
+		74C9D7F12C43CC18008176E0 /* FinishingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7F02C43CC18008176E0 /* FinishingStatus.swift */; };
+		74C9D7F32C43CC31008176E0 /* PitStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7F22C43CC31008176E0 /* PitStops.swift */; };
 		74DBC3702BF7824300C563E4 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DBC36F2BF7824300C563E4 /* RaceView.swift */; };
 		74DBF2382C10CC9900313693 /* RaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DBF2372C10CC9900313693 /* RaceViewModel.swift */; };
 		74EFB65D2BF66A9800EFD8A1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74EFB65C2BF66A9800EFD8A1 /* Colors.xcassets */; };
 		74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6602BF66B9700EFD8A1 /* UIColor.swift */; };
 		74EFB6632BF66C9500EFD8A1 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6622BF66C9500EFD8A1 /* UIImage.swift */; };
-		74F06F602BF7C8B500834823 /* UpcomingRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F06F5F2BF7C8B500834823 /* UpcomingRace.swift */; };
 		74FDC02F2BFF54970009502E /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC02E2BFF54960009502E /* CountdownView.swift */; };
 		74FDC0312BFF5AFA0009502E /* PracticeTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */; };
 		74FDC0332BFF69440009502E /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0322BFF69440009502E /* PaddedLabel.swift */; };
@@ -101,6 +121,9 @@
 		74845C8E2C3FF20C00295919 /* ChampionshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipView.swift; sourceTree = "<group>"; };
 		74845C902C3FF21300295919 /* ChampionshipAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipAssembler.swift; sourceTree = "<group>"; };
 		74845C922C3FF24700295919 /* ChampionshipCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipCoordinator.swift; sourceTree = "<group>"; };
+		74845C942C3FF37800295919 /* RaceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceInfoView.swift; sourceTree = "<group>"; };
+		74845C962C3FFA6800295919 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		74845C982C3FFD7400295919 /* DependencyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyWrapper.swift; sourceTree = "<group>"; };
 		74914EE52C1878C5001F62E4 /* RaceViewAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewAssembler.swift; sourceTree = "<group>"; };
 		749E18FA2BEA8B5A00BE6555 /* Formula 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Formula 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,12 +133,29 @@
 		749E190B2BEA8B5D00BE6555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		749E19122BEA8FD900BE6555 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		749E19142BEA912B00BE6555 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		74C9D7CD2C43B2E7008176E0 /* Seasons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seasons.swift; sourceTree = "<group>"; };
+		74C9D7CF2C43B49D008176E0 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		74C9D7D12C43C3BB008176E0 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		74C9D7D52C43CA25008176E0 /* RaceResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResults.swift; sourceTree = "<group>"; };
+		74C9D7D72C43CA3E008176E0 /* QualifyingResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualifyingResults.swift; sourceTree = "<group>"; };
+		74C9D7D92C43CA5B008176E0 /* Laps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laps.swift; sourceTree = "<group>"; };
+		74C9D7DB2C43CA6F008176E0 /* Drivers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drivers.swift; sourceTree = "<group>"; };
+		74C9D7DD2C43CA7F008176E0 /* DriverStandings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverStandings.swift; sourceTree = "<group>"; };
+		74C9D7DF2C43CA8F008176E0 /* Constructors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructors.swift; sourceTree = "<group>"; };
+		74C9D7E12C43CA9D008176E0 /* Circuits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circuits.swift; sourceTree = "<group>"; };
+		74C9D7E32C43CABA008176E0 /* Decodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Extension.swift"; sourceTree = "<group>"; };
+		74C9D7E52C43CAD2008176E0 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
+		74C9D7E82C43CB23008176E0 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		74C9D7EA2C43CB97008176E0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		74C9D7EC2C43CBAE008176E0 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		74C9D7EE2C43CBCC008176E0 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		74C9D7F02C43CC18008176E0 /* FinishingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishingStatus.swift; sourceTree = "<group>"; };
+		74C9D7F22C43CC31008176E0 /* PitStops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitStops.swift; sourceTree = "<group>"; };
 		74DBC36F2BF7824300C563E4 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		74DBF2372C10CC9900313693 /* RaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewModel.swift; sourceTree = "<group>"; };
 		74EFB65C2BF66A9800EFD8A1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		74EFB6602BF66B9700EFD8A1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		74EFB6622BF66C9500EFD8A1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		74F06F5F2BF7C8B500834823 /* UpcomingRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingRace.swift; sourceTree = "<group>"; };
 		74FDC02E2BFF54960009502E /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimetable.swift; sourceTree = "<group>"; };
 		74FDC0322BFF69440009502E /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
@@ -174,13 +214,6 @@
 				74FDC0362BFF6F8F0009502E /* Subviews */,
 			);
 			path = "Race Screen";
-			sourceTree = "<group>";
-		};
-		74845C3D2C3FD55F00295919 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		74845C3E2C3FD56E00295919 /* Coordination */ = {
@@ -253,6 +286,7 @@
 			children = (
 				74845C6A2C3FD98C00295919 /* ModuleDependencyContainer.swift */,
 				74845C782C3FDE5600295919 /* GlobalDependencyContainer.swift */,
+				74845C982C3FFD7400295919 /* DependencyWrapper.swift */,
 			);
 			path = DependencyHandling;
 			sourceTree = "<group>";
@@ -287,7 +321,12 @@
 		74845C892C3FEFCC00295919 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				74C9D7E72C43CB03008176E0 /* Helpers */,
 				74845C8A2C3FEFDD00295919 /* FCustomHostingController.swift */,
+				74C9D7E82C43CB23008176E0 /* APIError.swift */,
+				74C9D7EA2C43CB97008176E0 /* Endpoint.swift */,
+				74C9D7EC2C43CBAE008176E0 /* Path.swift */,
+				74C9D7EE2C43CBCC008176E0 /* Season.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -311,10 +350,8 @@
 		749E18FC2BEA8B5A00BE6555 /* Formula 1 */ = {
 			isa = PBXGroup;
 			children = (
-				74845C3D2C3FD55F00295919 /* New Group */,
 				749E19112BEA8FBD00BE6555 /* Application */,
 				74F06F5E2BF7C8A400834823 /* Data */,
-				742B88A82BF3BFE500A1E496 /* Presentation */,
 				74EFB65E2BF66AE800EFD8A1 /* Resources */,
 				74EFB65F2BF66B5900EFD8A1 /* Utils */,
 				749E19082BEA8B5D00BE6555 /* LaunchScreen.storyboard */,
@@ -329,8 +366,19 @@
 				742B88A32BF3BA3500A1E496 /* Coordinators */,
 				749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */,
 				749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */,
+				742B88A82BF3BFE500A1E496 /* Presentation */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		74C9D7E72C43CB03008176E0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				74C9D7E32C43CABA008176E0 /* Decodable+Extension.swift */,
+				74C9D7D12C43C3BB008176E0 /* DateFormatter+Extension.swift */,
+				74C9D7E52C43CAD2008176E0 /* URLSession+Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		74DBC36E2BF7817500C563E4 /* Calendar */ = {
@@ -363,8 +411,19 @@
 		74F06F5E2BF7C8A400834823 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				74F06F5F2BF7C8B500834823 /* UpcomingRace.swift */,
 				74845C802C3FDF6200295919 /* AuthenticationUseCase.swift */,
+				74845C962C3FFA6800295919 /* NetworkManager.swift */,
+				74C9D7CD2C43B2E7008176E0 /* Seasons.swift */,
+				74C9D7CF2C43B49D008176E0 /* Race.swift */,
+				74C9D7D52C43CA25008176E0 /* RaceResults.swift */,
+				74C9D7D72C43CA3E008176E0 /* QualifyingResults.swift */,
+				74C9D7D92C43CA5B008176E0 /* Laps.swift */,
+				74C9D7DB2C43CA6F008176E0 /* Drivers.swift */,
+				74C9D7DD2C43CA7F008176E0 /* DriverStandings.swift */,
+				74C9D7DF2C43CA8F008176E0 /* Constructors.swift */,
+				74C9D7E12C43CA9D008176E0 /* Circuits.swift */,
+				74C9D7F02C43CC18008176E0 /* FinishingStatus.swift */,
+				74C9D7F22C43CC31008176E0 /* PitStops.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -375,6 +434,7 @@
 				74FDC02E2BFF54960009502E /* CountdownView.swift */,
 				74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */,
 				74FDC0342BFF6D590009502E /* RaceTimetable.swift */,
+				74845C942C3FF37800295919 /* RaceInfoView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -454,10 +514,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74C9D7DE2C43CA7F008176E0 /* DriverStandings.swift in Sources */,
 				74845C852C3FE58E00295919 /* TabsCoordinator.swift in Sources */,
-				74F06F602BF7C8B500834823 /* UpcomingRace.swift in Sources */,
 				74845C4B2C3FD63B00295919 /* Coordinating.swift in Sources */,
 				74845C592C3FD82700295919 /* DetachedTransitionHandling.swift in Sources */,
+				74C9D7DC2C43CA6F008176E0 /* Drivers.swift in Sources */,
 				74845C572C3FD80C00295919 /* Routing.swift in Sources */,
 				74845C932C3FF24700295919 /* ChampionshipCoordinator.swift in Sources */,
 				74845C8D2C3FF20700295919 /* ChampionshipViewModel.swift in Sources */,
@@ -466,8 +527,12 @@
 				74845C6D2C3FDAC100295919 /* ReferenceCounted.swift in Sources */,
 				74845C882C3FE8A500295919 /* UINavigationController+Proxying.swift in Sources */,
 				74845C832C3FE12000295919 /* RootCoordinator.swift in Sources */,
+				74C9D7F12C43CC18008176E0 /* FinishingStatus.swift in Sources */,
+				74845C992C3FFD7400295919 /* DependencyWrapper.swift in Sources */,
 				74FDC02F2BFF54970009502E /* CountdownView.swift in Sources */,
+				74C9D7E42C43CABA008176E0 /* Decodable+Extension.swift in Sources */,
 				74845C7F2C3FDF3B00295919 /* AuthenticationCoordinator.swift in Sources */,
+				74C9D7E22C43CA9D008176E0 /* Circuits.swift in Sources */,
 				74845C622C3FD8BB00295919 /* NavigationType.swift in Sources */,
 				74845C422C3FD5A800295919 /* Unowned.swift in Sources */,
 				74845C6F2C3FDD2A00295919 /* FAppCoordinator.swift in Sources */,
@@ -476,34 +541,49 @@
 				74845C472C3FD60300295919 /* Router.swift in Sources */,
 				74845C642C3FD90900295919 /* RaceViewCoordinator.swift in Sources */,
 				74845C6B2C3FD98C00295919 /* ModuleDependencyContainer.swift in Sources */,
+				74C9D7F32C43CC31008176E0 /* PitStops.swift in Sources */,
 				74845C5B2C3FD84500295919 /* DetachedContext.swift in Sources */,
 				74845C8F2C3FF20C00295919 /* ChampionshipView.swift in Sources */,
+				74C9D7DA2C43CA5B008176E0 /* Laps.swift in Sources */,
+				74C9D7D22C43C3BB008176E0 /* DateFormatter+Extension.swift in Sources */,
 				74FDC0312BFF5AFA0009502E /* PracticeTimetable.swift in Sources */,
 				74845C792C3FDE5600295919 /* GlobalDependencyContainer.swift in Sources */,
+				74C9D7CE2C43B2E7008176E0 /* Seasons.swift in Sources */,
 				74845C812C3FDF6200295919 /* AuthenticationUseCase.swift in Sources */,
+				74C9D7ED2C43CBAE008176E0 /* Path.swift in Sources */,
 				74845C512C3FD68700295919 /* ReferenceCounterListening.swift in Sources */,
 				74FDC0352BFF6D590009502E /* RaceTimetable.swift in Sources */,
+				74C9D7E62C43CAD2008176E0 /* URLSession+Extension.swift in Sources */,
 				74845C752C3FDE0F00295919 /* ProxyViewController.swift in Sources */,
 				74EFB6632BF66C9500EFD8A1 /* UIImage.swift in Sources */,
 				74845C772C3FDE2200295919 /* ProxyingViewController.swift in Sources */,
 				74845C492C3FD62400295919 /* ViewControlling.swift in Sources */,
+				74C9D7D82C43CA3E008176E0 /* QualifyingResults.swift in Sources */,
 				74845C732C3FDDB800295919 /* SharedStore.swift in Sources */,
+				74845C972C3FFA6800295919 /* NetworkManager.swift in Sources */,
 				74914EE62C1878C5001F62E4 /* RaceViewAssembler.swift in Sources */,
 				74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */,
 				74845C532C3FD7BB00295919 /* ReferenceCounter.swift in Sources */,
 				74845C682C3FD95E00295919 /* BaseCoordinator.swift in Sources */,
 				74845C5F2C3FD89700295919 /* NavigationTransition.swift in Sources */,
+				74C9D7E02C43CA8F008176E0 /* Constructors.swift in Sources */,
 				74845C5D2C3FD85D00295919 /* Reason.swift in Sources */,
 				749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */,
 				74DBC3702BF7824300C563E4 /* RaceView.swift in Sources */,
+				74C9D7D02C43B49D008176E0 /* Race.swift in Sources */,
 				74845C552C3FD7D600295919 /* ReferenceOperatable.swift in Sources */,
+				74C9D7D62C43CA25008176E0 /* RaceResults.swift in Sources */,
+				74845C952C3FF37800295919 /* RaceInfoView.swift in Sources */,
 				749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */,
+				74C9D7E92C43CB23008176E0 /* APIError.swift in Sources */,
 				74845C8B2C3FEFDD00295919 /* FCustomHostingController.swift in Sources */,
+				74C9D7EF2C43CBCC008176E0 /* Season.swift in Sources */,
 				74845C452C3FD5E800295919 /* Destination.swift in Sources */,
 				74845C912C3FF21300295919 /* ChampionshipAssembler.swift in Sources */,
 				749E18FE2BEA8B5A00BE6555 /* AppDelegate.swift in Sources */,
 				74845C712C3FDD9E00295919 /* RootFlow.swift in Sources */,
 				749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */,
+				74C9D7EB2C43CB97008176E0 /* Endpoint.swift in Sources */,
 				74845C402C3FD58400295919 /* UnownedRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
