@@ -15,9 +15,9 @@ struct CountdownView: View {
     
     var body: some View {
         HStack(spacing: 30) {
-            TimeView(imageName: "timeSquare", count: days, label: "дней")
-            TimeView(imageName: "timeSquare", count: hours, label: "часов")
-            TimeView(imageName: "timeSquare", count: minutes, label: "минут")
+            TimeView(imageName: "timeSquare", count: days, labelKey: "daysTillRace")
+            TimeView(imageName: "timeSquare", count: hours, labelKey: "hoursTillRace")
+            TimeView(imageName: "timeSquare", count: minutes, labelKey: "minutesTillRace")
         }
         .frame(height: 90)
         .padding(.top, 18)
@@ -28,7 +28,7 @@ struct CountdownView: View {
 struct TimeView: View {
     var imageName: String
     var count: Int
-    var label: String
+    var labelKey: String
     
     var body: some View {
         VStack {
@@ -41,7 +41,7 @@ struct TimeView: View {
                         .foregroundColor(.white)
                         .font(.system(size: 30, weight: .bold))
                 )
-            Text(label)
+            Text(LocalizationHelper().localizedStringForKey(labelKey, count: count))
                 .foregroundColor(.white)
                 .font(.system(size: 16, weight: .light))
                 .padding(.top, 4)

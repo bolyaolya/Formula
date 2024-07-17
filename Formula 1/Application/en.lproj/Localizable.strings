@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  Formula 1
+
+  Created by Olya Boyko on 17.07.2024.
+  
+*/
+
+// Формы для "дней"
+"daysTillRace_0" = "дней";
+"daysTillRace_1" = "день";
+"daysTillRace_2" = "дня";
+"daysTillRace_3" = "дня";
+"daysTillRace_4" = "дня";
+"daysTillRace_5" = "дней";
+"daysTillRace_many" = "дней";
+
+// Формы для "часов"
+"hoursTillRace_0" = "часов";
+"hoursTillRace_1" = "час";
+"hoursTillRace_2" = "часа";
+"hoursTillRace_3" = "часа";
+"hoursTillRace_4" = "часа";
+"hoursTillRace_5" = "часов";
+"hoursTillRace_many" = "часов";
+
+// Формы для "минут"
+"minutesTillRace_0" = "минут";
+"minutesTillRace_1" = "минута";
+"minutesTillRace_2" = "минуты";
+"minutesTillRace_3" = "минуты";
+"minutesTillRace_4" = "минуты";
+"minutesTillRace_5" = "минут";
+"minutesTillRace_many" = "минут";

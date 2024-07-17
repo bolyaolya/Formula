@@ -56,6 +56,9 @@
 		749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E19142BEA912B00BE6555 /* Coordinator.swift */; };
 		749FB1732C47DDF800FCBC8E /* CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749FB1722C47DDF800FCBC8E /* CoreLocation.swift */; };
 		749FB1752C47FBDF00FCBC8E /* TimeZoneInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749FB1742C47FBDF00FCBC8E /* TimeZoneInfo.swift */; };
+		749FB1772C4818DD00FCBC8E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749FB1762C4818DD00FCBC8E /* Date+Extension.swift */; };
+		749FB17F2C4829E000FCBC8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 749FB17D2C4829E000FCBC8E /* Localizable.strings */; };
+		749FB1842C482C1600FCBC8E /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749FB1832C482C1600FCBC8E /* LocalizationHelper.swift */; };
 		74A4408D2C46A5FC00A7E416 /* RaceLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A4408C2C46A5FC00A7E416 /* RaceLocalization.swift */; };
 		74A4408F2C46AA2600A7E416 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A4408E2C46AA2600A7E416 /* CustomDivider.swift */; };
 		74A440942C46B68400A7E416 /* CountryFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A440932C46B68400A7E416 /* CountryFlags.swift */; };
@@ -140,6 +143,9 @@
 		749E19142BEA912B00BE6555 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		749FB1722C47DDF800FCBC8E /* CoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocation.swift; sourceTree = "<group>"; };
 		749FB1742C47FBDF00FCBC8E /* TimeZoneInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneInfo.swift; sourceTree = "<group>"; };
+		749FB1762C4818DD00FCBC8E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		749FB17E2C4829E000FCBC8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		749FB1832C482C1600FCBC8E /* LocalizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
 		74A4408C2C46A5FC00A7E416 /* RaceLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceLocalization.swift; sourceTree = "<group>"; };
 		74A4408E2C46AA2600A7E416 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
 		74A440932C46B68400A7E416 /* CountryFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlags.swift; sourceTree = "<group>"; };
@@ -378,6 +384,7 @@
 				749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */,
 				749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */,
 				742B88A82BF3BFE500A1E496 /* Presentation */,
+				749FB17D2C4829E000FCBC8E /* Localizable.strings */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -390,6 +397,8 @@
 				74C9D7E52C43CAD2008176E0 /* URLSession+Extension.swift */,
 				74A4408C2C46A5FC00A7E416 /* RaceLocalization.swift */,
 				74A440932C46B68400A7E416 /* CountryFlags.swift */,
+				749FB1762C4818DD00FCBC8E /* Date+Extension.swift */,
+				749FB1832C482C1600FCBC8E /* LocalizationHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -516,6 +525,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				749FB17F2C4829E000FCBC8E /* Localizable.strings in Resources */,
 				74EFB65D2BF66A9800EFD8A1 /* Colors.xcassets in Resources */,
 				749E19072BEA8B5D00BE6555 /* Assets.xcassets in Resources */,
 				749E190A2BEA8B5D00BE6555 /* Base in Resources */,
@@ -555,6 +565,7 @@
 				74A4408F2C46AA2600A7E416 /* CustomDivider.swift in Sources */,
 				74845C4E2C3FD66400295919 /* ReferenceCounting.swift in Sources */,
 				74DBF2382C10CC9900313693 /* RaceViewModel.swift in Sources */,
+				749FB1842C482C1600FCBC8E /* LocalizationHelper.swift in Sources */,
 				74845C472C3FD60300295919 /* Router.swift in Sources */,
 				74845C642C3FD90900295919 /* RaceViewCoordinator.swift in Sources */,
 				74845C6B2C3FD98C00295919 /* ModuleDependencyContainer.swift in Sources */,
@@ -596,6 +607,7 @@
 				749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */,
 				74A4408D2C46A5FC00A7E416 /* RaceLocalization.swift in Sources */,
 				74C9D7E92C43CB23008176E0 /* APIError.swift in Sources */,
+				749FB1772C4818DD00FCBC8E /* Date+Extension.swift in Sources */,
 				74845C8B2C3FEFDD00295919 /* FCustomHostingController.swift in Sources */,
 				74C9D7EF2C43CBCC008176E0 /* Season.swift in Sources */,
 				74845C452C3FD5E800295919 /* Destination.swift in Sources */,
@@ -617,6 +629,14 @@
 				749E19092BEA8B5D00BE6555 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		749FB17D2C4829E000FCBC8E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				749FB17E2C4829E000FCBC8E /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

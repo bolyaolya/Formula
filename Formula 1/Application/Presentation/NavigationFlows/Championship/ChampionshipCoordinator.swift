@@ -28,9 +28,9 @@ final class ChampionshipCoordinator: NavigationCoordinator<ChampionshipDestinati
     
     private func setupNavBarAppearance() {
         let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.backgroundColor = .greyColor
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.configureWithTransparentBackground()
         
         let backButtonAppearance = UIBarButtonItemAppearance()
         backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]

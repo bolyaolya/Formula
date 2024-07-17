@@ -18,9 +18,15 @@ protocol RaceViewModel: ObservableObject {
     var daysLeft: Int { get set }
     var hoursLeft: Int { get set }
     var minutesLeft: Int { get set }
+    
+    func calculateTimeUntilRaceStart()
+    func fetchNextRaceWeekend()
 }
 
-extension RaceViewModel { }
+extension RaceViewModel {
+    func calculateTimeUntilRaceStart() {}
+    func fetchNextRaceWeekend() {}
+}
 
 // MARK: - RaceViewModel implementation
 
@@ -38,6 +44,11 @@ final class IRaceViewModel: RaceViewModel {
     @Published var minutesLeft: Int = 0
     
     // MARK: Private properties
+    
+    private var race: Race?
+    private var raceTimeZone: TimeZone?
+    
+    private var timer: Timer?
     
     // MARK: Init
     
@@ -61,6 +72,7 @@ final class IRaceViewModel: RaceViewModel {
                     print("No upcoming races found for the current year.")
                     return
                 }
+                self.race = race
                 
                 await updateRaceDetails(from: race)
                 
@@ -72,13 +84,30 @@ final class IRaceViewModel: RaceViewModel {
                         print("Failed to get time zone for race location.")
                         return
                     }
-                    self.calculateTimeUntilRaceStart(for: race, userTimeZone: timeZone)
+                    self.raceTimeZone = timeZone
+                    
+                    self.startTimer()
                 }
                 
             } catch {
                 print("Failed to fetch race schedule: \(error.localizedDescription)")
             }
         }
+    }
+    
+    private func startTimer() {
+        guard let race = race, let raceTimeZone = raceTimeZone else {
+            print("Race or race time zone not set.")
+            return
+        }
+        
+        self.timer?.invalidate()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            self.calculateTimeUntilRaceStart()
+        }
+        timer?.fire()
     }
     
     private func updateRaceDetails(from race: Race) async {
@@ -154,25 +183,34 @@ final class IRaceViewModel: RaceViewModel {
         }.resume()
     }
     
-    private func calculateTimeUntilRaceStart(for race: Race, userTimeZone: TimeZone) {
+    func calculateTimeUntilRaceStart() {
+        guard let race = race, let raceTimeZone = raceTimeZone else {
+            print("Race or race time zone not set.")
+            return
+        }
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        dateFormatter.timeZone = userTimeZone
+        dateFormatter.timeZone = raceTimeZone
         
         guard let raceDate = dateFormatter.date(from: "\(race.date)T\(race.time)") else {
             print("Failed to parse race start date.")
             return
         }
         
+        let currentUserTimeZone = TimeZone.current
         let currentDate = Date()
         
-        guard raceDate > currentDate else {
+        let raceDateInCurrentUserTimeZone = raceDate.convertToTimeZone(initialTimeZone: raceTimeZone,
+                                                                       to: currentUserTimeZone)
+        
+        guard raceDateInCurrentUserTimeZone > currentDate else {
             print("Race already started or start time is in the past.")
             return
         }
         
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.day, .hour, .minute], from: currentDate, to: raceDate)
+        let components = calendar.dateComponents([.day, .hour, .minute], from: currentDate, to: raceDateInCurrentUserTimeZone)
         
         guard let days = components.day,
               let hours = components.hour,

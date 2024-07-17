@@ -10,6 +10,7 @@ import SwiftUI
 struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
     
     @StateObject var viewModel: ViewModel
+    @State private var timer: Timer?
     
     var body: some View {
         ZStack {
@@ -23,17 +24,26 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
                                  raceName: viewModel.raceName, 
                                  countryFlag: viewModel.countryFlag)
                     
-                    CountdownView(days: viewModel.daysLeft, hours: viewModel.hoursLeft, minutes: viewModel.minutesLeft)
+                    CountdownView(days: viewModel.daysLeft, 
+                                  hours: viewModel.hoursLeft,
+                                  minutes: viewModel.minutesLeft)
                     
                     PracticeTimetable()
                     
+//                   TODO: SprintTimetable()
+                    
                     RaceTimetable()
                 }
-                
             }
             .clipped()
             .onAppear {
-                //viewModel.fetch()
+                viewModel.fetchNextRaceWeekend()
+            }
+            .onDisappear {
+                timer?.invalidate()
+            }
+            .onReceive(Timer.publish(every: 60, on: .main, in: .common).autoconnect()) { _ in
+                viewModel.calculateTimeUntilRaceStart()
             }
         }
     }
