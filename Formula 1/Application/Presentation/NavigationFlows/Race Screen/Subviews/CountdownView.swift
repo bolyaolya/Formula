@@ -9,11 +9,15 @@ import SwiftUI
 
 struct CountdownView: View {
     
+    var days: Int
+    var hours: Int
+    var minutes: Int
+    
     var body: some View {
         HStack(spacing: 30) {
-            TimeView(imageName: "timeSquare", count: "00", label: "дней")
-            TimeView(imageName: "timeSquare", count: "00", label: "часов")
-            TimeView(imageName: "timeSquare", count: "00", label: "минут")
+            TimeView(imageName: "timeSquare", count: days, label: "дней")
+            TimeView(imageName: "timeSquare", count: hours, label: "часов")
+            TimeView(imageName: "timeSquare", count: minutes, label: "минут")
         }
         .frame(height: 90)
         .padding(.top, 18)
@@ -23,7 +27,7 @@ struct CountdownView: View {
 
 struct TimeView: View {
     var imageName: String
-    var count: String
+    var count: Int
     var label: String
     
     var body: some View {
@@ -33,7 +37,7 @@ struct TimeView: View {
                 .scaledToFill()
                 .frame(width: 65, height: 65)
                 .overlay(
-                    Text(count)
+                    Text("\(count)")
                         .foregroundColor(.white)
                         .font(.system(size: 30, weight: .bold))
                 )
@@ -42,13 +46,5 @@ struct TimeView: View {
                 .font(.system(size: 16, weight: .light))
                 .padding(.top, 4)
         }
-    }
-}
-
-struct CountdownView_Previews: PreviewProvider {
-    static var previews: some View {
-        CountdownView()
-            .background(Color.black)
-            .previewLayout(.sizeThatFits)
     }
 }

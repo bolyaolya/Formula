@@ -19,9 +19,11 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
             ScrollView(.vertical) {
                 VStack(spacing: 17) {
                     
-                    RaceInfoView(date: "\(viewModel.dateStart) - \(viewModel.dateEnd)")
+                    RaceInfoView(date: "\(viewModel.dateStart) - \(viewModel.dateEnd)", 
+                                 raceName: viewModel.raceName, 
+                                 countryFlag: viewModel.countryFlag)
                     
-                    CountdownView()
+                    CountdownView(days: viewModel.daysLeft, hours: viewModel.hoursLeft, minutes: viewModel.minutesLeft)
                     
                     PracticeTimetable()
                     
