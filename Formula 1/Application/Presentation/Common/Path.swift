@@ -8,7 +8,7 @@
 import Foundation
 
 enum Path {
-    private static let basePath = "/api/f1"
+    private static let basePath = "/ergast/f1"
     
     /// Circuits (all, specific season)
     case circuits
@@ -51,7 +51,7 @@ enum Path {
 }
 
 extension Path {
-    /// Function that generates the path for an endpoint within the Ergast API.
+    /// Function that generates the path for an endpoint within the API.
     /// - Parameter season: Season enum case, specified by an Int, which indicates to fetch data for a given year (1950-2020).  Data for historical seasons will be fetched if nil.
     /// - Returns: String to be added to the Endpoint path.
     private func subPath(for season: Season? = nil, round: String? = nil) -> String {

@@ -8,16 +8,25 @@
 import SwiftUI
 
 struct RaceTimetable: View {
+    
+    var qualyDate: String
+    var raceDate: String
+    
+    var qualyTime: String
+    var raceTime: String
+    
+    var dateExt = Date()
+    
     var body: some View {
         VStack(spacing: 15) {
-            RaceSessionView(sessionName: "Квалификация", day: "Сб", time: "16:00 - 17:00")
-            RaceSessionView(sessionName: "Гонка", day: "Вс", time: "15:00")
+            RaceSessionView(sessionName: "Квалификация", day: dateExt.dayOfWeek(for: qualyDate), time: qualyTime)
+            RaceSessionView(sessionName: "Гонка", day: dateExt.dayOfWeek(for: raceDate), time: raceTime)
         }
         .padding(10)
         .background(Color.bubbleBackground)
         .cornerRadius(16)
-        .padding(.horizontal, 25)
-        .padding(.vertical, 26)
+        .padding(.horizontal, 15)
+        .padding(.vertical, 18)
     }
 }
 
@@ -31,13 +40,14 @@ struct RaceSessionView: View {
             Text(sessionName)
                 .foregroundColor(.white)
                 .font(.system(size: 18, weight: .regular))
-                .padding(.leading, 16)
+                .padding(.leading, 10)
             
             Spacer()
             
             Text(day)
                 .foregroundColor(.white.opacity(0.8))
-                .font(.system(size: 17, weight: .light))
+                .font(.system(size: 16, weight: .light))
+                .padding(.trailing, 25)
             
             Text(time)
                 .foregroundColor(.white)
@@ -48,13 +58,5 @@ struct RaceSessionView: View {
                 .cornerRadius(10)
                 .padding(.trailing, 10)
         }
-    }
-}
-
-struct RaceTimetable_Previews: PreviewProvider {
-    static var previews: some View {
-        RaceTimetable()
-            .background(Color.black)
-            .previewLayout(.sizeThatFits)
     }
 }

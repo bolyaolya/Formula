@@ -9,18 +9,28 @@ import SwiftUI
 
 struct PracticeTimetable: View {
     
+    var firstPracticeDate: String
+    var secondPracticeDate: String?
+    var thirdPracticeDate: String?
+    
+    var firstPracticeTime: String
+    var secondPracticeTime: String?
+    var thirdPracticeTime: String?
+    
+    var dateExt = Date()
+    
     var body: some View {
         VStack(spacing: 15) {
-            PracticeView(label: "1-я практика", day: "Пт", time: "13:30 - 14:30")
-            PracticeView(label: "2-я практика", day: "Пт", time: "17:00 - 18:00")
-            PracticeView(label: "3-я практика", day: "Сб", time: "12:30 - 13:30")
+            PracticeView(label: "1-я практика", day: dateExt.dayOfWeek(for: firstPracticeDate), time: firstPracticeTime)
+            PracticeView(label: "2-я практика", day: dateExt.dayOfWeek(for: secondPracticeDate ?? " - "), time: secondPracticeTime ?? " - ")
+            PracticeView(label: "3-я практика", day: dateExt.dayOfWeek(for: thirdPracticeDate ?? " - "), time: thirdPracticeTime ?? " - ")
         }
         .padding(10)
         .background(Color.bubbleBackground)
         .cornerRadius(16)
-        .padding(.horizontal, 25)
+        .padding(.horizontal, 15)
         .frame(height: 145)
-        .padding(.top, 30)
+        .padding(.top, 20)
     }
 }
 
@@ -34,13 +44,14 @@ struct PracticeView: View {
             Text(label)
                 .foregroundColor(.white)
                 .font(.system(size: 18, weight: .regular))
-                .padding(.leading, 16)
+                .padding(.leading, 10)
             
             Spacer()
             
             Text(day)
                 .foregroundColor(.white.opacity(0.8))
-                .font(.system(size: 17, weight: .light))
+                .font(.system(size: 16, weight: .light))
+                .padding(.trailing, 25)
             
             Text(time)
                 .foregroundColor(.white)
@@ -51,13 +62,5 @@ struct PracticeView: View {
                 .cornerRadius(10)
                 .padding(.trailing, 10)
         }
-    }
-}
-
-struct PracticeTimetable_Previews: PreviewProvider {
-    static var previews: some View {
-        PracticeTimetable()
-            .background(Color.black)
-            .previewLayout(.sizeThatFits)
     }
 }

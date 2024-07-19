@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74312F822C4A5C6400988322 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F812C4A5C6400988322 /* ActivityIndicator.swift */; };
 		74845C402C3FD58400295919 /* UnownedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C3F2C3FD58400295919 /* UnownedRouter.swift */; };
 		74845C422C3FD5A800295919 /* Unowned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C412C3FD5A800295919 /* Unowned.swift */; };
 		74845C452C3FD5E800295919 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C442C3FD5E800295919 /* Destination.swift */; };
@@ -39,7 +40,6 @@
 		74845C832C3FE12000295919 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C822C3FE12000295919 /* RootCoordinator.swift */; };
 		74845C852C3FE58E00295919 /* TabsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C842C3FE58E00295919 /* TabsCoordinator.swift */; };
 		74845C882C3FE8A500295919 /* UINavigationController+Proxying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C872C3FE8A500295919 /* UINavigationController+Proxying.swift */; };
-		74845C8B2C3FEFDD00295919 /* FCustomHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C8A2C3FEFDD00295919 /* FCustomHostingController.swift */; };
 		74845C8D2C3FF20700295919 /* ChampionshipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C8C2C3FF20700295919 /* ChampionshipViewModel.swift */; };
 		74845C8F2C3FF20C00295919 /* ChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C8E2C3FF20C00295919 /* ChampionshipView.swift */; };
 		74845C912C3FF21300295919 /* ChampionshipAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C902C3FF21300295919 /* ChampionshipAssembler.swift */; };
@@ -47,6 +47,11 @@
 		74845C952C3FF37800295919 /* RaceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C942C3FF37800295919 /* RaceInfoView.swift */; };
 		74845C972C3FFA6800295919 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C962C3FFA6800295919 /* NetworkManager.swift */; };
 		74845C992C3FFD7400295919 /* DependencyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C982C3FFD7400295919 /* DependencyWrapper.swift */; };
+		74861E3C2C49748F00E13493 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74861E3B2C49748F00E13493 /* UIImage+Extension.swift */; };
+		74861E3E2C49763B00E13493 /* DimmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74861E3D2C49763B00E13493 /* DimmingViewController.swift */; };
+		74861E402C49768100E13493 /* HostedViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74861E3F2C49768100E13493 /* HostedViewConfiguration.swift */; };
+		74861E422C4976A600E13493 /* CustomHostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74861E412C4976A600E13493 /* CustomHostingViewController.swift */; };
+		74861E452C49772F00E13493 /* LoadingDimmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74861E442C49772F00E13493 /* LoadingDimmingViewController.swift */; };
 		74914EE62C1878C5001F62E4 /* RaceViewAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74914EE52C1878C5001F62E4 /* RaceViewAssembler.swift */; };
 		749E18FE2BEA8B5A00BE6555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */; };
 		749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E18FF2BEA8B5A00BE6555 /* SceneDelegate.swift */; };
@@ -82,6 +87,7 @@
 		74C9D7F32C43CC31008176E0 /* PitStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7F22C43CC31008176E0 /* PitStops.swift */; };
 		74DBC3702BF7824300C563E4 /* RaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DBC36F2BF7824300C563E4 /* RaceView.swift */; };
 		74DBF2382C10CC9900313693 /* RaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DBF2372C10CC9900313693 /* RaceViewModel.swift */; };
+		74E9BA042C492D2D00040112 /* TimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E9BA032C492D2D00040112 /* TimeConverter.swift */; };
 		74EFB65D2BF66A9800EFD8A1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74EFB65C2BF66A9800EFD8A1 /* Colors.xcassets */; };
 		74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6602BF66B9700EFD8A1 /* UIColor.swift */; };
 		74EFB6632BF66C9500EFD8A1 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6622BF66C9500EFD8A1 /* UIImage.swift */; };
@@ -92,6 +98,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74312F812C4A5C6400988322 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		74845C3F2C3FD58400295919 /* UnownedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnownedRouter.swift; sourceTree = "<group>"; };
 		74845C412C3FD5A800295919 /* Unowned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unowned.swift; sourceTree = "<group>"; };
 		74845C442C3FD5E800295919 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
@@ -124,7 +131,6 @@
 		74845C822C3FE12000295919 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		74845C842C3FE58E00295919 /* TabsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsCoordinator.swift; sourceTree = "<group>"; };
 		74845C872C3FE8A500295919 /* UINavigationController+Proxying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Proxying.swift"; sourceTree = "<group>"; };
-		74845C8A2C3FEFDD00295919 /* FCustomHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCustomHostingController.swift; sourceTree = "<group>"; };
 		74845C8C2C3FF20700295919 /* ChampionshipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipViewModel.swift; sourceTree = "<group>"; };
 		74845C8E2C3FF20C00295919 /* ChampionshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipView.swift; sourceTree = "<group>"; };
 		74845C902C3FF21300295919 /* ChampionshipAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipAssembler.swift; sourceTree = "<group>"; };
@@ -132,6 +138,11 @@
 		74845C942C3FF37800295919 /* RaceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceInfoView.swift; sourceTree = "<group>"; };
 		74845C962C3FFA6800295919 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		74845C982C3FFD7400295919 /* DependencyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyWrapper.swift; sourceTree = "<group>"; };
+		74861E3B2C49748F00E13493 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		74861E3D2C49763B00E13493 /* DimmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingViewController.swift; sourceTree = "<group>"; };
+		74861E3F2C49768100E13493 /* HostedViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedViewConfiguration.swift; sourceTree = "<group>"; };
+		74861E412C4976A600E13493 /* CustomHostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHostingViewController.swift; sourceTree = "<group>"; };
+		74861E442C49772F00E13493 /* LoadingDimmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDimmingViewController.swift; sourceTree = "<group>"; };
 		74914EE52C1878C5001F62E4 /* RaceViewAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewAssembler.swift; sourceTree = "<group>"; };
 		749E18FA2BEA8B5A00BE6555 /* Formula 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Formula 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		749E18FD2BEA8B5A00BE6555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +180,7 @@
 		74C9D7F22C43CC31008176E0 /* PitStops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitStops.swift; sourceTree = "<group>"; };
 		74DBC36F2BF7824300C563E4 /* RaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceView.swift; sourceTree = "<group>"; };
 		74DBF2372C10CC9900313693 /* RaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewModel.swift; sourceTree = "<group>"; };
+		74E9BA032C492D2D00040112 /* TimeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConverter.swift; sourceTree = "<group>"; };
 		74EFB65C2BF66A9800EFD8A1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		74EFB6602BF66B9700EFD8A1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		74EFB6622BF66C9500EFD8A1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -321,6 +333,7 @@
 				742B88A92BF3C0EA00A1E496 /* Race Screen */,
 				742727DA2BF3C8E2006DE29C /* Championship */,
 				74DBC36E2BF7817500C563E4 /* Calendar */,
+				74861E3A2C49734500E13493 /* Settings */,
 				74845C822C3FE12000295919 /* RootCoordinator.swift */,
 			);
 			path = NavigationFlows;
@@ -337,15 +350,32 @@
 		74845C892C3FEFCC00295919 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				74861E432C49771600E13493 /* DimmingViews */,
 				74C9D7E72C43CB03008176E0 /* Helpers */,
-				74845C8A2C3FEFDD00295919 /* FCustomHostingController.swift */,
 				74C9D7E82C43CB23008176E0 /* APIError.swift */,
 				74C9D7EA2C43CB97008176E0 /* Endpoint.swift */,
 				74C9D7EC2C43CBAE008176E0 /* Path.swift */,
 				74C9D7EE2C43CBCC008176E0 /* Season.swift */,
 				74A4408E2C46AA2600A7E416 /* CustomDivider.swift */,
+				74312F812C4A5C6400988322 /* ActivityIndicator.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		74861E3A2C49734500E13493 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		74861E432C49771600E13493 /* DimmingViews */ = {
+			isa = PBXGroup;
+			children = (
+				74861E3D2C49763B00E13493 /* DimmingViewController.swift */,
+				74861E442C49772F00E13493 /* LoadingDimmingViewController.swift */,
+			);
+			path = DimmingViews;
 			sourceTree = "<group>";
 		};
 		749E18F12BEA8B5A00BE6555 = {
@@ -399,6 +429,10 @@
 				74A440932C46B68400A7E416 /* CountryFlags.swift */,
 				749FB1762C4818DD00FCBC8E /* Date+Extension.swift */,
 				749FB1832C482C1600FCBC8E /* LocalizationHelper.swift */,
+				74E9BA032C492D2D00040112 /* TimeConverter.swift */,
+				74861E3B2C49748F00E13493 /* UIImage+Extension.swift */,
+				74861E3F2C49768100E13493 /* HostedViewConfiguration.swift */,
+				74861E412C4976A600E13493 /* CustomHostingViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -543,6 +577,7 @@
 				74845C852C3FE58E00295919 /* TabsCoordinator.swift in Sources */,
 				74845C4B2C3FD63B00295919 /* Coordinating.swift in Sources */,
 				74845C592C3FD82700295919 /* DetachedTransitionHandling.swift in Sources */,
+				74312F822C4A5C6400988322 /* ActivityIndicator.swift in Sources */,
 				74C9D7DC2C43CA6F008176E0 /* Drivers.swift in Sources */,
 				74845C572C3FD80C00295919 /* Routing.swift in Sources */,
 				74845C932C3FF24700295919 /* ChampionshipCoordinator.swift in Sources */,
@@ -564,7 +599,10 @@
 				74845C6F2C3FDD2A00295919 /* FAppCoordinator.swift in Sources */,
 				74A4408F2C46AA2600A7E416 /* CustomDivider.swift in Sources */,
 				74845C4E2C3FD66400295919 /* ReferenceCounting.swift in Sources */,
+				74861E422C4976A600E13493 /* CustomHostingViewController.swift in Sources */,
 				74DBF2382C10CC9900313693 /* RaceViewModel.swift in Sources */,
+				74E9BA042C492D2D00040112 /* TimeConverter.swift in Sources */,
+				74861E3C2C49748F00E13493 /* UIImage+Extension.swift in Sources */,
 				749FB1842C482C1600FCBC8E /* LocalizationHelper.swift in Sources */,
 				74845C472C3FD60300295919 /* Router.swift in Sources */,
 				74845C642C3FD90900295919 /* RaceViewCoordinator.swift in Sources */,
@@ -573,6 +611,7 @@
 				74845C5B2C3FD84500295919 /* DetachedContext.swift in Sources */,
 				74845C8F2C3FF20C00295919 /* ChampionshipView.swift in Sources */,
 				74C9D7DA2C43CA5B008176E0 /* Laps.swift in Sources */,
+				74861E402C49768100E13493 /* HostedViewConfiguration.swift in Sources */,
 				74C9D7D22C43C3BB008176E0 /* DateFormatter+Extension.swift in Sources */,
 				74FDC0312BFF5AFA0009502E /* PracticeTimetable.swift in Sources */,
 				74845C792C3FDE5600295919 /* GlobalDependencyContainer.swift in Sources */,
@@ -592,6 +631,7 @@
 				74845C732C3FDDB800295919 /* SharedStore.swift in Sources */,
 				74845C972C3FFA6800295919 /* NetworkManager.swift in Sources */,
 				74914EE62C1878C5001F62E4 /* RaceViewAssembler.swift in Sources */,
+				74861E452C49772F00E13493 /* LoadingDimmingViewController.swift in Sources */,
 				74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */,
 				74845C532C3FD7BB00295919 /* ReferenceCounter.swift in Sources */,
 				74845C682C3FD95E00295919 /* BaseCoordinator.swift in Sources */,
@@ -608,11 +648,11 @@
 				74A4408D2C46A5FC00A7E416 /* RaceLocalization.swift in Sources */,
 				74C9D7E92C43CB23008176E0 /* APIError.swift in Sources */,
 				749FB1772C4818DD00FCBC8E /* Date+Extension.swift in Sources */,
-				74845C8B2C3FEFDD00295919 /* FCustomHostingController.swift in Sources */,
 				74C9D7EF2C43CBCC008176E0 /* Season.swift in Sources */,
 				74845C452C3FD5E800295919 /* Destination.swift in Sources */,
 				74845C912C3FF21300295919 /* ChampionshipAssembler.swift in Sources */,
 				749E18FE2BEA8B5A00BE6555 /* AppDelegate.swift in Sources */,
+				74861E3E2C49763B00E13493 /* DimmingViewController.swift in Sources */,
 				74845C712C3FDD9E00295919 /* RootFlow.swift in Sources */,
 				749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */,
 				74C9D7EB2C43CB97008176E0 /* Endpoint.swift in Sources */,
@@ -771,7 +811,7 @@
 				DEVELOPMENT_TEAM = CSY29TKUKT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Formula 1/Info.plist";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Разрешите определение локации для определения тайм-зоны";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Разрешите определение геолокации для определения часового пояса";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -799,7 +839,7 @@
 				DEVELOPMENT_TEAM = CSY29TKUKT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Formula 1/Info.plist";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Разрешите определение локации для определения тайм-зоны";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Разрешите определение геолокации для определения часового пояса";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

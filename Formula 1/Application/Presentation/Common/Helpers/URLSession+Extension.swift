@@ -37,11 +37,11 @@ extension URLSession {
                     let decode = try subPath.decodingType.decode(from: data)
                     completion(.success(decode as! T))
                 } catch (let error) {
-                    print(error)
+                    print("Decoding error: \(error.localizedDescription)")
                     completion(.failure(.network(error.localizedDescription)))
                 }
             case .failure(let error):
-                print(error)
+                print("Network error: \(error.localizedDescription)")
                 completion(.failure(error))
             }
         }
@@ -62,8 +62,9 @@ extension URLSession {
     /// - Returns: A model representing the decodable model that is specified by the `subPath` parameter.
     internal func fetch<T: Decodable>( _ subPath: Path, for season: Season? = nil, round: String? = nil, lap: String? = nil,
         limit: String? = nil, offset: String? = nil, session: URLSession = URLSession.shared) async throws -> T {
-        try await withCheckedThrowingContinuation { [weak self] continuation in
-            self?.fetch( subPath, for: season, round: round, lap: lap, limit: limit, offset: offset, session: session) { result in
+        
+        return try await withCheckedThrowingContinuation { [weak self] continuation in
+            self?.fetch(subPath, for: season, round: round, lap: lap, limit: limit, offset: offset, session: session) { result in
                 continuation.resume(with: result)
             }
         }

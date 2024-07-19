@@ -9,7 +9,8 @@ import SwiftUI
 
 // MARK: - RaceViewModel Protocol
 
-protocol RaceViewModel: ObservableObject {
+protocol RaceViewModel: ObservableObject, HostedViewConfigurable {
+    
     var dateStart: String { get set }
     var dateEnd: String { get set }
     var raceName: String { get set }
@@ -18,6 +19,22 @@ protocol RaceViewModel: ObservableObject {
     var daysLeft: Int { get set }
     var hoursLeft: Int { get set }
     var minutesLeft: Int { get set }
+    
+    var firstPracticeDate: String { get set }
+    var secondPracticeDate: String { get set }
+    var thirdPracticeDate: String { get set }
+    
+    var firstPracticeScreenTime: String { get set }
+    var secondPracticeScreenTime: String { get set }
+    var thirdPracticeScreenTime: String { get set }
+    
+    var qualyDate: String { get set }
+    var qualyTime: String { get set }
+    
+    var raceDate: String { get set }
+    var raceTime: String { get set }
+    
+    var isLoading: Bool { get }
     
     func calculateTimeUntilRaceStart()
     func fetchNextRaceWeekend()
@@ -32,6 +49,8 @@ extension RaceViewModel {
 
 final class IRaceViewModel: RaceViewModel {
     
+    var configuration: (any HostedViewConfiguring)?
+    
     @ReferenceCounted private var coordinator: UnownedRouter<RaceViewDestination>
     
     @Published var dateStart: String = ""
@@ -43,11 +62,25 @@ final class IRaceViewModel: RaceViewModel {
     @Published var hoursLeft: Int = 0
     @Published var minutesLeft: Int = 0
     
+    @Published var firstPracticeDate: String = ""
+    @Published var secondPracticeDate: String = ""
+    @Published var thirdPracticeDate: String = ""
+    
+    @Published var firstPracticeScreenTime: String = ""
+    @Published var secondPracticeScreenTime: String = ""
+    @Published var thirdPracticeScreenTime: String = ""
+    
+    @Published var qualyDate: String = ""
+    @Published var qualyTime: String = ""
+    
+    @Published var raceDate: String = ""
+    @Published var raceTime: String = ""
+    
+    @Published var isLoading: Bool = true
+    
     // MARK: Private properties
     
     private var race: Race?
-    private var raceTimeZone: TimeZone?
-    
     private var timer: Timer?
     
     // MARK: Init
@@ -72,35 +105,31 @@ final class IRaceViewModel: RaceViewModel {
                     print("No upcoming races found for the current year.")
                     return
                 }
+                
                 self.race = race
                 
                 await updateRaceDetails(from: race)
+                self.startTimer()
                 
-                let raceLatitude = Double(race.circuit.location.lat) ?? 0.0
-                let raceLongitude = Double(race.circuit.location.long) ?? 0.0
-                
-                fetchTimeZone(latitude: raceLatitude, longitude: raceLongitude) { timeZone in
-                    guard let timeZone = timeZone else {
-                        print("Failed to get time zone for race location.")
-                        return
-                    }
-                    self.raceTimeZone = timeZone
-                    
-                    self.startTimer()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.isLoading = false
                 }
                 
+            } catch let DecodingError.dataCorrupted(context) {
+                print("Data corrupted: \(context.debugDescription)")
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                }
             } catch {
                 print("Failed to fetch race schedule: \(error.localizedDescription)")
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                }
             }
         }
     }
     
     private func startTimer() {
-        guard let race = race, let raceTimeZone = raceTimeZone else {
-            print("Race or race time zone not set.")
-            return
-        }
-        
         self.timer?.invalidate()
         
         timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
@@ -114,15 +143,26 @@ final class IRaceViewModel: RaceViewModel {
         await updateRaceDates(from: race)
         await updateRaceName(from: race.raceName)
         await updateCountryFlag(from: race)
+        await fetchPracticesTime(from: race)
+        await fetchSundayActivities(from: race)
     }
     
     private func updateRaceDates(from race: Race) async {
         DispatchQueue.main.async {
-            if let firstPracticeDate = race.firstPractice?.date,
-               let formattedFirstPracticeDate = DateFormatter().formattedRussianDate(from: firstPracticeDate) {
+            if let firstPractice = race.firstPractice?.date,
+               let formattedFirstPracticeDate = DateFormatter().formattedRussianDate(from: firstPractice) {
                 self.dateStart = formattedFirstPracticeDate
+                self.firstPracticeDate = firstPractice
             } else {
                 print("No first practice data available.")
+            }
+            
+            if let secondPractice = race.secondPractice?.date {
+                self.secondPracticeDate = secondPractice
+            }
+            
+            if let thirdPractice = race.thirdPractice?.date {
+                self.thirdPracticeDate = thirdPractice
             }
             
             if let raceDate = DateFormatter().formattedRussianDate(from: race.date) {
@@ -151,66 +191,31 @@ final class IRaceViewModel: RaceViewModel {
         }
     }
     
-    private func fetchTimeZone(latitude: Double, longitude: Double, completion: @escaping (TimeZone?) -> Void) {
-        guard let url = URL(string: "http://api.geonames.org/timezoneJSON?lat=\(latitude)&lng=\(longitude)&username=olyabolya")
-        else {
-            print("Invalid URL")
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-                completion(nil)
-                return
-            }
-            guard let data = data else {
-                print("No data received")
-                completion(nil)
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                let timeZoneInfo = try decoder.decode(TimeZoneInfo.self, from: data)
-                let timeZone = TimeZone(identifier: timeZoneInfo.timezoneId)
-                completion(timeZone)
-                
-            } catch {
-                print("Error decoding JSON: \(error.localizedDescription)")
-                completion(nil)
-            }
-        }.resume()
-    }
-    
     func calculateTimeUntilRaceStart() {
-        guard let race = race, let raceTimeZone = raceTimeZone else {
-            print("Race or race time zone not set.")
+        guard let race = race else {
+            print("Race not set.")
             return
         }
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        dateFormatter.timeZone = raceTimeZone
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
         
-        guard let raceDate = dateFormatter.date(from: "\(race.date)T\(race.time)") else {
-            print("Failed to parse race start date.")
+        let raceDateTimeString = "\(race.date)T\(race.time)"
+        guard let raceDate = dateFormatter.date(from: raceDateTimeString) else {
+            print("Failed to parse race start date: \(raceDateTimeString)")
             return
         }
         
-        let currentUserTimeZone = TimeZone.current
         let currentDate = Date()
         
-        let raceDateInCurrentUserTimeZone = raceDate.convertToTimeZone(initialTimeZone: raceTimeZone,
-                                                                       to: currentUserTimeZone)
-        
-        guard raceDateInCurrentUserTimeZone > currentDate else {
+        guard raceDate > currentDate else {
             print("Race already started or start time is in the past.")
             return
         }
         
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.day, .hour, .minute], from: currentDate, to: raceDateInCurrentUserTimeZone)
+        let components = calendar.dateComponents([.day, .hour, .minute], from: currentDate, to: raceDate)
         
         guard let days = components.day,
               let hours = components.hour,
@@ -223,6 +228,83 @@ final class IRaceViewModel: RaceViewModel {
             self.daysLeft = days
             self.hoursLeft = hours
             self.minutesLeft = minutes
+        }
+    }
+    
+    private func fetchEventTime(time: String?, completion: @escaping (String?) -> Void) {
+        guard let time else {
+            print("Practice time is nil.")
+            completion(nil)
+            return
+        }
+        
+        if let localTime = TimeConverter().convertUTCToLocal(timeString: time) {
+            DispatchQueue.main.async {
+                completion(localTime)
+            }
+        } else {
+            print("Failed to convert time")
+            completion(nil)
+        }
+    }
+    
+    private func fetchPracticesTime(from race: Race) async {
+        let firstPracticeTime = race.firstPractice?.time
+        let secondPracticeTime = race.secondPractice?.time
+        let thirdPracticeTime = race.thirdPractice?.time
+        let qualyTime = race.qualifying.time
+        let raceTime = race.time
+        
+        fetchEventTime(time: firstPracticeTime) { localTimeString in
+            if let localTimeString = localTimeString {
+                DispatchQueue.main.async {
+                    self.firstPracticeScreenTime = localTimeString
+                }
+            }
+        }
+
+        fetchEventTime(time: secondPracticeTime) { localTimeString in
+            if let localTimeString = localTimeString {
+                DispatchQueue.main.async {
+                    self.secondPracticeScreenTime = localTimeString
+                }
+            }
+        }
+
+        fetchEventTime(time: thirdPracticeTime) { localTimeString in
+            if let localTimeString = localTimeString {
+                DispatchQueue.main.async {
+                    self.thirdPracticeScreenTime = localTimeString
+                }
+            }
+        }
+
+         fetchEventTime(time: qualyTime) { localTimeString in
+            if let localTimeString = localTimeString {
+                DispatchQueue.main.async {
+                    self.qualyTime = localTimeString
+                }
+            }
+        }
+
+         fetchEventTime(time: raceTime) { localTimeString in
+            if let localTimeString = localTimeString {
+                DispatchQueue.main.async {
+                    self.raceTime = localTimeString
+                }
+            }
+        }
+    }
+    
+    private func fetchSundayActivities(from race: Race) async {
+        DispatchQueue.main.async {
+            if !race.qualifying.date.isEmpty {
+                self.qualyDate = race.qualifying.date
+            }
+            
+            if !race.date.isEmpty {
+                self.raceDate = race.date
+            }
         }
     }
 }

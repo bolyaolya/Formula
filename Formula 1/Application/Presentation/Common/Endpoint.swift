@@ -7,8 +7,8 @@
 
 import Foundation
 
-/// Internal struct for query items used in Ergast URLs.
-private enum ErgastQueryItems {
+/// Internal struct for query items used in URLs.
+private enum QueryItems {
     /// Limit indicator, to specify to the API how many items to return at a time per request.
     case limit(String?)
     
@@ -16,18 +16,18 @@ private enum ErgastQueryItems {
     case offset(String?)
 }
 
-/// Indicates URL components for the Ergast REST API.
-private enum ErgastEndpoint {
+/// Indicates URL components for the REST API.
+private enum JolpiEndpoint {
     /// URL scheme.
-    static let scheme = "https"
+    static let scheme = "http"
     
     /// URL host.
-    static let host = "ergast.com"
+    static let host = "api.jolpi.ca"
 }
 
 /// Generates a URL for a given Path enum case.
 internal struct Endpoint {
-    /// URL for Ergast API.
+    /// URL for API.
     private let urlPath: String
     
     /// Indicates number of items to return per request.
@@ -38,7 +38,7 @@ internal struct Endpoint {
     
     /// Initializer for an Endpoint object.
     /// - Parameters:
-    ///   - path: Specify a path, mapping to a specific endpoint of the Ergast REST API.
+    ///   - path: Specify a path, mapping to a specific endpoint of the REST API.
     ///   - season: Season enum case, specified by an Int, which indicates to fetch data for a given year.  All historical seasons will be fetched if nil.
     ///   - limit: Optional property to specify number of items to return per request.
     ///   - offset: Optional property to indicate starting point of elements from API request.
@@ -54,8 +54,8 @@ internal struct Endpoint {
 extension Endpoint {
     var url: URL {
         var components = URLComponents()
-        components.scheme = ErgastEndpoint.scheme
-        components.host = ErgastEndpoint.host
+        components.scheme = JolpiEndpoint.scheme
+        components.host = JolpiEndpoint.host
         components.path = urlPath
         
         var queryItems: [URLQueryItem] = .init()

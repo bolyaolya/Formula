@@ -47,7 +47,10 @@ final class RaceViewCoordinator: NavigationCoordinator<RaceViewDestination> {
     }
     
     private func setupTabBarItem() {
-        let raceTabBarItem = UITabBarItem(title: "Гонка", image: .carImage, selectedImage: .carBoldImage)
+        let carImage = UIImage(named: "carImage")?.resize(targetSize: CGSize(width: 40, height: 40))
+        let carBoldImage = UIImage(named: "carBoldImage")?.resize(targetSize: CGSize(width: 40, height: 40))
+        
+        let raceTabBarItem = UITabBarItem(title: "Гонка", image: carImage, selectedImage: carBoldImage)
         raceTabBarItem.tag = 0
         rootViewController.tabBarItem = raceTabBarItem
     }

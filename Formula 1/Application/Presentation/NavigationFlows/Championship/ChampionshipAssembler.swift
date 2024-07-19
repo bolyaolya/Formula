@@ -13,7 +13,7 @@ final class ChampionshipAssembler {
     func viewController(coordinator: UnownedRouter<ChampionshipDestination>) -> UIViewController {
         let viewModel = IChampionshipViewModel(coordinator: coordinator)
         let view = ChampionshipView(viewModel: viewModel)
-        let hostingController = FCustomHostingController(rootView: view)
+        let hostingController = CustomHostingController(rootView: view)
         hostingController.shouldHideNavBar(true)
         
         return hostingController

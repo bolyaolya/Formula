@@ -13,7 +13,8 @@ final class RaceViewAssembler {
     func viewController(coordinator: UnownedRouter<RaceViewDestination>) -> UIViewController {
         let viewModel = IRaceViewModel(coordinator: coordinator)
         let view = RaceView(viewModel: viewModel)
-        let hostingController = FCustomHostingController(rootView: view)
+        let hostingController = CustomHostingController(rootView: view)
+        viewModel.configuration = HostedViewConfiguration(dimmingProxy: hostingController)
         hostingController.shouldHideNavBar(true)
         
         return hostingController

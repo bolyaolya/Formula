@@ -14,6 +14,8 @@ struct RaceInfoView: View {
     var countryFlag: UIImage
     
     var body: some View {
+        
+        
         VStack {
             Text("Следующий этап")
                 .foregroundStyle(Color.white)
@@ -50,3 +52,4 @@ struct RaceInfoView: View {
         .padding(.top, 14)
     }
 }
+

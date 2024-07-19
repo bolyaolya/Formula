@@ -17,33 +17,47 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
             Color(.darkColor)
                 .ignoresSafeArea()
             
-            ScrollView(.vertical) {
-                VStack(spacing: 17) {
-                    
-                    RaceInfoView(date: "\(viewModel.dateStart) - \(viewModel.dateEnd)", 
-                                 raceName: viewModel.raceName, 
-                                 countryFlag: viewModel.countryFlag)
-                    
-                    CountdownView(days: viewModel.daysLeft, 
-                                  hours: viewModel.hoursLeft,
-                                  minutes: viewModel.minutesLeft)
-                    
-                    PracticeTimetable()
-                    
-//                   TODO: SprintTimetable()
-                    
-                    RaceTimetable()
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .scaleEffect(1.5)
+                    .padding()
+                    .tint(Color(.white))
+            } else {
+                ScrollView(.vertical) {
+                    VStack(spacing: 17) {
+                        
+                        RaceInfoView(date: "\(viewModel.dateStart) - \(viewModel.dateEnd)",
+                                     raceName: viewModel.raceName,
+                                     countryFlag: viewModel.countryFlag)
+                        
+                        CountdownView(days: viewModel.daysLeft,
+                                      hours: viewModel.hoursLeft,
+                                      minutes: viewModel.minutesLeft)
+                        
+                        PracticeTimetable(firstPracticeDate: viewModel.firstPracticeDate,
+                                          secondPracticeDate: viewModel.secondPracticeDate,
+                                          thirdPracticeDate: viewModel.thirdPracticeDate,
+                                          firstPracticeTime: viewModel.firstPracticeScreenTime,
+                                          secondPracticeTime: viewModel.secondPracticeScreenTime,
+                                          thirdPracticeTime: viewModel.thirdPracticeScreenTime)
+                        
+                        //                   TODO: SprintTimetable()
+                        
+                        RaceTimetable(qualyDate: viewModel.qualyDate,
+                                      raceDate: viewModel.raceDate,
+                                      qualyTime: viewModel.qualyTime,
+                                      raceTime: viewModel.raceTime)
+                    }
                 }
-            }
-            .clipped()
-            .onAppear {
-                viewModel.fetchNextRaceWeekend()
-            }
-            .onDisappear {
-                timer?.invalidate()
-            }
-            .onReceive(Timer.publish(every: 60, on: .main, in: .common).autoconnect()) { _ in
-                viewModel.calculateTimeUntilRaceStart()
+                .clipped()
+                
+                .onDisappear {
+                    timer?.invalidate()
+                }
+                .onReceive(Timer.publish(every: 60, on: .main, in: .common).autoconnect()) { _ in
+                    viewModel.calculateTimeUntilRaceStart()
+                }
             }
         }
     }

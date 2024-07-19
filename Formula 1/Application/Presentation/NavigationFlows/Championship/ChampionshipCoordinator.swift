@@ -47,7 +47,10 @@ final class ChampionshipCoordinator: NavigationCoordinator<ChampionshipDestinati
     }
     
     private func setupTabBarItem() {
-        let champTabBarItem = UITabBarItem(title: "Чемпионат", image: UIImage.podiumImage, selectedImage: UIImage.podiumBoldImage)
+        let podiumImage = UIImage(named: "podiumImage")?.resize(targetSize: CGSize(width: 40, height: 40))
+        let podiumBoldImage = UIImage(named: "podiumBoldImage")?.resize(targetSize: CGSize(width: 40, height: 40))
+        
+        let champTabBarItem = UITabBarItem(title: "Чемпионат", image: podiumImage, selectedImage: podiumBoldImage)
         champTabBarItem.tag = 1
         rootViewController.tabBarItem = champTabBarItem
     }
