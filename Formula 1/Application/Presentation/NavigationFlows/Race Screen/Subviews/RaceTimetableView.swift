@@ -1,5 +1,5 @@
 //
-//  RaceTimetable.swift
+//  RaceTimetableView.swift
 //  Formula 1
 //
 //  Created by Olya B on 23.05.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RaceTimetable: View {
+struct RaceTimetableView: View {
     
     var qualyDate: String
     var raceDate: String

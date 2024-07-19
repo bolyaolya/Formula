@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74312F822C4A5C6400988322 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F812C4A5C6400988322 /* ActivityIndicator.swift */; };
+		74312F842C4A70F900988322 /* SprintTimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F832C4A70F900988322 /* SprintTimetableView.swift */; };
 		74845C402C3FD58400295919 /* UnownedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C3F2C3FD58400295919 /* UnownedRouter.swift */; };
 		74845C422C3FD5A800295919 /* Unowned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C412C3FD5A800295919 /* Unowned.swift */; };
 		74845C452C3FD5E800295919 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C442C3FD5E800295919 /* Destination.swift */; };
@@ -92,13 +93,14 @@
 		74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6602BF66B9700EFD8A1 /* UIColor.swift */; };
 		74EFB6632BF66C9500EFD8A1 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EFB6622BF66C9500EFD8A1 /* UIImage.swift */; };
 		74FDC02F2BFF54970009502E /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC02E2BFF54960009502E /* CountdownView.swift */; };
-		74FDC0312BFF5AFA0009502E /* PracticeTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */; };
+		74FDC0312BFF5AFA0009502E /* PracticeTimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0302BFF5AFA0009502E /* PracticeTimetableView.swift */; };
 		74FDC0332BFF69440009502E /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0322BFF69440009502E /* PaddedLabel.swift */; };
-		74FDC0352BFF6D590009502E /* RaceTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0342BFF6D590009502E /* RaceTimetable.swift */; };
+		74FDC0352BFF6D590009502E /* RaceTimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC0342BFF6D590009502E /* RaceTimetableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		74312F812C4A5C6400988322 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		74312F832C4A70F900988322 /* SprintTimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimetableView.swift; sourceTree = "<group>"; };
 		74845C3F2C3FD58400295919 /* UnownedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnownedRouter.swift; sourceTree = "<group>"; };
 		74845C412C3FD5A800295919 /* Unowned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unowned.swift; sourceTree = "<group>"; };
 		74845C442C3FD5E800295919 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
@@ -185,9 +187,9 @@
 		74EFB6602BF66B9700EFD8A1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		74EFB6622BF66C9500EFD8A1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		74FDC02E2BFF54960009502E /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
-		74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimetable.swift; sourceTree = "<group>"; };
+		74FDC0302BFF5AFA0009502E /* PracticeTimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTimetableView.swift; sourceTree = "<group>"; };
 		74FDC0322BFF69440009502E /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
-		74FDC0342BFF6D590009502E /* RaceTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTimetable.swift; sourceTree = "<group>"; };
+		74FDC0342BFF6D590009502E /* RaceTimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTimetableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -491,8 +493,9 @@
 			children = (
 				74845C942C3FF37800295919 /* RaceInfoView.swift */,
 				74FDC02E2BFF54960009502E /* CountdownView.swift */,
-				74FDC0302BFF5AFA0009502E /* PracticeTimetable.swift */,
-				74FDC0342BFF6D590009502E /* RaceTimetable.swift */,
+				74FDC0302BFF5AFA0009502E /* PracticeTimetableView.swift */,
+				74FDC0342BFF6D590009502E /* RaceTimetableView.swift */,
+				74312F832C4A70F900988322 /* SprintTimetableView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -613,14 +616,14 @@
 				74C9D7DA2C43CA5B008176E0 /* Laps.swift in Sources */,
 				74861E402C49768100E13493 /* HostedViewConfiguration.swift in Sources */,
 				74C9D7D22C43C3BB008176E0 /* DateFormatter+Extension.swift in Sources */,
-				74FDC0312BFF5AFA0009502E /* PracticeTimetable.swift in Sources */,
+				74FDC0312BFF5AFA0009502E /* PracticeTimetableView.swift in Sources */,
 				74845C792C3FDE5600295919 /* GlobalDependencyContainer.swift in Sources */,
 				749FB1752C47FBDF00FCBC8E /* TimeZoneInfo.swift in Sources */,
 				74C9D7CE2C43B2E7008176E0 /* Seasons.swift in Sources */,
 				74845C812C3FDF6200295919 /* AuthenticationUseCase.swift in Sources */,
 				74C9D7ED2C43CBAE008176E0 /* Path.swift in Sources */,
 				74845C512C3FD68700295919 /* ReferenceCounterListening.swift in Sources */,
-				74FDC0352BFF6D590009502E /* RaceTimetable.swift in Sources */,
+				74FDC0352BFF6D590009502E /* RaceTimetableView.swift in Sources */,
 				749FB1732C47DDF800FCBC8E /* CoreLocation.swift in Sources */,
 				74C9D7E62C43CAD2008176E0 /* URLSession+Extension.swift in Sources */,
 				74845C752C3FDE0F00295919 /* ProxyViewController.swift in Sources */,
@@ -638,6 +641,7 @@
 				74845C5F2C3FD89700295919 /* NavigationTransition.swift in Sources */,
 				74C9D7E02C43CA8F008176E0 /* Constructors.swift in Sources */,
 				74845C5D2C3FD85D00295919 /* Reason.swift in Sources */,
+				74312F842C4A70F900988322 /* SprintTimetableView.swift in Sources */,
 				749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */,
 				74DBC3702BF7824300C563E4 /* RaceView.swift in Sources */,
 				74C9D7D02C43B49D008176E0 /* Race.swift in Sources */,

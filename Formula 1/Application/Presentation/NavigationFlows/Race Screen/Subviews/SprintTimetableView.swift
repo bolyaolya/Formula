@@ -1,47 +1,47 @@
 //
-//  PracticeTimetable.swift
+//  SprintTimetableView.swift
 //  Formula 1
 //
-//  Created by Olya B on 23.05.2024.
+//  Created by Olya Boyko on 19.07.2024.
 //
 
 import SwiftUI
 
-struct PracticeTimetable: View {
+struct SprintTimetableView: View {
     
-    var firstPracticeDate: String
-    var secondPracticeDate: String?
-    var thirdPracticeDate: String?
+    var sprintQualyDate: String
+    var sprintQualyTime: String
     
-    var firstPracticeTime: String
-    var secondPracticeTime: String?
-    var thirdPracticeTime: String?
+    var sprintDate: String
+    var sprintTime: String
     
     var dateExt = Date()
     
     var body: some View {
         VStack(spacing: 15) {
-            PracticeView(label: "1-я практика", day: dateExt.dayOfWeek(for: firstPracticeDate), time: firstPracticeTime)
-            PracticeView(label: "2-я практика", day: dateExt.dayOfWeek(for: secondPracticeDate ?? " - "), time: secondPracticeTime ?? " - ")
-            PracticeView(label: "3-я практика", day: dateExt.dayOfWeek(for: thirdPracticeDate ?? " - "), time: thirdPracticeTime ?? " - ")
+            SprintSessionView(sessionName: "Квалификация",
+                              day: dateExt.dayOfWeek(for: sprintQualyDate),
+                              time: sprintQualyTime)
+            SprintSessionView(sessionName: "Спринт", 
+                              day: dateExt.dayOfWeek(for: sprintDate),
+                              time: sprintTime)
         }
         .padding(10)
         .background(Color.bubbleBackground)
         .cornerRadius(16)
         .padding(.horizontal, 15)
-        .frame(height: 145)
-        .padding(.top, 20)
+        .padding(.vertical, 18)
     }
 }
 
-struct PracticeView: View {
-    var label: String
+struct SprintSessionView: View {
+    var sessionName: String
     var day: String
     var time: String
     
     var body: some View {
         HStack {
-            Text(label)
+            Text(sessionName)
                 .foregroundColor(.white)
                 .font(.system(size: 18, weight: .regular))
                 .padding(.leading, 10)

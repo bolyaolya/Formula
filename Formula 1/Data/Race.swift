@@ -51,6 +51,8 @@ public struct Race: Codable {
     public let firstPractice: FirstPractice?
     public let secondPractice: SecondPractice?
     public let thirdPractice: ThirdPractice?
+    public let sprintQualy: SprintQualifying?
+    public let sprint: Sprint?
     public let qualifying: Qualifying
     public let qualifyingResults: [QualifyingResult]?
     public let pitStops: [PitStop]?
@@ -63,6 +65,8 @@ public struct Race: Codable {
         case firstPractice = "FirstPractice"
         case secondPractice = "SecondPractice"
         case thirdPractice = "ThirdPractice"
+        case sprintQualy = "SprintQualifying"
+        case sprint = "Sprint"
         case qualifying = "Qualifying"
         case qualifyingResults = "QualifyingResults"
         case pitStops = "PitStops"
@@ -89,6 +93,24 @@ public struct SecondPractice: Codable {
 } 
 
 public struct ThirdPractice: Codable {
+    public let date: String
+    public let time: String
+    
+    public enum CodingKeys: String, CodingKey {
+        case date, time
+    }
+}
+
+public struct SprintQualifying: Codable {
+    public let date: String
+    public let time: String
+    
+    public enum CodingKeys: String, CodingKey {
+        case date, time
+    }
+}
+
+public struct Sprint: Codable {
     public let date: String
     public let time: String
     

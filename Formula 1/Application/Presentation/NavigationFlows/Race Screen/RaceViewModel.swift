@@ -28,6 +28,11 @@ protocol RaceViewModel: ObservableObject, HostedViewConfigurable {
     var secondPracticeScreenTime: String { get set }
     var thirdPracticeScreenTime: String { get set }
     
+    var sprintQualyDate: String? { get set }
+    var sprintQualyTime: String? { get set }
+    var sprintDate: String? { get set }
+    var sprintTime: String? { get set }
+    
     var qualyDate: String { get set }
     var qualyTime: String { get set }
     
@@ -69,6 +74,11 @@ final class IRaceViewModel: RaceViewModel {
     @Published var firstPracticeScreenTime: String = ""
     @Published var secondPracticeScreenTime: String = ""
     @Published var thirdPracticeScreenTime: String = ""
+    
+    @Published var sprintQualyDate: String?
+    @Published var sprintQualyTime: String?
+    @Published var sprintDate: String?
+    @Published var sprintTime: String?
     
     @Published var qualyDate: String = ""
     @Published var qualyTime: String = ""
@@ -145,6 +155,7 @@ final class IRaceViewModel: RaceViewModel {
         await updateCountryFlag(from: race)
         await fetchPracticesTime(from: race)
         await fetchSundayActivities(from: race)
+        fetchSprintData(from: race)
     }
     
     private func updateRaceDates(from race: Race) async {
@@ -292,6 +303,18 @@ final class IRaceViewModel: RaceViewModel {
                 DispatchQueue.main.async {
                     self.raceTime = localTimeString
                 }
+            }
+        }
+    }
+    
+    private func fetchSprintData(from race: Race) {
+        if let sprint = race.sprint {
+            DispatchQueue.main.async {
+                self.sprintDate = sprint.date
+                self.sprintTime = sprint.time
+                
+                self.sprintQualyDate = race.secondPractice?.date
+                self.sprintQualyTime = race.secondPractice?.time
             }
         }
     }

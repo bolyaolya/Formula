@@ -35,16 +35,23 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
                                       hours: viewModel.hoursLeft,
                                       minutes: viewModel.minutesLeft)
                         
-                        PracticeTimetable(firstPracticeDate: viewModel.firstPracticeDate,
+                        PracticeTimetableView(firstPracticeDate: viewModel.firstPracticeDate,
                                           secondPracticeDate: viewModel.secondPracticeDate,
                                           thirdPracticeDate: viewModel.thirdPracticeDate,
                                           firstPracticeTime: viewModel.firstPracticeScreenTime,
                                           secondPracticeTime: viewModel.secondPracticeScreenTime,
                                           thirdPracticeTime: viewModel.thirdPracticeScreenTime)
                         
-                        //                   TODO: SprintTimetable()
+                        if let sprintDate = viewModel.sprintDate,
+                            let sprintTime = viewModel.sprintTime,
+                           let sprintQualyDate = viewModel.sprintQualyDate,
+                           let sprintQualyTime = viewModel.sprintQualyTime {
+                            SprintTimetableView(sprintQualyDate: sprintQualyDate,
+                                                sprintQualyTime: sprintQualyTime,
+                                                sprintDate: sprintDate, sprintTime: sprintTime)
+                        }
                         
-                        RaceTimetable(qualyDate: viewModel.qualyDate,
+                        RaceTimetableView(qualyDate: viewModel.qualyDate,
                                       raceDate: viewModel.raceDate,
                                       qualyTime: viewModel.qualyTime,
                                       raceTime: viewModel.raceTime)
