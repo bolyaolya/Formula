@@ -42,12 +42,10 @@ protocol RaceViewModel: ObservableObject, HostedViewConfigurable {
     var isLoading: Bool { get }
     
     func calculateTimeUntilRaceStart()
-    func fetchNextRaceWeekend()
 }
 
 extension RaceViewModel {
     func calculateTimeUntilRaceStart() {}
-    func fetchNextRaceWeekend() {}
 }
 
 // MARK: - RaceViewModel implementation
@@ -103,7 +101,7 @@ final class IRaceViewModel: RaceViewModel {
     
     //MARK: Methods
     
-    func fetchNextRaceWeekend() {
+    private func fetchNextRaceWeekend() {
         Task {
             do {
                 let raceSchedule = try await NetworkManager().raceSchedule(for: .currentYear)

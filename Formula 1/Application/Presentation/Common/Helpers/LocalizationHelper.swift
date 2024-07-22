@@ -34,4 +34,20 @@ class LocalizationHelper {
         
         return NSLocalizedString(formattedKey, comment: "")
     }
+    
+    func correctEnding(for pointsString: String) -> String {
+        guard let points = Int(pointsString) else {
+            return "очков"
+        }
+        
+        switch points % 10 {
+        case 1 where points % 100 != 11:
+            return "очко"
+        case 2, 3,
+            4 where points % 100 < 12 || points % 100 > 14:
+            return "очка"
+        default:
+            return "очков"
+        }
+    }
 }

@@ -15,21 +15,12 @@ struct RaceInfoView: View {
     
     var body: some View {
         
-        
         VStack {
-            Text("Следующий этап")
-                .foregroundStyle(Color.white)
-                .font(.system(size: 30))
-                .fontWeight(.bold)
-            
-            CustomDivider()
-            
             Text(raceName.uppercased())
                 .foregroundColor(.white)
                 .font(.system(size: 20))
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
-                .padding(.top, 5)
             
             HStack {
                 Image(uiImage: countryFlag)
@@ -49,7 +40,7 @@ struct RaceInfoView: View {
                 .foregroundColor(.white)
                 .font(.system(size: 25, weight: .bold))
         }
-        .padding(.top, 14)
+        .padding(.top, 8)
     }
 }
 

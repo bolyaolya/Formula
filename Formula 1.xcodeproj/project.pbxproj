@@ -9,6 +9,23 @@
 /* Begin PBXBuildFile section */
 		74312F822C4A5C6400988322 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F812C4A5C6400988322 /* ActivityIndicator.swift */; };
 		74312F842C4A70F900988322 /* SprintTimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F832C4A70F900988322 /* SprintTimetableView.swift */; };
+		74312F872C4A7A0D00988322 /* DriversChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F862C4A7A0D00988322 /* DriversChampionshipView.swift */; };
+		745F5DD22C4E630A00A26CEA /* ConstructorsChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DD12C4E630A00A26CEA /* ConstructorsChampionshipView.swift */; };
+		745F5DD42C4E69E800A26CEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 745F5DD32C4E69E800A26CEA /* GoogleService-Info.plist */; };
+		745F5DD72C4E6A6A00A26CEA /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 745F5DD62C4E6A6A00A26CEA /* FirebaseAnalyticsSwift */; };
+		745F5DD92C4E6A6A00A26CEA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 745F5DD82C4E6A6A00A26CEA /* FirebaseAuth */; };
+		745F5DDB2C4E6A6A00A26CEA /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 745F5DDA2C4E6A6A00A26CEA /* FirebaseDatabase */; };
+		745F5DDD2C4E6A6A00A26CEA /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 745F5DDC2C4E6A6A00A26CEA /* FirebaseDatabaseSwift */; };
+		745F5DDF2C4E6A6A00A26CEA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 745F5DDE2C4E6A6A00A26CEA /* FirebaseFirestore */; };
+		745F5DE12C4E6A6A00A26CEA /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 745F5DE02C4E6A6A00A26CEA /* FirebaseFunctions */; };
+		745F5DE32C4E6A6A00A26CEA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 745F5DE22C4E6A6A00A26CEA /* FirebaseStorage */; };
+		745F5DE62C4E6B9300A26CEA /* CloudStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DE52C4E6B9300A26CEA /* CloudStorageService.swift */; };
+		745F5DEA2C4E9E7B00A26CEA /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DE92C4E9E7B00A26CEA /* ImageRepository.swift */; };
+		745F5DEC2C4E9EAA00A26CEA /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DEB2C4E9EAA00A26CEA /* FileManagerService.swift */; };
+		745F5DEE2C4EB62C00A26CEA /* CalendarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DED2C4EB62C00A26CEA /* CalendarAssembler.swift */; };
+		745F5DF02C4EB63500A26CEA /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DEF2C4EB63500A26CEA /* CalendarViewModel.swift */; };
+		745F5DF22C4EB63B00A26CEA /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DF12C4EB63B00A26CEA /* CalendarView.swift */; };
+		745F5DF42C4EB64800A26CEA /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DF32C4EB64800A26CEA /* CalendarCoordinator.swift */; };
 		74845C402C3FD58400295919 /* UnownedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C3F2C3FD58400295919 /* UnownedRouter.swift */; };
 		74845C422C3FD5A800295919 /* Unowned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C412C3FD5A800295919 /* Unowned.swift */; };
 		74845C452C3FD5E800295919 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C442C3FD5E800295919 /* Destination.swift */; };
@@ -68,6 +85,7 @@
 		74A4408D2C46A5FC00A7E416 /* RaceLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A4408C2C46A5FC00A7E416 /* RaceLocalization.swift */; };
 		74A4408F2C46AA2600A7E416 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A4408E2C46AA2600A7E416 /* CustomDivider.swift */; };
 		74A440942C46B68400A7E416 /* CountryFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A440932C46B68400A7E416 /* CountryFlags.swift */; };
+		74AEFA572C4BBB1D006B2CF1 /* SegmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AEFA562C4BBB1D006B2CF1 /* SegmentButton.swift */; };
 		74C9D7CE2C43B2E7008176E0 /* Seasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7CD2C43B2E7008176E0 /* Seasons.swift */; };
 		74C9D7D02C43B49D008176E0 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7CF2C43B49D008176E0 /* Race.swift */; };
 		74C9D7D22C43C3BB008176E0 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C9D7D12C43C3BB008176E0 /* DateFormatter+Extension.swift */; };
@@ -101,6 +119,16 @@
 /* Begin PBXFileReference section */
 		74312F812C4A5C6400988322 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		74312F832C4A70F900988322 /* SprintTimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimetableView.swift; sourceTree = "<group>"; };
+		74312F862C4A7A0D00988322 /* DriversChampionshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversChampionshipView.swift; sourceTree = "<group>"; };
+		745F5DD12C4E630A00A26CEA /* ConstructorsChampionshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorsChampionshipView.swift; sourceTree = "<group>"; };
+		745F5DD32C4E69E800A26CEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		745F5DE52C4E6B9300A26CEA /* CloudStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudStorageService.swift; sourceTree = "<group>"; };
+		745F5DE92C4E9E7B00A26CEA /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		745F5DEB2C4E9EAA00A26CEA /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
+		745F5DED2C4EB62C00A26CEA /* CalendarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAssembler.swift; sourceTree = "<group>"; };
+		745F5DEF2C4EB63500A26CEA /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		745F5DF12C4EB63B00A26CEA /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		745F5DF32C4EB64800A26CEA /* CalendarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
 		74845C3F2C3FD58400295919 /* UnownedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnownedRouter.swift; sourceTree = "<group>"; };
 		74845C412C3FD5A800295919 /* Unowned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unowned.swift; sourceTree = "<group>"; };
 		74845C442C3FD5E800295919 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
@@ -162,6 +190,7 @@
 		74A4408C2C46A5FC00A7E416 /* RaceLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceLocalization.swift; sourceTree = "<group>"; };
 		74A4408E2C46AA2600A7E416 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
 		74A440932C46B68400A7E416 /* CountryFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlags.swift; sourceTree = "<group>"; };
+		74AEFA562C4BBB1D006B2CF1 /* SegmentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentButton.swift; sourceTree = "<group>"; };
 		74C9D7CD2C43B2E7008176E0 /* Seasons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seasons.swift; sourceTree = "<group>"; };
 		74C9D7CF2C43B49D008176E0 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		74C9D7D12C43C3BB008176E0 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
@@ -197,6 +226,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				745F5DDD2C4E6A6A00A26CEA /* FirebaseDatabaseSwift in Frameworks */,
+				745F5DDB2C4E6A6A00A26CEA /* FirebaseDatabase in Frameworks */,
+				745F5DD72C4E6A6A00A26CEA /* FirebaseAnalyticsSwift in Frameworks */,
+				745F5DE12C4E6A6A00A26CEA /* FirebaseFunctions in Frameworks */,
+				745F5DE32C4E6A6A00A26CEA /* FirebaseStorage in Frameworks */,
+				745F5DDF2C4E6A6A00A26CEA /* FirebaseFirestore in Frameworks */,
+				745F5DD92C4E6A6A00A26CEA /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +242,7 @@
 		742727DA2BF3C8E2006DE29C /* Championship */ = {
 			isa = PBXGroup;
 			children = (
+				74312F852C4A7A0000988322 /* Subviews */,
 				74845C8C2C3FF20700295919 /* ChampionshipViewModel.swift */,
 				74845C8E2C3FF20C00295919 /* ChampionshipView.swift */,
 				74845C902C3FF21300295919 /* ChampionshipAssembler.swift */,
@@ -220,6 +257,7 @@
 				749E19142BEA912B00BE6555 /* Coordinator.swift */,
 				749E19122BEA8FD900BE6555 /* AppCoordinator.swift */,
 				74845C6E2C3FDD2A00295919 /* FAppCoordinator.swift */,
+				74845C822C3FE12000295919 /* RootCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -244,6 +282,26 @@
 				74FDC0362BFF6F8F0009502E /* Subviews */,
 			);
 			path = "Race Screen";
+			sourceTree = "<group>";
+		};
+		74312F852C4A7A0000988322 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				74312F862C4A7A0D00988322 /* DriversChampionshipView.swift */,
+				745F5DD12C4E630A00A26CEA /* ConstructorsChampionshipView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		745F5DE42C4E6B8700A26CEA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				74845C962C3FFA6800295919 /* NetworkManager.swift */,
+				745F5DE52C4E6B9300A26CEA /* CloudStorageService.swift */,
+				745F5DE92C4E9E7B00A26CEA /* ImageRepository.swift */,
+				745F5DEB2C4E9EAA00A26CEA /* FileManagerService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		74845C3E2C3FD56E00295919 /* Coordination */ = {
@@ -336,7 +394,6 @@
 				742727DA2BF3C8E2006DE29C /* Championship */,
 				74DBC36E2BF7817500C563E4 /* Calendar */,
 				74861E3A2C49734500E13493 /* Settings */,
-				74845C822C3FE12000295919 /* RootCoordinator.swift */,
 			);
 			path = NavigationFlows;
 			sourceTree = "<group>";
@@ -360,6 +417,7 @@
 				74C9D7EE2C43CBCC008176E0 /* Season.swift */,
 				74A4408E2C46AA2600A7E416 /* CustomDivider.swift */,
 				74312F812C4A5C6400988322 /* ActivityIndicator.swift */,
+				74AEFA562C4BBB1D006B2CF1 /* SegmentButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -405,6 +463,7 @@
 				74EFB65F2BF66B5900EFD8A1 /* Utils */,
 				749E19082BEA8B5D00BE6555 /* LaunchScreen.storyboard */,
 				749E190B2BEA8B5D00BE6555 /* Info.plist */,
+				745F5DD32C4E69E800A26CEA /* GoogleService-Info.plist */,
 			);
 			path = "Formula 1";
 			sourceTree = "<group>";
@@ -442,6 +501,10 @@
 		74DBC36E2BF7817500C563E4 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				745F5DED2C4EB62C00A26CEA /* CalendarAssembler.swift */,
+				745F5DEF2C4EB63500A26CEA /* CalendarViewModel.swift */,
+				745F5DF12C4EB63B00A26CEA /* CalendarView.swift */,
+				745F5DF32C4EB64800A26CEA /* CalendarCoordinator.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -469,8 +532,8 @@
 		74F06F5E2BF7C8A400834823 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				745F5DE42C4E6B8700A26CEA /* Services */,
 				74845C802C3FDF6200295919 /* AuthenticationUseCase.swift */,
-				74845C962C3FFA6800295919 /* NetworkManager.swift */,
 				74C9D7CD2C43B2E7008176E0 /* Seasons.swift */,
 				74C9D7CF2C43B49D008176E0 /* Race.swift */,
 				74C9D7D52C43CA25008176E0 /* RaceResults.swift */,
@@ -517,6 +580,13 @@
 			);
 			name = "Formula 1";
 			packageProductDependencies = (
+				745F5DD62C4E6A6A00A26CEA /* FirebaseAnalyticsSwift */,
+				745F5DD82C4E6A6A00A26CEA /* FirebaseAuth */,
+				745F5DDA2C4E6A6A00A26CEA /* FirebaseDatabase */,
+				745F5DDC2C4E6A6A00A26CEA /* FirebaseDatabaseSwift */,
+				745F5DDE2C4E6A6A00A26CEA /* FirebaseFirestore */,
+				745F5DE02C4E6A6A00A26CEA /* FirebaseFunctions */,
+				745F5DE22C4E6A6A00A26CEA /* FirebaseStorage */,
 			);
 			productName = "Formula 1";
 			productReference = 749E18FA2BEA8B5A00BE6555 /* Formula 1.app */;
@@ -547,6 +617,7 @@
 			);
 			mainGroup = 749E18F12BEA8B5A00BE6555;
 			packageReferences = (
+				745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 749E18FB2BEA8B5A00BE6555 /* Products */;
 			projectDirPath = "";
@@ -564,6 +635,7 @@
 			files = (
 				749FB17F2C4829E000FCBC8E /* Localizable.strings in Resources */,
 				74EFB65D2BF66A9800EFD8A1 /* Colors.xcassets in Resources */,
+				745F5DD42C4E69E800A26CEA /* GoogleService-Info.plist in Resources */,
 				749E19072BEA8B5D00BE6555 /* Assets.xcassets in Resources */,
 				749E190A2BEA8B5D00BE6555 /* Base in Resources */,
 			);
@@ -580,6 +652,7 @@
 				74845C852C3FE58E00295919 /* TabsCoordinator.swift in Sources */,
 				74845C4B2C3FD63B00295919 /* Coordinating.swift in Sources */,
 				74845C592C3FD82700295919 /* DetachedTransitionHandling.swift in Sources */,
+				745F5DF22C4EB63B00A26CEA /* CalendarView.swift in Sources */,
 				74312F822C4A5C6400988322 /* ActivityIndicator.swift in Sources */,
 				74C9D7DC2C43CA6F008176E0 /* Drivers.swift in Sources */,
 				74845C572C3FD80C00295919 /* Routing.swift in Sources */,
@@ -596,6 +669,8 @@
 				74FDC02F2BFF54970009502E /* CountdownView.swift in Sources */,
 				74C9D7E42C43CABA008176E0 /* Decodable+Extension.swift in Sources */,
 				74845C7F2C3FDF3B00295919 /* AuthenticationCoordinator.swift in Sources */,
+				745F5DEA2C4E9E7B00A26CEA /* ImageRepository.swift in Sources */,
+				745F5DD22C4E630A00A26CEA /* ConstructorsChampionshipView.swift in Sources */,
 				74C9D7E22C43CA9D008176E0 /* Circuits.swift in Sources */,
 				74845C622C3FD8BB00295919 /* NavigationType.swift in Sources */,
 				74845C422C3FD5A800295919 /* Unowned.swift in Sources */,
@@ -606,6 +681,7 @@
 				74DBF2382C10CC9900313693 /* RaceViewModel.swift in Sources */,
 				74E9BA042C492D2D00040112 /* TimeConverter.swift in Sources */,
 				74861E3C2C49748F00E13493 /* UIImage+Extension.swift in Sources */,
+				74AEFA572C4BBB1D006B2CF1 /* SegmentButton.swift in Sources */,
 				749FB1842C482C1600FCBC8E /* LocalizationHelper.swift in Sources */,
 				74845C472C3FD60300295919 /* Router.swift in Sources */,
 				74845C642C3FD90900295919 /* RaceViewCoordinator.swift in Sources */,
@@ -616,6 +692,7 @@
 				74C9D7DA2C43CA5B008176E0 /* Laps.swift in Sources */,
 				74861E402C49768100E13493 /* HostedViewConfiguration.swift in Sources */,
 				74C9D7D22C43C3BB008176E0 /* DateFormatter+Extension.swift in Sources */,
+				745F5DF42C4EB64800A26CEA /* CalendarCoordinator.swift in Sources */,
 				74FDC0312BFF5AFA0009502E /* PracticeTimetableView.swift in Sources */,
 				74845C792C3FDE5600295919 /* GlobalDependencyContainer.swift in Sources */,
 				749FB1752C47FBDF00FCBC8E /* TimeZoneInfo.swift in Sources */,
@@ -624,6 +701,7 @@
 				74C9D7ED2C43CBAE008176E0 /* Path.swift in Sources */,
 				74845C512C3FD68700295919 /* ReferenceCounterListening.swift in Sources */,
 				74FDC0352BFF6D590009502E /* RaceTimetableView.swift in Sources */,
+				74312F872C4A7A0D00988322 /* DriversChampionshipView.swift in Sources */,
 				749FB1732C47DDF800FCBC8E /* CoreLocation.swift in Sources */,
 				74C9D7E62C43CAD2008176E0 /* URLSession+Extension.swift in Sources */,
 				74845C752C3FDE0F00295919 /* ProxyViewController.swift in Sources */,
@@ -638,6 +716,8 @@
 				74EFB6612BF66B9700EFD8A1 /* UIColor.swift in Sources */,
 				74845C532C3FD7BB00295919 /* ReferenceCounter.swift in Sources */,
 				74845C682C3FD95E00295919 /* BaseCoordinator.swift in Sources */,
+				745F5DEE2C4EB62C00A26CEA /* CalendarAssembler.swift in Sources */,
+				745F5DEC2C4E9EAA00A26CEA /* FileManagerService.swift in Sources */,
 				74845C5F2C3FD89700295919 /* NavigationTransition.swift in Sources */,
 				74C9D7E02C43CA8F008176E0 /* Constructors.swift in Sources */,
 				74845C5D2C3FD85D00295919 /* Reason.swift in Sources */,
@@ -650,6 +730,7 @@
 				74845C952C3FF37800295919 /* RaceInfoView.swift in Sources */,
 				749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */,
 				74A4408D2C46A5FC00A7E416 /* RaceLocalization.swift in Sources */,
+				745F5DE62C4E6B9300A26CEA /* CloudStorageService.swift in Sources */,
 				74C9D7E92C43CB23008176E0 /* APIError.swift in Sources */,
 				749FB1772C4818DD00FCBC8E /* Date+Extension.swift in Sources */,
 				74C9D7EF2C43CBCC008176E0 /* Season.swift in Sources */,
@@ -659,6 +740,7 @@
 				74861E3E2C49763B00E13493 /* DimmingViewController.swift in Sources */,
 				74845C712C3FDD9E00295919 /* RootFlow.swift in Sources */,
 				749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */,
+				745F5DF02C4EB63500A26CEA /* CalendarViewModel.swift in Sources */,
 				74C9D7EB2C43CB97008176E0 /* Endpoint.swift in Sources */,
 				74845C402C3FD58400295919 /* UnownedRouter.swift in Sources */,
 			);
@@ -825,7 +907,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "olyabolya.Formula-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "olyabolya.Formula-One-Info";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -853,7 +935,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "olyabolya.Formula-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "olyabolya.Formula-One-Info";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -883,6 +965,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.29.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		745F5DD62C4E6A6A00A26CEA /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		745F5DD82C4E6A6A00A26CEA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		745F5DDA2C4E6A6A00A26CEA /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		745F5DDC2C4E6A6A00A26CEA /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		745F5DDE2C4E6A6A00A26CEA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		745F5DE02C4E6A6A00A26CEA /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		745F5DE22C4E6A6A00A26CEA /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 749E18F22BEA8B5A00BE6555 /* Project object */;
 }

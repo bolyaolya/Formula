@@ -1,28 +1,28 @@
 //
-//  RaceViewCoordinator.swift
+//  CalendarCoordinator.swift
 //  Formula 1
 //
-//  Created by Olya Boyko on 11.07.2024.
+//  Created by Olya Boyko on 22.07.2024.
 //
 
 import UIKit
 
-enum RaceViewDestination: Destination {
+enum CalendarDestination: Destination {
     case initial
 }
 
-final class RaceViewCoordinator: NavigationCoordinator<RaceViewDestination> {
+final class CalendarCoordinator: NavigationCoordinator<CalendarDestination> {
     
     override func prepareToStart() {
         setupNavBarAppearance()
         setupTabBarItem()
     }
     
-    override func prepareNavigationTransition(for destination: RaceViewDestination) -> NavigationTransition {
+    override func prepareNavigationTransition(for destination: CalendarDestination) -> NavigationTransition {
         switch destination {
         case .initial:
-            let raceViewController = RaceViewAssembler().viewController(coordinator: unownedRouter)
-            return .setSingleViewController(raceViewController)
+            let calendarViewController = CalendarAssembler().viewController(coordinator: unownedRouter)
+            return .setSingleViewController(calendarViewController)
         }
     }
     
@@ -47,12 +47,12 @@ final class RaceViewCoordinator: NavigationCoordinator<RaceViewDestination> {
     }
     
     private func setupTabBarItem() {
-        let carImage = UIImage(named: "carImage")?.resize(targetSize: CGSize(width: 30, height: 30))
-        let carBoldImage = UIImage(named: "carBoldImage")?.resize(targetSize: CGSize(width: 30, height: 30))
+        let calendarImage = UIImage(named: "circleImage")?.resize(targetSize: CGSize(width: 30, height: 30))
+        let calendarBoldImage = UIImage(named: "circleBoldImage")?.resize(targetSize: CGSize(width: 30, height: 30))
         
-        let raceTabBarItem = UITabBarItem(title: "Гонка", image: carImage, selectedImage: carBoldImage)
-        raceTabBarItem.tag = 0
-        rootViewController.tabBarItem = raceTabBarItem
+        let calendarTabBarItem = UITabBarItem(title: "Календарь", image: calendarImage, selectedImage: calendarBoldImage)
+        calendarTabBarItem.tag = 1
+        rootViewController.tabBarItem = calendarTabBarItem
     }
 }
 

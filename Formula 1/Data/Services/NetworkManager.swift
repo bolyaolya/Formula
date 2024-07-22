@@ -83,12 +83,9 @@ public class NetworkManager {
     ///   - offset: Optional property to indicate starting point of elements from API request.
     /// - Returns: A model representing a Race Schedule
     func raceSchedule(for season: Season, limit: String? = nil, offset: String? = nil) async throws -> RaceSchedule {
-        
         let raceSchedule: RaceSchedule = try await URLSession.shared.fetch(.raceSchedule, for: season, limit: limit, offset: offset)
-        
         return raceSchedule
     }
-
     
     /// Asynchronously fetches Formula 1 Race Results for a given year.
     /// - Parameters:

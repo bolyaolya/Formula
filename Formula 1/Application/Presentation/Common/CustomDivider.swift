@@ -12,6 +12,5 @@ struct CustomDivider: View {
         Divider()
             .frame(height: 1.0)
             .background(Color(.systemGray))
-            
     }
 }

@@ -49,13 +49,17 @@ public struct StandingsList: Codable {
     }
 }
 
-public struct DriverStanding: Codable {
+public struct DriverStanding: Codable, Identifiable {
     public let position: String
     public let positionText: String
     public let points: String
     public let wins: String
     public let driver: Driver
     public let constructors: [Constructor]
+    
+    public var id: String {
+        driver.driverID
+    }
 
     private enum CodingKeys: String, CodingKey {
         case position, positionText, points, wins

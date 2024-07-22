@@ -17,8 +17,9 @@ final class RootCoordinator: TabsCoordinator {
         rootViewController.tabBar.tintColor = .white
         let mainCoordinator = RaceViewCoordinator()
         let championshipCoordinator = ChampionshipCoordinator()
+        let calendarCoordinator = CalendarCoordinator()
         setupTabBarAppearance()
-        setCoordinatedTabs([mainCoordinator, championshipCoordinator])
+        setCoordinatedTabs([mainCoordinator, championshipCoordinator, calendarCoordinator])
     }
     
     private func setupTabBarAppearance() {
