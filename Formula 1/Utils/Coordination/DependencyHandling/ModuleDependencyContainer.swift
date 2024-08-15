@@ -7,8 +7,7 @@
 
 import Foundation
 
-public final class ModuleDependencyContainer {
-    
+public final class ModuleDependencyContainer {    
     private var dependencies: [String: AnyObject] = [:]
     
     public func register<T: AnyObject>(_ initializer: @autoclosure @escaping () -> T) {

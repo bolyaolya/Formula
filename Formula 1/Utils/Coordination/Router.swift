@@ -8,7 +8,6 @@
 import UIKit
 
 public final class Router<DestinationType: Destination, RootViewController: UINavigationController>: Routing, DetachedTransitionHandling, ReferenceCounting {
-    
     // MARK: Public properties
     
     public var rootViewController: UINavigationController
@@ -50,4 +49,3 @@ public final class Router<DestinationType: Destination, RootViewController: UINa
         shouldStop()
     }
 }
-

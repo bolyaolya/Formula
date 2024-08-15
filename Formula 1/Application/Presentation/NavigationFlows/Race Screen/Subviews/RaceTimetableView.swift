@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct RaceTimetableView: View {
-    
+struct RaceTimetableView: View {    
     var qualyDate: String
     var raceDate: String
     

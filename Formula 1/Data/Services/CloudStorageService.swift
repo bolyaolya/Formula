@@ -9,7 +9,6 @@ import UIKit
 import FirebaseStorage
 
 final class CloudStorageService {
-    
     private let storage = Storage.storage()
     private let jsonDecoder = JSONDecoder()
     
@@ -23,13 +22,13 @@ final class CloudStorageService {
             let metadata = StorageMetadata()
             metadata.contentType = "image/jpg"
             
-            storageRef.putData(imageData, metadata: metadata) { (metadata, error) in
+            storageRef.putData(imageData, metadata: metadata) { _, error in
                 if let error = error {
                     completion(.failure(error))
                     return
                 }
                 
-                storageRef.downloadURL { (url, error) in
+                storageRef.downloadURL { url, error in
                     if let url = url {
                         completion(.success(url))
                     } else if let error = error {

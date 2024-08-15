@@ -7,8 +7,7 @@
 
 import Foundation
 
-open class DetachedContext<ReasonType: Reason> {
-   
+open class DetachedContext<ReasonType: Reason> {   
     public var reason: ReasonType
     
     public init(reason: ReasonType) {

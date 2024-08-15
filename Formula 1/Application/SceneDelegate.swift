@@ -8,18 +8,15 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, UIApplicationDelegate {
-
     var window: UIWindow?
     var appCoordinator: FAppCoordinator!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
         let appCoordinator = FAppCoordinator(window: window, type: .navigating)
-        appCoordinator.start()
-       
+        appCoordinator.start()       
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }

@@ -12,7 +12,6 @@ enum RaceViewDestination: Destination {
 }
 
 final class RaceViewCoordinator: NavigationCoordinator<RaceViewDestination> {
-    
     override func prepareToStart() {
         setupNavBarAppearance()
         setupTabBarItem()
@@ -55,5 +54,3 @@ final class RaceViewCoordinator: NavigationCoordinator<RaceViewDestination> {
         rootViewController.tabBarItem = raceTabBarItem
     }
 }
-
-

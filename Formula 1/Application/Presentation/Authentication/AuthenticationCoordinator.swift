@@ -15,8 +15,7 @@ enum AuthenticationDestination: Destination {
 //    case privacyPolicy
 }
 
-final class AuthenticationCoordinator: NavigationCoordinator<AuthenticationDestination> {
-  
+final class AuthenticationCoordinator: NavigationCoordinator<AuthenticationDestination> {  
     override func prepareToStart() {
         dependencyContainer.register(AuthenticationUseCase())
     }

@@ -7,8 +7,7 @@
 
 import UIKit
 
-public struct NavigationTransition {
-    
+public struct NavigationTransition {    
     private let nextViewController: UIViewController
     private let animated: Bool
     private let navigationType: NavigationType

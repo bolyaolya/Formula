@@ -7,8 +7,7 @@
 
 import Foundation
 
-public final class Unowned<Value> {
-    
+public final class Unowned<Value> {    
     private var _value: () -> Value
     
     public var wrappedValue: Value {
@@ -19,8 +18,10 @@ public final class Unowned<Value> {
         self._value = Unowned.createValueClosure(for: value, erase: erase)
     }
     
-    private static func createValueClosure<Erasable: AnyObject>(for value: Erasable,
-                                                                erase: @escaping (Erasable) -> Value) -> () -> Value {
+    private static func createValueClosure<Erasable: AnyObject>(
+        for value: Erasable,
+        erase: @escaping (Erasable) -> Value
+    ) -> () -> Value {
         { [unowned value] in erase(value) }
     }
 }

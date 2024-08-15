@@ -7,8 +7,7 @@
 
 import UIKit
 
-extension UINavigationController: ProxyingViewController {
-    
+extension UINavigationController: ProxyingViewController {    
     public func switchCurrent(to newViewController: UIViewController, withOptions options: UIView.AnimationOptions?) {
         var proxiedViewControllers: [UIViewController]
         if let childNavigationController = newViewController as? UINavigationController {

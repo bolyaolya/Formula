@@ -26,7 +26,7 @@ extension Season {
     /// - Returns: String that will be part of the resultant URL.
     var query: String? {
         switch self {
-            case .year(let year):
+        case .year(let year):
             return "/\(year)"
         case .all:
             return ""

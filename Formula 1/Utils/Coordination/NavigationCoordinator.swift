@@ -8,7 +8,6 @@
 import UIKit
 
 open class NavigationCoordinator<DestinationType: Destination>: BaseCoordinator, ViewControlling, Routing {
-   
     public typealias RootViewController = UINavigationController
     
     // MARK: Public properties
@@ -66,15 +65,12 @@ open class NavigationCoordinator<DestinationType: Destination>: BaseCoordinator,
         case shouldPopLastViewController(animated: Bool)
         case doNothing
     }
-   
 }
 
 // MARK: Router
 
-extension NavigationCoordinator where NavigationCoordinator: ReferenceCounting {
-    
+extension NavigationCoordinator where NavigationCoordinator: ReferenceCounting {    
     public var unownedRouter: UnownedRouter<DestinationType> {
         UnownedRouter(self) { $0.strongRouter }
     }
-    
 }

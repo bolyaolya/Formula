@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ConstructorsChampionshipView: View {
     var body: some View {
-        VStack {
-            
-        }
+        VStack { }
     }
 }

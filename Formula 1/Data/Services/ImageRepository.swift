@@ -22,7 +22,6 @@ final class ImageRepository {
 }
 
 extension ImageRepository: ImageRepositoryProtocol {
-    
     func add(imageData: Data, imageID: String) throws {
         imagesCache.setObject(imageData as NSData, forKey: imageID as NSString)
         
@@ -40,8 +39,7 @@ extension ImageRepository: ImageRepositoryProtocol {
         }
     }
     
-    func fetchImageData(imageID: String, path: String) async throws -> Data {
-        
+    func fetchImageData(imageID: String, path: String) async throws -> Data {        
         if let imageData = getImageFromCache(idImage: imageID) {
             return imageData
         } else {

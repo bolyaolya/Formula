@@ -12,8 +12,7 @@ enum MMRootFlow: RootFlow {
     case mainFlow
 }
 
-final class FAppCoordinator: AppCoordinator<MMRootFlow> {
-    
+final class FAppCoordinator: AppCoordinator<MMRootFlow> {    
     override func prepareCoordinator(for rootFlow: MMRootFlow) -> any AnyCoordinator {
         switch rootFlow {
         case .authentication:

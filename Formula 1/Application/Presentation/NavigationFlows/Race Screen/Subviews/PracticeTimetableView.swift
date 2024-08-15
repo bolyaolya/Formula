@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct PracticeTimetableView: View {
-    
+struct PracticeTimetableView: View {    
     var firstPracticeDate: String
     var secondPracticeDate: String?
     var thirdPracticeDate: String?

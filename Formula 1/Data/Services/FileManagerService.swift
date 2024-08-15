@@ -7,18 +7,17 @@
 
 import Foundation
 
-//MARK: - FileManagerServiceProtocol
+// MARK: - FileManagerServiceProtocol
 
 protocol FileManagerServiceProtocol {
     func addImageData(_ imageData: Data, _ id: String) throws
-    func getImageData() throws -> [String:Data]
+    func getImageData() throws -> [String: Data]
     func removeAll() throws
 }
 
-//MARK: - FileManagerService
+// MARK: - FileManagerService
 
 final class FileManagerService {
-    
     private let fileManager = FileManager.default
     
     private func createDocumentsURL() throws -> URL {
@@ -37,19 +36,17 @@ final class FileManagerService {
     }
 }
 
-//MARK: - extension FileManagerServiceProtocol
+// MARK: - extension FileManagerServiceProtocol
 
 extension FileManagerService: FileManagerServiceProtocol {
-    
     func addImageData(_ imageData: Data, _ id: String) throws {
         let url = try createDocumentsURL()
         let nameFileURL = url.appendingPathComponent(id)
         fileManager.createFile(atPath: nameFileURL.path, contents: imageData)
     }
     
-    func getImageData() throws -> [String:Data] {
-        
-        var idAndImageData: [String:Data] = [:]
+    func getImageData() throws -> [String: Data] {        
+        var idAndImageData: [String: Data] = [:]
         let urlArray = try contents()
         
         for imageUrl in urlArray {

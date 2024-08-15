@@ -15,16 +15,14 @@ public typealias UnownedRouter<DestinationType: Destination> = Unowned<Router<De
 // MARK: - ViewControlling
 
 extension Unowned: ViewControlling where Value: ViewControlling {
-    
     public var rootViewController: Value.RootViewController {
         wrappedValue.rootViewController
     }
 }
 
-// MARK: -  Routing
+// MARK: - Routing
 
 extension Unowned: Routing where Value: Routing {
-    
     public func navigateTo(_ destination: Value.DestinationType) {
         wrappedValue.navigateTo(destination)
     }
@@ -37,7 +35,6 @@ extension Unowned: Routing where Value: Routing {
 // MARK: - DetachedTransitionHandling
 
 extension Unowned: DetachedTransitionHandling where Value: Routing {
-    
     public func performDetachedTransition(_ context: DetachedContext<some Reason>) {
         wrappedValue.performDetachedTransition(context)
     }
@@ -50,14 +47,12 @@ extension Unowned: DetachedTransitionHandling where Value: Routing {
 // MARK: - Reference counting
 
 extension Unowned: ReferenceCounting where Value: ReferenceCounting {
-    
     public var referenceCounter: ReferenceCounter {
         wrappedValue.referenceCounter
     }
 }
 
-extension Unowned: ReferenceCounterListening where Value: ReferenceCounterListening {
-    
+extension Unowned: ReferenceCounterListening where Value: ReferenceCounterListening {    
     public func onCountDidReachZero() {
         wrappedValue.onCountDidReachZero()
     }

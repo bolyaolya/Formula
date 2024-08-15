@@ -8,7 +8,6 @@
 import Foundation
 
 class LocalizationHelper {
-    
     /// Returns a localized string for a given key and count, applying Russian pluralization rules.
         ///
         /// - Parameters:
@@ -24,11 +23,9 @@ class LocalizationHelper {
         
         if group >= 2 && group <= 4 {
             formattedKey = "\(key)_\(group)"
-        }
-        else if endsWithOne {
+        } else if endsWithOne {
             formattedKey = "\(key)_1"
-        }
-        else if count >= 5 {
+        } else if count >= 5 {
             formattedKey = "\(key)_many"
         }
         

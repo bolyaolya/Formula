@@ -8,8 +8,7 @@
 import UIKit
 import SwiftUI
 
-final class CalendarAssembler {
-    
+final class CalendarAssembler {    
     func viewController(coordinator: UnownedRouter<CalendarDestination>) -> UIViewController {
         let viewModel = ICalendarViewModel(coordinator: coordinator)
         let view = CalendarView(viewModel: viewModel)

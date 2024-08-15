@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
-    
     @StateObject var viewModel: ViewModel
     @State private var timer: Timer?
     
@@ -25,8 +24,7 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
                     .tint(Color(.white))
             } else {
                 ScrollView(.vertical) {
-                    VStack(spacing: 17) {
-                        
+                    VStack(spacing: 17) {                        
                         Text("Следующий этап")
                             .foregroundStyle(Color.white)
                             .font(.system(size: 30))

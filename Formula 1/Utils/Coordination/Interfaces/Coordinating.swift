@@ -7,8 +7,7 @@
 
 import Foundation
 
-public protocol Coordinating: ReferenceCounting {
-    
+public protocol Coordinating: ReferenceCounting {    
     /// Incapsulates what exactly should happen (e.g. what should the initial
     /// screen for the coordinated flow be) at the moment of starting this coordinator.
     func start()

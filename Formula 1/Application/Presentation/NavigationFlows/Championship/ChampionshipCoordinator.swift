@@ -12,7 +12,6 @@ enum ChampionshipDestination: Destination {
 }
 
 final class ChampionshipCoordinator: NavigationCoordinator<ChampionshipDestination> {
-    
     override func prepareToStart() {
         setupNavBarAppearance()
         setupTabBarItem()
@@ -55,5 +54,3 @@ final class ChampionshipCoordinator: NavigationCoordinator<ChampionshipDestinati
         rootViewController.tabBarItem = champTabBarItem
     }
 }
-
-

@@ -14,8 +14,7 @@ import UIKit
 /// This class is not designed to count references on itself, as it is not meant
 /// to leave navigation stack while app (or less preferably a larger part of an
 /// app) is running.
-open class TabsCoordinator: BaseCoordinator, ViewControlling {
-    
+open class TabsCoordinator: BaseCoordinator, ViewControlling {    
     public typealias RootViewController = UITabBarController
     
     // MARK: Public properties

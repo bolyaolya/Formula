@@ -10,7 +10,6 @@ import SwiftUI
 // MARK: - RaceViewModel Protocol
 
 protocol RaceViewModel: ObservableObject, HostedViewConfigurable {
-    
     var dateStart: String { get set }
     var dateEnd: String { get set }
     var raceName: String { get set }
@@ -51,7 +50,6 @@ extension RaceViewModel {
 // MARK: - RaceViewModel implementation
 
 final class IRaceViewModel: RaceViewModel {
-    
     var configuration: (any HostedViewConfiguring)?
     
     @ReferenceCounted private var coordinator: UnownedRouter<RaceViewDestination>
@@ -99,7 +97,7 @@ final class IRaceViewModel: RaceViewModel {
         fetchNextRaceWeekend()
     }
     
-    //MARK: Methods
+    // MARK: Methods
     
     private func fetchNextRaceWeekend() {
         Task {
@@ -121,8 +119,7 @@ final class IRaceViewModel: RaceViewModel {
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     self.isLoading = false
-                }
-                
+                }                
             } catch let DecodingError.dataCorrupted(context) {
                 print("Data corrupted: \(context.debugDescription)")
                 DispatchQueue.main.async {

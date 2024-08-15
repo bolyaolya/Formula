@@ -9,11 +9,10 @@ import Foundation
 
 public struct GlobalDependencyContainer {
     private static var assemblers: [String: () -> Any] = [:]
-    private static var cache : [String: Any] = [:]
+    private static var cache: [String: Any] = [:]
 }
 
-extension GlobalDependencyContainer {
-    
+extension GlobalDependencyContainer {    
     /// Adds a dependency to a static dictionary that may be resolved since
     /// from any point of the app.
     ///

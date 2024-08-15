@@ -29,5 +29,3 @@ class TimeConverter {
         return localTimeString
     }
 }
-
-

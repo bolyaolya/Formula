@@ -8,7 +8,6 @@
 import Foundation
 
 public protocol DetachedTransitionHandling {
-
     /// Method handles a specific transition is a specified context that does not belong to any coordinator.
     ///
     /// This may be useful to call AppCoordinator from deeper places in coordination hierarchy without
@@ -20,8 +19,7 @@ public protocol DetachedTransitionHandling {
     func performDetachedTransition(_ context: DetachedContext<some Reason>)
 }
 
-extension DetachedTransitionHandling {
-    
+extension DetachedTransitionHandling {    
     public func performDetachedTransition(_ context: DetachedContext<some Reason>) {
         context.performDetachedTransition()
     }

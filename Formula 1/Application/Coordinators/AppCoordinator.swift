@@ -16,7 +16,6 @@ public enum AppCoordinatorType {
 /// This class is encouraged to be instantiated in SceneDelegate (AppDelegate) and to stay alive while
 /// app is running.
 open class AppCoordinator<RootFlowType: RootFlow>: BaseCoordinator {
-    
     public static var shared: AppCoordinator<RootFlowType> {
         SharedStore.get(String(describing: RootFlowType.self))
     }
@@ -67,9 +66,11 @@ open class AppCoordinator<RootFlowType: RootFlow>: BaseCoordinator {
     }
     // MARK: Public methods
     
-    public final func shouldStartCoordinatedRootFlow(_ rootFlow: RootFlowType,
-                                                     withOptions options: UIView.AnimationOptions? = nil,
-                                                     clearingGlobalDependencies: Bool = false) {
+    public final func shouldStartCoordinatedRootFlow(
+        _ rootFlow: RootFlowType,
+        withOptions options: UIView.AnimationOptions? = nil,
+        clearingGlobalDependencies: Bool = false
+    ) {
         childCoordinators.forEach { childCoordinator in
             childCoordinator.stop()
         }

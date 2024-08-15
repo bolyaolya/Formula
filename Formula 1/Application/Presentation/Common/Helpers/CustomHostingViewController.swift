@@ -8,7 +8,6 @@
 import SwiftUI
 
 final class CustomHostingController<Content>: UIHostingController<Content> where Content: View {
-    
     private var shouldHideNavBar: Bool = false
     private var shouldHideNavBarAnimated: Bool = false
     private var shouldHideTabBar: Bool = false
@@ -16,6 +15,7 @@ final class CustomHostingController<Content>: UIHostingController<Content> where
     private var dimmingViewController: DimmingViewControllerProtocol?
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(shouldHideNavBar, animated: shouldHideNavBarAnimated)
         tabBarController?.tabBar.isHidden = shouldHideTabBar
     }
@@ -30,8 +30,7 @@ final class CustomHostingController<Content>: UIHostingController<Content> where
     }
 }
 
-extension CustomHostingController: DimmingProxy {
-    
+extension CustomHostingController: DimmingProxy {    
     func shouldDimCurrentScreen(_ flag: Bool, onDimHide: @escaping () -> Void) {
         if flag {
             dimmingViewController = makeLoadingDimmingViewController()

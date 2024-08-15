@@ -7,8 +7,7 @@
 
 import Foundation
 
-public class NetworkManager {
-    
+public class NetworkManager {    
     /// Asynchronously fetches Formula 1 Circuits for a given year.
     /// - Parameters:
     ///   - season: Season enum case, specified by an Int, which indicates to fetch data for a given year.
@@ -137,8 +136,12 @@ public class NetworkManager {
     ///   - limit: Property to specify number of items to return per request.
     ///   - offset: Property to indicate starting point of elements from API request.
     /// - Returns: A model that represents a finishing status.
-    func finishingStatus( for season: Season, round: String? = nil, limit: String? = nil,
-                          offset: String? = nil) async throws -> FinishingStatus {
+    func finishingStatus(
+        for season: Season,
+        round: String? = nil,
+        limit: String? = nil,
+        offset: String? = nil
+    ) async throws -> FinishingStatus {
         try await URLSession.shared.fetch(.finishingStatus, for: season, limit: limit, offset: offset)
     }
 }

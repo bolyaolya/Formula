@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		742796BC2C52486B0092414E /* CalendarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742796BB2C52486B0092414E /* CalendarCellView.swift */; };
 		74312F822C4A5C6400988322 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F812C4A5C6400988322 /* ActivityIndicator.swift */; };
 		74312F842C4A70F900988322 /* SprintTimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F832C4A70F900988322 /* SprintTimetableView.swift */; };
 		74312F872C4A7A0D00988322 /* DriversChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F862C4A7A0D00988322 /* DriversChampionshipView.swift */; };
+		745C0CD52C5CEBE4005D7B8F /* TrackScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745C0CD42C5CEBE4005D7B8F /* TrackScheme.swift */; };
 		745F5DD22C4E630A00A26CEA /* ConstructorsChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DD12C4E630A00A26CEA /* ConstructorsChampionshipView.swift */; };
 		745F5DD42C4E69E800A26CEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 745F5DD32C4E69E800A26CEA /* GoogleService-Info.plist */; };
 		745F5DD72C4E6A6A00A26CEA /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 745F5DD62C4E6A6A00A26CEA /* FirebaseAnalyticsSwift */; };
@@ -117,9 +119,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		742796BB2C52486B0092414E /* CalendarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCellView.swift; sourceTree = "<group>"; };
 		74312F812C4A5C6400988322 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		74312F832C4A70F900988322 /* SprintTimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimetableView.swift; sourceTree = "<group>"; };
 		74312F862C4A7A0D00988322 /* DriversChampionshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversChampionshipView.swift; sourceTree = "<group>"; };
+		745C0CD42C5CEBE4005D7B8F /* TrackScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackScheme.swift; sourceTree = "<group>"; };
 		745F5DD12C4E630A00A26CEA /* ConstructorsChampionshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorsChampionshipView.swift; sourceTree = "<group>"; };
 		745F5DD32C4E69E800A26CEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		745F5DE52C4E6B9300A26CEA /* CloudStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudStorageService.swift; sourceTree = "<group>"; };
@@ -293,6 +297,18 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		745C0CD32C5CEB0B005D7B8F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				74C9D7E32C43CABA008176E0 /* Decodable+Extension.swift */,
+				74C9D7D12C43C3BB008176E0 /* DateFormatter+Extension.swift */,
+				74C9D7E52C43CAD2008176E0 /* URLSession+Extension.swift */,
+				74861E3B2C49748F00E13493 /* UIImage+Extension.swift */,
+				749FB1762C4818DD00FCBC8E /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		745F5DE42C4E6B8700A26CEA /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +425,7 @@
 		74845C892C3FEFCC00295919 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				745C0CD32C5CEB0B005D7B8F /* Extensions */,
 				74861E432C49771600E13493 /* DimmingViews */,
 				74C9D7E72C43CB03008176E0 /* Helpers */,
 				74C9D7E82C43CB23008176E0 /* APIError.swift */,
@@ -483,17 +500,13 @@
 		74C9D7E72C43CB03008176E0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				74C9D7E32C43CABA008176E0 /* Decodable+Extension.swift */,
-				74C9D7D12C43C3BB008176E0 /* DateFormatter+Extension.swift */,
-				74C9D7E52C43CAD2008176E0 /* URLSession+Extension.swift */,
 				74A4408C2C46A5FC00A7E416 /* RaceLocalization.swift */,
 				74A440932C46B68400A7E416 /* CountryFlags.swift */,
-				749FB1762C4818DD00FCBC8E /* Date+Extension.swift */,
 				749FB1832C482C1600FCBC8E /* LocalizationHelper.swift */,
 				74E9BA032C492D2D00040112 /* TimeConverter.swift */,
-				74861E3B2C49748F00E13493 /* UIImage+Extension.swift */,
 				74861E3F2C49768100E13493 /* HostedViewConfiguration.swift */,
 				74861E412C4976A600E13493 /* CustomHostingViewController.swift */,
+				745C0CD42C5CEBE4005D7B8F /* TrackScheme.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -505,6 +518,7 @@
 				745F5DEF2C4EB63500A26CEA /* CalendarViewModel.swift */,
 				745F5DF12C4EB63B00A26CEA /* CalendarView.swift */,
 				745F5DF32C4EB64800A26CEA /* CalendarCoordinator.swift */,
+				742796BB2C52486B0092414E /* CalendarCellView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -577,6 +591,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				740A89882C6E0DE500B840D1 /* PBXTargetDependency */,
 			);
 			name = "Formula 1";
 			packageProductDependencies = (
@@ -618,6 +633,7 @@
 			mainGroup = 749E18F12BEA8B5A00BE6555;
 			packageReferences = (
 				745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				740A89862C6E0DB300B840D1 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
 			);
 			productRefGroup = 749E18FB2BEA8B5A00BE6555 /* Products */;
 			projectDirPath = "";
@@ -654,6 +670,7 @@
 				74845C592C3FD82700295919 /* DetachedTransitionHandling.swift in Sources */,
 				745F5DF22C4EB63B00A26CEA /* CalendarView.swift in Sources */,
 				74312F822C4A5C6400988322 /* ActivityIndicator.swift in Sources */,
+				742796BC2C52486B0092414E /* CalendarCellView.swift in Sources */,
 				74C9D7DC2C43CA6F008176E0 /* Drivers.swift in Sources */,
 				74845C572C3FD80C00295919 /* Routing.swift in Sources */,
 				74845C932C3FF24700295919 /* ChampionshipCoordinator.swift in Sources */,
@@ -730,6 +747,7 @@
 				74845C952C3FF37800295919 /* RaceInfoView.swift in Sources */,
 				749E19152BEA912B00BE6555 /* Coordinator.swift in Sources */,
 				74A4408D2C46A5FC00A7E416 /* RaceLocalization.swift in Sources */,
+				745C0CD52C5CEBE4005D7B8F /* TrackScheme.swift in Sources */,
 				745F5DE62C4E6B9300A26CEA /* CloudStorageService.swift in Sources */,
 				74C9D7E92C43CB23008176E0 /* APIError.swift in Sources */,
 				749FB1772C4818DD00FCBC8E /* Date+Extension.swift in Sources */,
@@ -747,6 +765,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		740A89882C6E0DE500B840D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 740A89872C6E0DE500B840D1 /* SwiftLintBuildToolPlugin */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		749E19082BEA8B5D00BE6555 /* LaunchScreen.storyboard */ = {
@@ -967,6 +992,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		740A89862C6E0DB300B840D1 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.56.1;
+			};
+		};
 		745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -978,6 +1011,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		740A89872C6E0DE500B840D1 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 740A89862C6E0DB300B840D1 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
 		745F5DD62C4E6A6A00A26CEA /* FirebaseAnalyticsSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

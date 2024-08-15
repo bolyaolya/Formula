@@ -8,8 +8,7 @@
 import UIKit
 import SwiftUI
 
-final class RaceViewAssembler {
-    
+final class RaceViewAssembler {    
     func viewController(coordinator: UnownedRouter<RaceViewDestination>) -> UIViewController {
         let viewModel = IRaceViewModel(coordinator: coordinator)
         let view = RaceView(viewModel: viewModel)

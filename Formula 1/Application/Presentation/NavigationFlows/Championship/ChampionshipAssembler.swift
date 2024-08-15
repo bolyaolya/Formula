@@ -8,8 +8,7 @@
 import UIKit
 import SwiftUI
 
-final class ChampionshipAssembler {
-    
+final class ChampionshipAssembler {    
     func viewController(coordinator: UnownedRouter<ChampionshipDestination>) -> UIViewController {
         let viewModel = IChampionshipViewModel(coordinator: coordinator)
         let view = ChampionshipView(viewModel: viewModel)

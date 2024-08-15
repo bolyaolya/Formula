@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DriversChampionshipView: View {
-    
     var championshipPlace: String
     var nameSurname: String
     var points: String
@@ -71,4 +70,3 @@ struct DriversChampionshipView: View {
         .padding(.vertical, 10)
     }
 }
-

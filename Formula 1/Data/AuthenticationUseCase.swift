@@ -6,10 +6,9 @@
 //
 
 import Foundation
-//import FirebaseFirestore.FIRTimestamp
+// import FirebaseFirestore.FIRTimestamp
 
-final class AuthenticationUseCase {
-    
+final class AuthenticationUseCase {    
 //    weak var signInDelegate: SignInDelegate? {
 //        didSet {
 //            authenticationService.signInDelegate = signInDelegate

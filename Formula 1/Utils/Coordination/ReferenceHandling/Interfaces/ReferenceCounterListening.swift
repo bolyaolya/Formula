@@ -7,8 +7,7 @@
 
 import Foundation
 
-public protocol ReferenceCounterListening: AnyObject {
-    
+public protocol ReferenceCounterListening: AnyObject {    
     /// Is called in a `delegate`-manner when references count reaches zero.
     func onCountDidReachZero()
 }

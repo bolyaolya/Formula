@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct SprintTimetableView: View {
-    
+struct SprintTimetableView: View {    
     var sprintQualyDate: String
     var sprintQualyTime: String
     

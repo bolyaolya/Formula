@@ -8,7 +8,6 @@
 import UIKit
 
 public protocol Routing: ViewControlling, DetachedTransitionHandling {
-    
     /// A specific set of possible destinations that can be navigated to from this router.
     ///
     /// `Destination` is encouraged to be implemented with an enum.
@@ -35,22 +34,17 @@ public protocol Routing: ViewControlling, DetachedTransitionHandling {
     func prepareNavigationTransition(for destination: DestinationType) -> NavigationTransition
     
     func shouldStop()
-  
 }
 
 extension Routing where RootViewController == UINavigationController {
-
     public func navigateTo(_ destination: DestinationType) {
         let transition = prepareNavigationTransition(for: destination)
         transition.perform(on: rootViewController)
     }
-    
 }
 
-extension Routing where RootViewController == UINavigationController, Self: ReferenceCounting {
-    
+extension Routing where RootViewController == UINavigationController, Self: ReferenceCounting {    
     public var strongRouter: Router<DestinationType, RootViewController> {
         Router(self, referenceCounter: self.referenceCounter)
-    }
-    
+    }    
 }

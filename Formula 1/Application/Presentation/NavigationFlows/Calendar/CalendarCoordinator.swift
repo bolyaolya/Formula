@@ -12,7 +12,6 @@ enum CalendarDestination: Destination {
 }
 
 final class CalendarCoordinator: NavigationCoordinator<CalendarDestination> {
-    
     override func prepareToStart() {
         setupNavBarAppearance()
         setupTabBarItem()
@@ -55,5 +54,3 @@ final class CalendarCoordinator: NavigationCoordinator<CalendarDestination> {
         rootViewController.tabBarItem = calendarTabBarItem
     }
 }
-
-

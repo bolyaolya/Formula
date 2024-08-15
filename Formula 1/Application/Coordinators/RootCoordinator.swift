@@ -8,9 +8,8 @@
 import UIKit
 
 final class RootCoordinator: TabsCoordinator {
-    
-    override func prepareToStart(with preconditionData: [String : Any]) {
-        //TODO: добавить подгрузку профиля пользователя
+    override func prepareToStart(with preconditionData: [String: Any]) {
+        // TODO: добавить подгрузку профиля пользователя
     }
     
     override func start() {

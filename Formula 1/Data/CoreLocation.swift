@@ -7,8 +7,7 @@
 
 import CoreLocation
 
-class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    
+class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {    
     private let manager = CLLocationManager()
     @Published var userLocation: CLLocation?
     @Published var userTimeZone: TimeZone?

@@ -8,9 +8,8 @@
 import Foundation
 
 extension URLSession {
-    
     private func dataTask(_ url: URL, _ session: URLSession, completion: @escaping ((Result<Data, APIError>) -> Void)) {
-        session.dataTask(with: url) { data, response, error in
+        session.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
                 if let error = error {
                     completion(.failure(.network(error.localizedDescription)))
@@ -24,9 +23,16 @@ extension URLSession {
         .resume()
     }
     
-    internal func fetch<T: Decodable>(_ subPath: Path, for season: Season? = nil, round: String? = nil, lap: String? = nil,
-                                      limit: String? = nil, offset: String? = nil, session: URLSession = URLSession.shared,
-                                      completion: @escaping ((Result<T, APIError>) -> Void)) {
+    internal func fetch<T: Decodable>(
+        _ subPath: Path,
+        for season: Season? = nil,
+        round: String? = nil,
+        lap: String? = nil,
+        limit: String? = nil,
+        offset: String? = nil,
+        session: URLSession = URLSession.shared,
+        completion: @escaping ((Result<T, APIError>) -> Void)
+    ) {
         let endpoint = Endpoint(with: subPath, for: season, round: round, lap: lap, limit: limit, offset: offset)
         let url = endpoint.url
 
@@ -60,9 +66,15 @@ extension URLSession {
     ///   - offset: Property to indicate starting point of elements from API request.
     ///   - session: URLSession instance (URLSession.shared singleton by default)
     /// - Returns: A model representing the decodable model that is specified by the `subPath` parameter.
-    internal func fetch<T: Decodable>( _ subPath: Path, for season: Season? = nil, round: String? = nil, lap: String? = nil,
-        limit: String? = nil, offset: String? = nil, session: URLSession = URLSession.shared) async throws -> T {
-        
+    internal func fetch<T: Decodable>(
+        _ subPath: Path,
+        for season: Season? = nil,
+        round: String? = nil,
+        lap: String? = nil,
+        limit: String? = nil, 
+        offset: String? = nil,
+        session: URLSession = URLSession.shared
+    ) async throws -> T {
         return try await withCheckedThrowingContinuation { [weak self] continuation in
             self?.fetch(subPath, for: season, round: round, lap: lap, limit: limit, offset: offset, session: session) { result in
                 continuation.resume(with: result)

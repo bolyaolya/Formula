@@ -8,7 +8,6 @@
 import UIKit
 
 public final class ProxyViewController: UIViewController {
-    
     // MARK: Private properties
     
     private var currentViewController: UIViewController? {
@@ -40,18 +39,17 @@ public final class ProxyViewController: UIViewController {
         view.addSubview(currentViewController.view)
         currentViewController.didMove(toParent: self)
         }
-    
 }
 
 extension ProxyViewController {
-    
-    private func add(_ child: UIViewController,
-                     completion: @escaping () -> Void = {}) {
+    private func add(
+        _ child: UIViewController,
+        completion: @escaping () -> Void = { }
+    ) {
         addChild(child)
         view.addSubview(child.view)
         child.didMove(toParent: self)
         completion()
-        
     }
 
     private func removeChild(_ childViewController: UIViewController) {
@@ -64,12 +62,10 @@ extension ProxyViewController {
 // MARK: - ProxyingViewController
 
 extension ProxyViewController: ProxyingViewController {
-    
     public final func switchCurrent(to newViewController: UIViewController, withOptions: UIView.AnimationOptions? = nil) {
         add(newViewController)
         if self.children.count > 2 {
             removeChild(self.children[children.count - 2])
         }
     }
-
 }

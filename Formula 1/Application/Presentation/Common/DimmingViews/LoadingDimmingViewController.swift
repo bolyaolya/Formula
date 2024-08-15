@@ -7,8 +7,7 @@
 
 import UIKit
 
-final class LoadingDimmingViewController: DimmingViewController {
-    
+final class LoadingDimmingViewController: DimmingViewController {    
     // MARK: Private properties
     
     private var spinner = UIActivityIndicatorView(style: .large)

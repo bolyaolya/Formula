@@ -11,8 +11,7 @@ import Foundation
 /// when this reference is desired to be counted by explicitly given
 /// `ReferenceCounter`
 @propertyWrapper
-public final class ReferenceCounted<T: ReferenceCounting> {
-    
+public final class ReferenceCounted<T: ReferenceCounting> {    
     public var wrappedValue: T
     
     public init(wrappedValue: T) {

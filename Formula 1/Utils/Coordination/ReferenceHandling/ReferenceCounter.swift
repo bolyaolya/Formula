@@ -8,7 +8,6 @@
 import Foundation
 
 public final class ReferenceCounter {
-    
     var listener: ReferenceCounterListening?
     
     private var count: Int = 0 {
@@ -25,8 +24,7 @@ public final class ReferenceCounter {
     }
 }
 
-extension ReferenceCounter: ReferenceOperatable {
-    
+extension ReferenceCounter: ReferenceOperatable {    
     public static postfix func ++ (rc: ReferenceCounter) {
         rc.count += 1
     }

@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct RaceInfoView: View {
-    
     var date: String
     var raceName: String
     var countryFlag: UIImage
     
     var body: some View {
-        
         VStack {
             Text(raceName.uppercased())
                 .foregroundColor(.white)
@@ -43,4 +41,3 @@ struct RaceInfoView: View {
         .padding(.top, 8)
     }
 }
-

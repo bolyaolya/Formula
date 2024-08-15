@@ -111,7 +111,7 @@ extension Path {
         case .drivers: return Drivers.self
         case .driverStandings: return DriverStandings.self
         case .finishingStatus: return FinishingStatus.self
-        case .lapTimes(_): return Laps.self
+        case .lapTimes: return Laps.self
         case .seasons: return Seasons.self
         case .pitStops: return PitStops.self
         case .raceResults: return RaceResults.self

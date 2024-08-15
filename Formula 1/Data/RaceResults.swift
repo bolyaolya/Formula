@@ -84,7 +84,7 @@ public struct AverageSpeed: Codable {
 }
 
 public enum Units: String, Codable {
-    case kph = "kph"
+    case kph
 }
 
 public struct FastestLapTime: Codable {

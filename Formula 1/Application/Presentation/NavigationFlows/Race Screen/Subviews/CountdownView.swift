@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct CountdownView: View {
-    
+struct CountdownView: View {    
     var days: Int
     var hours: Int
     var minutes: Int

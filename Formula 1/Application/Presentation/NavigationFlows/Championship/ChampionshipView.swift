@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct ChampionshipView<ViewModel>: View where ViewModel: ChampionshipViewModel {
-    
+struct ChampionshipView<ViewModel>: View where ViewModel: ChampionshipViewModel {    
     @StateObject var viewModel: ViewModel
     @State private var selectedSegment: Int = 0
     

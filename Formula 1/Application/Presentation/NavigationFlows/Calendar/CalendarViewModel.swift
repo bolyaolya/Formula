@@ -10,6 +10,10 @@ import SwiftUI
 // MARK: - CalendarViewModel Protocol
 
 protocol CalendarViewModel: ObservableObject {
+    var round: String { get }
+    var countryName: String { get }
+    var trackName: String { get }
+    var trackScheme: UIImage { get }
     
     var isLoading: Bool { get }
 }
@@ -19,8 +23,12 @@ extension CalendarViewModel { }
 // MARK: - CalendarViewModel implementation
 
 final class ICalendarViewModel: CalendarViewModel {
-    
     @ReferenceCounted private var coordinator: UnownedRouter<CalendarDestination>
+    
+    @Published var round: String = ""
+    @Published var countryName: String = ""
+    @Published var trackName: String = ""
+    @Published var trackScheme: UIImage = UIImage()
     
     @Published var isLoading: Bool = false
     
@@ -32,7 +40,5 @@ final class ICalendarViewModel: CalendarViewModel {
         self.coordinator = coordinator
     }
     
-    //MARK: Methods
-    
-    
+    // MARK: Methods
 }

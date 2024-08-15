@@ -11,7 +11,6 @@ import Foundation
 
 /// Should be witnessed by an object that should store and access configuration object
 protocol HostedViewConfigurable {
-    
     var configuration: HostedViewConfiguring? { get set }
 }
 
@@ -19,15 +18,12 @@ protocol HostedViewConfigurable {
 
 // Should be witnessed by a configuration class
 protocol HostedViewConfiguring {
-    
     var dimmingProxy: DimmingProxy? { get }
-    
 }
 
 // MARK: - HostedViewConfiguration
 
-final class HostedViewConfiguration: HostedViewConfiguring {
-    
+final class HostedViewConfiguration: HostedViewConfiguring {    
     weak var dimmingProxy: DimmingProxy?
     
     init(dimmingProxy: DimmingProxy? = nil) {

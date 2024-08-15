@@ -8,7 +8,6 @@
 import UIKit
 
 open class BaseCoordinator: Coordinating, DetachedTransitionHandling {
-
     // MARK: Public properties
     
     public weak var parentCoordinator: Coordinating?
@@ -85,7 +84,6 @@ open class BaseCoordinator: Coordinating, DetachedTransitionHandling {
 }
 
 extension BaseCoordinator: ReferenceCounterListening {
-
     public func onCountDidReachZero() {
         parentCoordinator?.removeChild(self)
     }

@@ -11,7 +11,6 @@ import Combine
 // MARK: - ChampionshipViewModel Protocol
 
 protocol ChampionshipViewModel: ObservableObject {
-    
     var drivers: [DriverStanding] { get set }
     var driverPhotos: [String: UIImage] { get set }
     
@@ -23,7 +22,6 @@ extension ChampionshipViewModel { }
 // MARK: - ChampionshipViewModel implementation
 
 final class IChampionshipViewModel: ChampionshipViewModel {
-    
     @ReferenceCounted private var coordinator: UnownedRouter<ChampionshipDestination>
     
     @Published var drivers: [DriverStanding] = []
@@ -43,7 +41,7 @@ final class IChampionshipViewModel: ChampionshipViewModel {
         fetchDriversStandings()
     }
     
-    //MARK: Methods
+    // MARK: Methods
     
     func fetchDriversStandings() {
         isLoading = true
