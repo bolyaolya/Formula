@@ -14,27 +14,32 @@ struct CalendarCellView: View {
     var trackName: String
     
     var body: some View {
-        VStack {
-            HStack(alignment: .top) {
+        HStack {
+            VStack(alignment: .leading) {
                 Text(raceNumber).underline()
-                    .foregroundStyle(Color.white)
+                    .font(.system(size: 25, weight: .bold))
                 
                 Spacer()
                 
-                Image(uiImage: trackScheme)
-                    .resizable()
-                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 75)
+                Text(countryName)
+                
+                Text("Трасса: \(trackName)")
             }
             
-            Text(countryName)
-                .foregroundStyle(Color.white)
+            Spacer()
             
-            Text("Трасса: \(trackName)")
+            VStack {
+                Image(uiImage: trackScheme)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 150, height: 113)
+            }
         }
         .padding(.vertical, 10)
         .padding(.horizontal, 8)
         .background(Color.bubbleBackground)
         .clipShape(RoundedRectangle(cornerRadius: 16))
-        .padding(.top, 24)
+        .padding(.vertical, 8)
+        .foregroundStyle(Color.white)
     }
 }

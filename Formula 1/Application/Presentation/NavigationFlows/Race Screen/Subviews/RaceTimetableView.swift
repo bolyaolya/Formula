@@ -10,7 +10,6 @@ import SwiftUI
 struct RaceTimetableView: View {    
     var qualyDate: String
     var raceDate: String
-    
     var qualyTime: String
     var raceTime: String
     
@@ -25,7 +24,7 @@ struct RaceTimetableView: View {
         .background(Color.bubbleBackground)
         .cornerRadius(16)
         .padding(.horizontal, 15)
-        .padding(.vertical, 18)
+        .padding(.vertical, 10)
     }
 }
 

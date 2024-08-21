@@ -67,6 +67,6 @@ struct DriversChampionshipView: View {
         .background(Color.bubbleBackground)
         .cornerRadius(16)
         .padding(.horizontal, 15)
-        .padding(.vertical, 10)
+        .padding(.vertical, 5)
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		740A898A2C6E128E00B840D1 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740A89892C6E128E00B840D1 /* CustomProgressView.swift */; };
 		742796BC2C52486B0092414E /* CalendarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742796BB2C52486B0092414E /* CalendarCellView.swift */; };
 		74312F822C4A5C6400988322 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F812C4A5C6400988322 /* ActivityIndicator.swift */; };
 		74312F842C4A70F900988322 /* SprintTimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F832C4A70F900988322 /* SprintTimetableView.swift */; };
@@ -119,6 +120,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		740A89892C6E128E00B840D1 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		742796BB2C52486B0092414E /* CalendarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCellView.swift; sourceTree = "<group>"; };
 		74312F812C4A5C6400988322 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		74312F832C4A70F900988322 /* SprintTimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimetableView.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 				74A4408E2C46AA2600A7E416 /* CustomDivider.swift */,
 				74312F812C4A5C6400988322 /* ActivityIndicator.swift */,
 				74AEFA562C4BBB1D006B2CF1 /* SegmentButton.swift */,
+				740A89892C6E128E00B840D1 /* CustomProgressView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -760,6 +763,7 @@
 				749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */,
 				745F5DF02C4EB63500A26CEA /* CalendarViewModel.swift in Sources */,
 				74C9D7EB2C43CB97008176E0 /* Endpoint.swift in Sources */,
+				740A898A2C6E128E00B840D1 /* CustomProgressView.swift in Sources */,
 				74845C402C3FD58400295919 /* UnownedRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

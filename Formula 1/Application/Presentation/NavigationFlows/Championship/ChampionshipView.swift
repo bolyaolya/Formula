@@ -17,11 +17,7 @@ struct ChampionshipView<ViewModel>: View where ViewModel: ChampionshipViewModel 
                 .ignoresSafeArea()
             
             if viewModel.isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .scaleEffect(1.5)
-                    .padding()
-                    .tint(Color(.white))
+                CustomProgressView()
             } else {
                 ScrollView(.vertical) {
                     VStack(spacing: 8) {

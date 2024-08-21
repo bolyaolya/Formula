@@ -9,6 +9,13 @@ import SwiftUI
 
 struct ConstructorsChampionshipView: View {
     var body: some View {
-        VStack { }
+        VStack {
+            Spacer()
+            
+            Text("Экран в разработке")
+                .foregroundStyle(Color.white)
+            
+            Spacer()
+        }
     }
 }

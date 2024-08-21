@@ -10,12 +10,12 @@ import SwiftUI
 // MARK: - CalendarViewModel Protocol
 
 protocol CalendarViewModel: ObservableObject {
-    var round: String { get }
-    var countryName: String { get }
-    var trackName: String { get }
+    var races: [Race] { get }
     var trackScheme: UIImage { get }
     
     var isLoading: Bool { get }
+    
+    func trackImage(for countryName: String) -> UIImage
 }
 
 extension CalendarViewModel { }
@@ -25,12 +25,10 @@ extension CalendarViewModel { }
 final class ICalendarViewModel: CalendarViewModel {
     @ReferenceCounted private var coordinator: UnownedRouter<CalendarDestination>
     
-    @Published var round: String = ""
-    @Published var countryName: String = ""
-    @Published var trackName: String = ""
+    @Published var races: [Race] = []
     @Published var trackScheme: UIImage = UIImage()
     
-    @Published var isLoading: Bool = false
+    @Published var isLoading: Bool = true
     
     // MARK: Private properties
     
@@ -38,7 +36,25 @@ final class ICalendarViewModel: CalendarViewModel {
     
     init(coordinator: UnownedRouter<CalendarDestination>) {
         self.coordinator = coordinator
+        
+        fetchCircuits()
     }
     
     // MARK: Methods
+    
+    func trackImage(for countryName: String) -> UIImage {
+        return UIImage(named: countryName) ?? UIImage()
+    }
+    
+    private func fetchCircuits() {
+        Task {
+            do {
+                let fetchedCircuits = try await NetworkManager().raceSchedule(for: .currentYear)
+                self.races = fetchedCircuits.data.raceTable.races
+            } catch {
+                print("Ошибка загрузки данных о трассе: \(error.localizedDescription)")
+            }
+        }
+        isLoading = false
+    }
 }

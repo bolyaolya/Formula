@@ -17,11 +17,7 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
                 .ignoresSafeArea()
             
             if viewModel.isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .scaleEffect(1.5)
-                    .padding()
-                    .tint(Color(.white))
+                CustomProgressView()
             } else {
                 ScrollView(.vertical) {
                     VStack(spacing: 17) {                        
@@ -60,6 +56,11 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
                                       raceDate: viewModel.raceDate,
                                       qualyTime: viewModel.qualyTime,
                                       raceTime: viewModel.raceTime)
+                        
+                        Text("* указано московское время")
+                            .font(.system(size: 15))
+                            .foregroundStyle(Color.gray)
+                            .padding(.bottom, 15)
                     }
                 }
                 .clipped()

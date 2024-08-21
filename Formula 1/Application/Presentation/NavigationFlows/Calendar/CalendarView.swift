@@ -16,11 +16,7 @@ struct CalendarView<ViewModel>: View where ViewModel: CalendarViewModel {
                 .ignoresSafeArea()
             
             if viewModel.isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .scaleEffect(1.5)
-                    .padding()
-                    .tint(Color(.white))
+                CustomProgressView()
             } else {
                 ScrollView(.vertical) {
                     VStack(spacing: 8) {
@@ -30,12 +26,17 @@ struct CalendarView<ViewModel>: View where ViewModel: CalendarViewModel {
                             .fontWeight(.bold)
                         
                         CustomDivider()
+                            .padding(.bottom, 15)
                         
-                        CalendarCellView(raceNumber: viewModel.round,
-                                         trackScheme: viewModel.trackScheme,
-                                         countryName: viewModel.countryName,
-                                         trackName: viewModel.trackName)
+                        ForEach(viewModel.races, id: \.round) { race in
+                            CalendarCellView(raceNumber: race.round,
+                                             trackScheme: viewModel.trackImage(for: race.circuit.circuitID),
+                                             countryName: RaceLocalization.localizedRaceName(for: race.raceName),
+                                             trackName: race.circuit.location.locality)
+                        }
                     }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
                 }
                 .clipped()
             }
