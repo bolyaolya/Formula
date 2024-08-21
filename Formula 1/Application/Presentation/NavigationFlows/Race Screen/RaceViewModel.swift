@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: - RaceViewModel Protocol
 
-protocol RaceViewModel: ObservableObject, HostedViewConfigurable {
+protocol RaceViewModel: ObservableObject {
     var dateStart: String { get set }
     var dateEnd: String { get set }
     var raceName: String { get set }
@@ -50,8 +50,6 @@ extension RaceViewModel {
 // MARK: - RaceViewModel implementation
 
 final class IRaceViewModel: RaceViewModel {
-    var configuration: (any HostedViewConfiguring)?
-    
     @ReferenceCounted private var coordinator: UnownedRouter<RaceViewDestination>
     
     @Published var dateStart: String = ""
@@ -88,6 +86,8 @@ final class IRaceViewModel: RaceViewModel {
     
     private var race: Race?
     private var timer: Timer?
+    private let locationManager = LocationManager()
+    private var userTimeZone = TimeZone.autoupdatingCurrent
     
     // MARK: Init
     
@@ -106,7 +106,7 @@ final class IRaceViewModel: RaceViewModel {
                 
                 guard let race = raceSchedule.data.raceTable.races.first(where: {
                     guard let raceDate = DateFormatter.fetchedDateFormatter.date(from: $0.date) else { return false }
-                    return raceDate > Date()
+                    return raceDate > Date() || (raceDate.addingTimeInterval(4 * 60 * 60) > Date())
                 }) else {
                     print("No upcoming races found for the current year.")
                     return
@@ -203,8 +203,8 @@ final class IRaceViewModel: RaceViewModel {
             return
         }
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let dateFormatter = ISO8601DateFormatter()
+        dateFormatter.formatOptions = [.withInternetDateTime]
         dateFormatter.timeZone = TimeZone(identifier: "UTC")
         
         let raceDateTimeString = "\(race.date)T\(race.time)"
@@ -214,43 +214,32 @@ final class IRaceViewModel: RaceViewModel {
         }
         
         let currentDate = Date()
+        let raceEndDate = raceDate.addingTimeInterval(4 * 3600)
         
-        guard raceDate > currentDate else {
-            print("Race already started or start time is in the past.")
-            return
-        }
-        
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.day, .hour, .minute], from: currentDate, to: raceDate)
-        
-        guard let days = components.day,
-              let hours = components.hour,
-              let minutes = components.minute else {
-            print("Failed to calculate countdown components.")
-            return
-        }
-        
-        DispatchQueue.main.async {
-            self.daysLeft = days
-            self.hoursLeft = hours
-            self.minutesLeft = minutes
-        }
-    }
-    
-    private func fetchEventTime(time: String?, completion: @escaping (String?) -> Void) {
-        guard let time else {
-            print("Practice time is nil.")
-            completion(nil)
-            return
-        }
-        
-        if let localTime = TimeConverter().convertUTCToLocal(timeString: time) {
+        if currentDate < raceDate {
+            let calendar = Calendar.current
+            let components = calendar.dateComponents([.day, .hour, .minute], from: currentDate, to: raceDate)
+            
+            guard let days = components.day,
+                  let hours = components.hour,
+                  let minutes = components.minute else {
+                print("Failed to calculate countdown components.")
+                return
+            }
+            
             DispatchQueue.main.async {
-                completion(localTime)
+                self.daysLeft = days
+                self.hoursLeft = hours
+                self.minutesLeft = minutes
+            }
+        } else if currentDate <= raceEndDate {
+            DispatchQueue.main.async {
+                self.daysLeft = 0
+                self.hoursLeft = 0
+                self.minutesLeft = 0
             }
         } else {
-            print("Failed to convert time")
-            completion(nil)
+            print("Race already started or start time is in the past.")
         }
     }
     
@@ -261,43 +250,39 @@ final class IRaceViewModel: RaceViewModel {
         let qualyTime = race.qualifying.time
         let raceTime = race.time
         
-        fetchEventTime(time: firstPracticeTime) { localTimeString in
-            if let localTimeString = localTimeString {
+        if let firstPracticeTime = firstPracticeTime {
+            if let localTimeString = LocationManager().convertToUserTimeZone(dateString: "\(race.date)T\(firstPracticeTime)", timeZone: userTimeZone) {
                 DispatchQueue.main.async {
                     self.firstPracticeScreenTime = localTimeString
                 }
             }
         }
 
-        fetchEventTime(time: secondPracticeTime) { localTimeString in
-            if let localTimeString = localTimeString {
+        if let secondPracticeTime = secondPracticeTime {
+            if let localTimeString = LocationManager().convertToUserTimeZone(dateString: "\(race.date)T\(secondPracticeTime)", timeZone: userTimeZone) {
                 DispatchQueue.main.async {
                     self.secondPracticeScreenTime = localTimeString
                 }
             }
         }
 
-        fetchEventTime(time: thirdPracticeTime) { localTimeString in
-            if let localTimeString = localTimeString {
+        if let thirdPracticeTime = thirdPracticeTime {
+            if let localTimeString = LocationManager().convertToUserTimeZone(dateString: "\(race.date)T\(thirdPracticeTime)", timeZone: userTimeZone) {
                 DispatchQueue.main.async {
                     self.thirdPracticeScreenTime = localTimeString
                 }
             }
         }
 
-         fetchEventTime(time: qualyTime) { localTimeString in
-            if let localTimeString = localTimeString {
-                DispatchQueue.main.async {
-                    self.qualyTime = localTimeString
-                }
+        if let localTimeString = LocationManager().convertToUserTimeZone(dateString: "\(race.date)T\(qualyTime)", timeZone: userTimeZone) {
+            DispatchQueue.main.async {
+                self.qualyTime = localTimeString
             }
         }
 
-         fetchEventTime(time: raceTime) { localTimeString in
-            if let localTimeString = localTimeString {
-                DispatchQueue.main.async {
-                    self.raceTime = localTimeString
-                }
+        if let localTimeString = LocationManager().convertToUserTimeZone(dateString: "\(race.date)T\(raceTime)", timeZone: userTimeZone) {
+            DispatchQueue.main.async {
+                self.raceTime = localTimeString
             }
         }
     }
