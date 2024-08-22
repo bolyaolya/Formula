@@ -12,6 +12,10 @@
 		74312F822C4A5C6400988322 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F812C4A5C6400988322 /* ActivityIndicator.swift */; };
 		74312F842C4A70F900988322 /* SprintTimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F832C4A70F900988322 /* SprintTimetableView.swift */; };
 		74312F872C4A7A0D00988322 /* DriversChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F862C4A7A0D00988322 /* DriversChampionshipView.swift */; };
+		744709362C77658D0059DBC8 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744709352C77658C0059DBC8 /* TimeView.swift */; };
+		744709382C7765A90059DBC8 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744709372C7765A90059DBC8 /* PracticeView.swift */; };
+		7447093A2C7765BE0059DBC8 /* RaceSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744709392C7765BE0059DBC8 /* RaceSessionView.swift */; };
+		7447093C2C7765D10059DBC8 /* SprintSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7447093B2C7765D10059DBC8 /* SprintSessionView.swift */; };
 		745C0CD52C5CEBE4005D7B8F /* TrackScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745C0CD42C5CEBE4005D7B8F /* TrackScheme.swift */; };
 		745F5DD22C4E630A00A26CEA /* ConstructorsChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DD12C4E630A00A26CEA /* ConstructorsChampionshipView.swift */; };
 		745F5DD42C4E69E800A26CEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 745F5DD32C4E69E800A26CEA /* GoogleService-Info.plist */; };
@@ -125,6 +129,10 @@
 		74312F812C4A5C6400988322 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		74312F832C4A70F900988322 /* SprintTimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimetableView.swift; sourceTree = "<group>"; };
 		74312F862C4A7A0D00988322 /* DriversChampionshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversChampionshipView.swift; sourceTree = "<group>"; };
+		744709352C77658C0059DBC8 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		744709372C7765A90059DBC8 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		744709392C7765BE0059DBC8 /* RaceSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSessionView.swift; sourceTree = "<group>"; };
+		7447093B2C7765D10059DBC8 /* SprintSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintSessionView.swift; sourceTree = "<group>"; };
 		745C0CD42C5CEBE4005D7B8F /* TrackScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackScheme.swift; sourceTree = "<group>"; };
 		745F5DD12C4E630A00A26CEA /* ConstructorsChampionshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorsChampionshipView.swift; sourceTree = "<group>"; };
 		745F5DD32C4E69E800A26CEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -576,6 +584,10 @@
 				74FDC0302BFF5AFA0009502E /* PracticeTimetableView.swift */,
 				74FDC0342BFF6D590009502E /* RaceTimetableView.swift */,
 				74312F832C4A70F900988322 /* SprintTimetableView.swift */,
+				744709352C77658C0059DBC8 /* TimeView.swift */,
+				744709372C7765A90059DBC8 /* PracticeView.swift */,
+				744709392C7765BE0059DBC8 /* RaceSessionView.swift */,
+				7447093B2C7765D10059DBC8 /* SprintSessionView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -732,6 +744,7 @@
 				74845C5B2C3FD84500295919 /* DetachedContext.swift in Sources */,
 				74845C8F2C3FF20C00295919 /* ChampionshipView.swift in Sources */,
 				74C9D7DA2C43CA5B008176E0 /* Laps.swift in Sources */,
+				7447093C2C7765D10059DBC8 /* SprintSessionView.swift in Sources */,
 				74861E402C49768100E13493 /* HostedViewConfiguration.swift in Sources */,
 				74C9D7D22C43C3BB008176E0 /* DateFormatter+Extension.swift in Sources */,
 				745F5DF42C4EB64800A26CEA /* CalendarCoordinator.swift in Sources */,
@@ -760,6 +773,7 @@
 				74845C682C3FD95E00295919 /* BaseCoordinator.swift in Sources */,
 				745F5DEE2C4EB62C00A26CEA /* CalendarAssembler.swift in Sources */,
 				745F5DEC2C4E9EAA00A26CEA /* FileManagerService.swift in Sources */,
+				744709382C7765A90059DBC8 /* PracticeView.swift in Sources */,
 				74845C5F2C3FD89700295919 /* NavigationTransition.swift in Sources */,
 				74C9D7E02C43CA8F008176E0 /* Constructors.swift in Sources */,
 				74845C5D2C3FD85D00295919 /* Reason.swift in Sources */,
@@ -776,6 +790,7 @@
 				745F5DE62C4E6B9300A26CEA /* CloudStorageService.swift in Sources */,
 				74C9D7E92C43CB23008176E0 /* APIError.swift in Sources */,
 				749FB1772C4818DD00FCBC8E /* Date+Extension.swift in Sources */,
+				7447093A2C7765BE0059DBC8 /* RaceSessionView.swift in Sources */,
 				74C9D7EF2C43CBCC008176E0 /* Season.swift in Sources */,
 				74845C452C3FD5E800295919 /* Destination.swift in Sources */,
 				74845C912C3FF21300295919 /* ChampionshipAssembler.swift in Sources */,
@@ -786,6 +801,7 @@
 				745F5DF02C4EB63500A26CEA /* CalendarViewModel.swift in Sources */,
 				74C9D7EB2C43CB97008176E0 /* Endpoint.swift in Sources */,
 				740A898A2C6E128E00B840D1 /* CustomProgressView.swift in Sources */,
+				744709362C77658D0059DBC8 /* TimeView.swift in Sources */,
 				74845C402C3FD58400295919 /* UnownedRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
