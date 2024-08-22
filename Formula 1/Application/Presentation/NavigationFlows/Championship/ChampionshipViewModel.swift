@@ -31,7 +31,7 @@ final class IChampionshipViewModel: ChampionshipViewModel {
     
     // MARK: Private properties
     
-    private let imageRepository = ImageRepository()
+    private let imageRepository: ImageRepositoryProtocol = ImageRepository()
     
     // MARK: Init
     

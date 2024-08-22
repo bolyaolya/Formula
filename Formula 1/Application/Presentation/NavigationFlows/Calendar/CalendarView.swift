@@ -30,7 +30,7 @@ struct CalendarView<ViewModel>: View where ViewModel: CalendarViewModel {
                         
                         ForEach(viewModel.races, id: \.round) { race in
                             CalendarCellView(raceNumber: race.round,
-                                             trackScheme: viewModel.trackImage(for: race.circuit.circuitID),
+                                             trackScheme: viewModel.trackSchemes[race.circuit.circuitID] ?? UIImage(),
                                              countryName: RaceLocalization.localizedRaceName(for: race.raceName),
                                              trackName: race.circuit.location.locality)
                         }
