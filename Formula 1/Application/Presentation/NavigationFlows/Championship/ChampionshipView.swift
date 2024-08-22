@@ -52,6 +52,8 @@ struct ChampionshipView<ViewModel>: View where ViewModel: ChampionshipViewModel 
                             ConstructorsChampionshipView()
                         }
                     }
+                    .padding(.top, 8)
+                    .padding(.bottom, 16)
                 }
                 .clipped()
             }

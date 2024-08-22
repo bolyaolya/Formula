@@ -590,11 +590,11 @@
 				749E18F62BEA8B5A00BE6555 /* Sources */,
 				749E18F72BEA8B5A00BE6555 /* Frameworks */,
 				749E18F82BEA8B5A00BE6555 /* Resources */,
+				745F5A3D2C775A8500E46B05 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				740A89882C6E0DE500B840D1 /* PBXTargetDependency */,
 			);
 			name = Formula;
 			packageProductDependencies = (
@@ -661,6 +661,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		745F5A3D2C775A8500E46B05 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SWIFT_PACKAGE_DIR=\"${BUILD_DIR%Build/*}SourcePackages/artifacts\"\nSWIFTLINT_CMD=$(ls \"$SWIFT_PACKAGE_DIR\"/swiftlintplugins/SwiftLintBinary/SwiftLintBinary.artifactbundle/swiftlint-*/bin/swiftlint | head -n 1)\n\nif test -f \"$SWIFTLINT_CMD\" 2>&1\nthen\n    \"$SWIFTLINT_CMD\"\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		749E18F62BEA8B5A00BE6555 /* Sources */ = {
@@ -769,13 +791,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		740A89882C6E0DE500B840D1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 740A89872C6E0DE500B840D1 /* SwiftLintBuildToolPlugin */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		749E19082BEA8B5D00BE6555 /* LaunchScreen.storyboard */ = {
@@ -931,6 +946,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CSY29TKUKT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Formula 1/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Formula;
@@ -960,6 +976,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CSY29TKUKT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Formula 1/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Formula;
@@ -1024,11 +1041,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		740A89872C6E0DE500B840D1 /* SwiftLintBuildToolPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 740A89862C6E0DB300B840D1 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
-			productName = "plugin:SwiftLintBuildToolPlugin";
-		};
 		745F5DD62C4E6A6A00A26CEA /* FirebaseAnalyticsSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 745F5DD52C4E6A6A00A26CEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

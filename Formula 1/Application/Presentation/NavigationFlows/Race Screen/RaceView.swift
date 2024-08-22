@@ -20,13 +20,14 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
                 CustomProgressView()
             } else {
                 ScrollView(.vertical) {
-                    VStack(spacing: 17) {                        
+                    VStack(spacing: 8) {
                         Text("Следующий этап")
                             .foregroundStyle(Color.white)
                             .font(.system(size: 30))
                             .fontWeight(.bold)
                         
                         CustomDivider()
+                            .padding(.bottom, 15)
                         
                         RaceInfoView(date: "\(viewModel.dateStart) - \(viewModel.dateEnd)",
                                      raceName: viewModel.raceName,
@@ -57,6 +58,8 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
                                       qualyTime: viewModel.qualificationTime,
                                       raceTime: viewModel.raceTime)
                     }
+                    .padding(.top, 8)
+                    .padding(.bottom, 16)
                 }
                 .clipped()
                 

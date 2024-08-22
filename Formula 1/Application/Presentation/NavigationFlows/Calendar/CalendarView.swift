@@ -34,9 +34,10 @@ struct CalendarView<ViewModel>: View where ViewModel: CalendarViewModel {
                                              countryName: RaceLocalization.localizedRaceName(for: race.raceName),
                                              trackName: race.circuit.location.locality)
                         }
+                        .padding(.horizontal, 16)
                     }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
+                    .padding(.top, 8)
+                    .padding(.bottom, 16)
                 }
                 .clipped()
             }
