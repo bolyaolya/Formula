@@ -19,6 +19,25 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         manager.requestWhenInUseAuthorization()
     }
     
+    func convertToUserTimeZone(dateString: String, timeZone: TimeZone) -> String? {
+        let dateFormatter = ISO8601DateFormatter()
+        dateFormatter.formatOptions = [.withInternetDateTime]
+        
+        guard let date = dateFormatter.date(from: dateString) else {
+            print("Failed to parse date string: \(dateString)")
+            return nil
+        }
+        
+        let userDateFormatter = DateFormatter()
+        userDateFormatter.timeZone = timeZone
+        userDateFormatter.timeStyle = .short
+        userDateFormatter.dateFormat = "HH:mm"
+        
+        let localTime = userDateFormatter.string(from: date)
+        
+        return localTime
+    }
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedWhenInUse:
@@ -42,7 +61,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             }
             if let timeZone = placemark.timeZone {
                 self.userTimeZone = timeZone
-                print("User time zone: \(timeZone.identifier)")
             }
         }
     }
