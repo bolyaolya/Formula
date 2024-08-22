@@ -39,28 +39,23 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
                         PracticeTimetableView(firstPracticeDate: viewModel.firstPracticeDate,
                                           secondPracticeDate: viewModel.secondPracticeDate,
                                           thirdPracticeDate: viewModel.thirdPracticeDate,
-                                          firstPracticeTime: viewModel.firstPracticeScreenTime,
-                                          secondPracticeTime: viewModel.secondPracticeScreenTime,
-                                          thirdPracticeTime: viewModel.thirdPracticeScreenTime)
+                                          firstPracticeTime: viewModel.firstPracticeTime,
+                                          secondPracticeTime: viewModel.secondPracticeTime,
+                                          thirdPracticeTime: viewModel.thirdPracticeTime)
                         
                         if let sprintDate = viewModel.sprintDate,
                             let sprintTime = viewModel.sprintTime,
-                           let sprintQualyDate = viewModel.sprintQualyDate,
-                           let sprintQualyTime = viewModel.sprintQualyTime {
+                           let sprintQualyDate = viewModel.sprintQualificationDate,
+                           let sprintQualyTime = viewModel.sprintQualificationTime {
                             SprintTimetableView(sprintQualyDate: sprintQualyDate,
                                                 sprintQualyTime: sprintQualyTime,
                                                 sprintDate: sprintDate, sprintTime: sprintTime)
                         }
                         
-                        RaceTimetableView(qualyDate: viewModel.qualyDate,
+                        RaceTimetableView(qualyDate: viewModel.qualificationDate,
                                       raceDate: viewModel.raceDate,
-                                      qualyTime: viewModel.qualyTime,
+                                      qualyTime: viewModel.qualificationTime,
                                       raceTime: viewModel.raceTime)
-                        
-                        Text("* указано московское время")
-                            .font(.system(size: 15))
-                            .foregroundStyle(Color.gray)
-                            .padding(.bottom, 15)
                     }
                 }
                 .clipped()
