@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CalendarView<ViewModel>: View where ViewModel: CalendarViewModel {    
+struct CalendarView<ViewModel>: View where ViewModel: ICalendarViewModel {    
     @StateObject var viewModel: ViewModel
     
     var body: some View {
