@@ -15,8 +15,6 @@ protocol CalendarViewModel: ObservableObject {
     var isLoading: Bool { get }
 }
 
-extension CalendarViewModel { }
-
 // MARK: - CalendarViewModel implementation
 
 final class ICalendarViewModel: CalendarViewModel {

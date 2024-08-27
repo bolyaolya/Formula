@@ -40,22 +40,22 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
                         PracticeTimetableView(firstPracticeDate: viewModel.firstPracticeDate,
                                           secondPracticeDate: viewModel.secondPracticeDate,
                                           thirdPracticeDate: viewModel.thirdPracticeDate,
-                                          firstPracticeTime: viewModel.firstPracticeTime,
-                                          secondPracticeTime: viewModel.secondPracticeTime,
-                                          thirdPracticeTime: viewModel.thirdPracticeTime)
+                                              firstPracticeTime: viewModel.firstPracticeScreenTime,
+                                          secondPracticeTime: viewModel.secondPracticeScreenTime,
+                                          thirdPracticeTime: viewModel.thirdPracticeScreenTime)
                         
                         if let sprintDate = viewModel.sprintDate,
                             let sprintTime = viewModel.sprintTime,
-                           let sprintQualyDate = viewModel.sprintQualificationDate,
-                           let sprintQualyTime = viewModel.sprintQualificationTime {
+                           let sprintQualyDate = viewModel.sprintQualyDate,
+                           let sprintQualyTime = viewModel.sprintQualyTime {
                             SprintTimetableView(sprintQualyDate: sprintQualyDate,
                                                 sprintQualyTime: sprintQualyTime,
                                                 sprintDate: sprintDate, sprintTime: sprintTime)
                         }
                         
-                        RaceTimetableView(qualyDate: viewModel.qualificationDate,
+                        RaceTimetableView(qualyDate: viewModel.qualyDate,
                                       raceDate: viewModel.raceDate,
-                                      qualyTime: viewModel.qualificationTime,
+                                      qualyTime: viewModel.qualyTime,
                                       raceTime: viewModel.raceTime)
                     }
                     .padding(.top, 8)

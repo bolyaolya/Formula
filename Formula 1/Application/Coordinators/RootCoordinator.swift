@@ -17,8 +17,9 @@ final class RootCoordinator: TabsCoordinator {
         let mainCoordinator = RaceViewCoordinator()
         let championshipCoordinator = ChampionshipCoordinator()
         let calendarCoordinator = CalendarCoordinator()
+        let settingsCoordinator = SettingsCoordinator()
         setupTabBarAppearance()
-        setCoordinatedTabs([mainCoordinator, championshipCoordinator, calendarCoordinator])
+        setCoordinatedTabs([mainCoordinator, championshipCoordinator, calendarCoordinator, settingsCoordinator])
     }
     
     private func setupTabBarAppearance() {

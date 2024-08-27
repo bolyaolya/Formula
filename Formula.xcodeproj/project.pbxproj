@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		740A898A2C6E128E00B840D1 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740A89892C6E128E00B840D1 /* CustomProgressView.swift */; };
 		742796BC2C52486B0092414E /* CalendarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742796BB2C52486B0092414E /* CalendarCellView.swift */; };
+		742BDBD32C77719F009A2BE7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BDBD22C77719F009A2BE7 /* SettingsView.swift */; };
+		742BDBD52C7771BA009A2BE7 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BDBD42C7771BA009A2BE7 /* SettingsCoordinator.swift */; };
+		742BDBD72C777294009A2BE7 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BDBD62C777294009A2BE7 /* SettingsViewModel.swift */; };
+		742BDBD92C7772D6009A2BE7 /* SettingsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BDBD82C7772D6009A2BE7 /* SettingsAssembler.swift */; };
 		74312F822C4A5C6400988322 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F812C4A5C6400988322 /* ActivityIndicator.swift */; };
 		74312F842C4A70F900988322 /* SprintTimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F832C4A70F900988322 /* SprintTimetableView.swift */; };
 		74312F872C4A7A0D00988322 /* DriversChampionshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74312F862C4A7A0D00988322 /* DriversChampionshipView.swift */; };
@@ -33,6 +37,7 @@
 		745F5DF02C4EB63500A26CEA /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DEF2C4EB63500A26CEA /* CalendarViewModel.swift */; };
 		745F5DF22C4EB63B00A26CEA /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DF12C4EB63B00A26CEA /* CalendarView.swift */; };
 		745F5DF42C4EB64800A26CEA /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DF32C4EB64800A26CEA /* CalendarCoordinator.swift */; };
+		74735EC52C7DF79B005E8716 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74735EC42C7DF79B005E8716 /* ButtonView.swift */; };
 		74845C402C3FD58400295919 /* UnownedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C3F2C3FD58400295919 /* UnownedRouter.swift */; };
 		74845C422C3FD5A800295919 /* Unowned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C412C3FD5A800295919 /* Unowned.swift */; };
 		74845C452C3FD5E800295919 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C442C3FD5E800295919 /* Destination.swift */; };
@@ -126,6 +131,10 @@
 /* Begin PBXFileReference section */
 		740A89892C6E128E00B840D1 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		742796BB2C52486B0092414E /* CalendarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCellView.swift; sourceTree = "<group>"; };
+		742BDBD22C77719F009A2BE7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		742BDBD42C7771BA009A2BE7 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		742BDBD62C777294009A2BE7 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		742BDBD82C7772D6009A2BE7 /* SettingsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembler.swift; sourceTree = "<group>"; };
 		74312F812C4A5C6400988322 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		74312F832C4A70F900988322 /* SprintTimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTimetableView.swift; sourceTree = "<group>"; };
 		74312F862C4A7A0D00988322 /* DriversChampionshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversChampionshipView.swift; sourceTree = "<group>"; };
@@ -143,6 +152,7 @@
 		745F5DEF2C4EB63500A26CEA /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		745F5DF12C4EB63B00A26CEA /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		745F5DF32C4EB64800A26CEA /* CalendarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
+		74735EC42C7DF79B005E8716 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		74845C3F2C3FD58400295919 /* UnownedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnownedRouter.swift; sourceTree = "<group>"; };
 		74845C412C3FD5A800295919 /* Unowned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unowned.swift; sourceTree = "<group>"; };
 		74845C442C3FD5E800295919 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
@@ -453,6 +463,11 @@
 		74861E3A2C49734500E13493 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				742BDBD22C77719F009A2BE7 /* SettingsView.swift */,
+				742BDBD42C7771BA009A2BE7 /* SettingsCoordinator.swift */,
+				742BDBD62C777294009A2BE7 /* SettingsViewModel.swift */,
+				742BDBD82C7772D6009A2BE7 /* SettingsAssembler.swift */,
+				74735EC42C7DF79B005E8716 /* ButtonView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -721,6 +736,7 @@
 				74A440942C46B68400A7E416 /* CountryFlags.swift in Sources */,
 				74845C992C3FFD7400295919 /* DependencyWrapper.swift in Sources */,
 				74FDC02F2BFF54970009502E /* CountdownView.swift in Sources */,
+				742BDBD72C777294009A2BE7 /* SettingsViewModel.swift in Sources */,
 				74C9D7E42C43CABA008176E0 /* Decodable+Extension.swift in Sources */,
 				74845C7F2C3FDF3B00295919 /* AuthenticationCoordinator.swift in Sources */,
 				745F5DEA2C4E9E7B00A26CEA /* ImageRepository.swift in Sources */,
@@ -742,6 +758,7 @@
 				74845C6B2C3FD98C00295919 /* ModuleDependencyContainer.swift in Sources */,
 				74C9D7F32C43CC31008176E0 /* PitStops.swift in Sources */,
 				74845C5B2C3FD84500295919 /* DetachedContext.swift in Sources */,
+				742BDBD52C7771BA009A2BE7 /* SettingsCoordinator.swift in Sources */,
 				74845C8F2C3FF20C00295919 /* ChampionshipView.swift in Sources */,
 				74C9D7DA2C43CA5B008176E0 /* Laps.swift in Sources */,
 				7447093C2C7765D10059DBC8 /* SprintSessionView.swift in Sources */,
@@ -750,6 +767,7 @@
 				745F5DF42C4EB64800A26CEA /* CalendarCoordinator.swift in Sources */,
 				74FDC0312BFF5AFA0009502E /* PracticeTimetableView.swift in Sources */,
 				74845C792C3FDE5600295919 /* GlobalDependencyContainer.swift in Sources */,
+				742BDBD92C7772D6009A2BE7 /* SettingsAssembler.swift in Sources */,
 				749FB1752C47FBDF00FCBC8E /* TimeZoneInfo.swift in Sources */,
 				74C9D7CE2C43B2E7008176E0 /* Seasons.swift in Sources */,
 				74845C812C3FDF6200295919 /* AuthenticationUseCase.swift in Sources */,
@@ -780,6 +798,7 @@
 				74312F842C4A70F900988322 /* SprintTimetableView.swift in Sources */,
 				749E19132BEA8FD900BE6555 /* AppCoordinator.swift in Sources */,
 				74DBC3702BF7824300C563E4 /* RaceView.swift in Sources */,
+				74735EC52C7DF79B005E8716 /* ButtonView.swift in Sources */,
 				74C9D7D02C43B49D008176E0 /* Race.swift in Sources */,
 				74845C552C3FD7D600295919 /* ReferenceOperatable.swift in Sources */,
 				74C9D7D62C43CA25008176E0 /* RaceResults.swift in Sources */,
@@ -798,6 +817,7 @@
 				74861E3E2C49763B00E13493 /* DimmingViewController.swift in Sources */,
 				74845C712C3FDD9E00295919 /* RootFlow.swift in Sources */,
 				749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */,
+				742BDBD32C77719F009A2BE7 /* SettingsView.swift in Sources */,
 				745F5DF02C4EB63500A26CEA /* CalendarViewModel.swift in Sources */,
 				74C9D7EB2C43CB97008176E0 /* Endpoint.swift in Sources */,
 				740A898A2C6E128E00B840D1 /* CustomProgressView.swift in Sources */,
@@ -961,11 +981,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CSY29TKUKT;
+				DEVELOPMENT_TEAM = HTF5ZZPGPW;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Formula 1/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Formula;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Разрешите определение геолокации для определения часового пояса";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -991,11 +1013,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CSY29TKUKT;
+				DEVELOPMENT_TEAM = HTF5ZZPGPW;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Formula 1/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Formula;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Разрешите определение геолокации для определения часового пояса";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
