@@ -75,6 +75,16 @@ public class NetworkManager {
         try await URLSession.shared.fetch(.driverStandings, for: season, limit: limit, offset: limit)
     }
     
+    /// Asynchronously fetch Formula 1 Constructor standings for a given year
+    /// - Parameters:
+    ///   - season: Season enum case, specified by an Int, which indicates to fetch data for a given year.
+    ///   - limit: Optional property to specify number of items to return per request.
+    ///   - offset: Optional property to indicate starting point of elements from API request.
+    /// - Returns: a model object that represents the driver standings for the specified year
+    public static func constructorStandings(for season: Season, limit: String? = nil, offset: String? = nil) async throws -> ConstructorStandings {
+        try await URLSession.shared.fetch(.constructorStandings, for: season, limit: limit, offset: limit)
+    }
+    
     /// Asynchronously fetches Formula 1 Race Schedule for a given year.
     /// - Parameters:
     ///   - season: Season enum case, specified by an Int, which indicates to fetch data for a given year.

@@ -110,6 +110,7 @@ extension Path {
         case .constructors: return Constructors.self
         case .drivers: return Drivers.self
         case .driverStandings: return DriverStandings.self
+        case .constructorStandings: return ConstructorStandings.self
         case .finishingStatus: return FinishingStatus.self
         case .lapTimes: return Laps.self
         case .seasons: return Seasons.self
