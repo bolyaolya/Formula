@@ -38,6 +38,7 @@
 		745F5DF22C4EB63B00A26CEA /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DF12C4EB63B00A26CEA /* CalendarView.swift */; };
 		745F5DF42C4EB64800A26CEA /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F5DF32C4EB64800A26CEA /* CalendarCoordinator.swift */; };
 		74735EC52C7DF79B005E8716 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74735EC42C7DF79B005E8716 /* ButtonView.swift */; };
+		74735EC92C7E19E3005E8716 /* ConstructorStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74735EC82C7E19E3005E8716 /* ConstructorStandings.swift */; };
 		74845C402C3FD58400295919 /* UnownedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C3F2C3FD58400295919 /* UnownedRouter.swift */; };
 		74845C422C3FD5A800295919 /* Unowned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C412C3FD5A800295919 /* Unowned.swift */; };
 		74845C452C3FD5E800295919 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74845C442C3FD5E800295919 /* Destination.swift */; };
@@ -153,6 +154,7 @@
 		745F5DF12C4EB63B00A26CEA /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		745F5DF32C4EB64800A26CEA /* CalendarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
 		74735EC42C7DF79B005E8716 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		74735EC82C7E19E3005E8716 /* ConstructorStandings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorStandings.swift; sourceTree = "<group>"; };
 		74845C3F2C3FD58400295919 /* UnownedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnownedRouter.swift; sourceTree = "<group>"; };
 		74845C412C3FD5A800295919 /* Unowned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unowned.swift; sourceTree = "<group>"; };
 		74845C442C3FD5E800295919 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
@@ -587,6 +589,7 @@
 				74C9D7F22C43CC31008176E0 /* PitStops.swift */,
 				749FB1722C47DDF800FCBC8E /* CoreLocation.swift */,
 				749FB1742C47FBDF00FCBC8E /* TimeZoneInfo.swift */,
+				74735EC82C7E19E3005E8716 /* ConstructorStandings.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -818,6 +821,7 @@
 				74845C712C3FDD9E00295919 /* RootFlow.swift in Sources */,
 				749E19002BEA8B5A00BE6555 /* SceneDelegate.swift in Sources */,
 				742BDBD32C77719F009A2BE7 /* SettingsView.swift in Sources */,
+				74735EC92C7E19E3005E8716 /* ConstructorStandings.swift in Sources */,
 				745F5DF02C4EB63500A26CEA /* CalendarViewModel.swift in Sources */,
 				74C9D7EB2C43CB97008176E0 /* Endpoint.swift in Sources */,
 				740A898A2C6E128E00B840D1 /* CustomProgressView.swift in Sources */,

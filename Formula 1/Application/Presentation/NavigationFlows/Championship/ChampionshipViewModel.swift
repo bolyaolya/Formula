@@ -11,20 +11,22 @@ import Combine
 // MARK: - ChampionshipViewModel Protocol
 
 protocol ChampionshipViewModel: ObservableObject {
-    var drivers: [DriverStanding] { get set }
+    var teams: [ConstructorStanding] { get }
+    var drivers: [DriverStanding] { get }
+    var constructorPhotos: [String: UIImage] { get set }
     var driverPhotos: [String: UIImage] { get set }
     
     var isLoading: Bool { get }
 }
-
-extension ChampionshipViewModel { }
 
 // MARK: - ChampionshipViewModel implementation
 
 final class IChampionshipViewModel: ChampionshipViewModel {
     @ReferenceCounted private var coordinator: UnownedRouter<ChampionshipDestination>
     
+    @Published var teams: [ConstructorStanding] = []
     @Published var drivers: [DriverStanding] = []
+    @Published var constructorPhotos: [String: UIImage] = [:]
     @Published var driverPhotos: [String: UIImage] = [:]
     
     @Published var isLoading: Bool = false
@@ -39,11 +41,12 @@ final class IChampionshipViewModel: ChampionshipViewModel {
         self.coordinator = coordinator
         
         fetchDriversStandings()
+        fetchConstructorStandings()
     }
     
     // MARK: Methods
     
-    func fetchDriversStandings() {
+    private func fetchDriversStandings() {
         isLoading = true
         
         Task {
@@ -51,16 +54,30 @@ final class IChampionshipViewModel: ChampionshipViewModel {
                 let season = Season.currentYear
                 let driverStandings = try await NetworkManager.driverStandings(for: season)
                 
-                DispatchQueue.main.async { [ weak self ] in
-                    self?.drivers = driverStandings.data.standingsTable.standingsLists.first?.driverStandings ?? []
-                    self?.fetchDriversPhotos()
-                    self?.isLoading = false
-                }
+                self.drivers = driverStandings.data.standingsTable.standingsLists.first?.driverStandings ?? []
+                self.fetchDriversPhotos()
+                self.isLoading = false
             } catch {
                 print("Error fetching driver standings: \(error)")
-                DispatchQueue.main.async { [weak self] in
-                    self?.isLoading = false
-                }
+                self.isLoading = false
+            }
+        }
+    }
+    
+    private func fetchConstructorStandings() {
+        isLoading = true
+        
+        Task {
+            do {
+                let season = Season.currentYear
+                let constructorStandings = try await NetworkManager.constructorStandings(for: season)
+                
+                self.teams = constructorStandings.data.standingsTable.standingsLists.first?.constructorStandings ?? []
+                self.fetchTeamsPhotos()
+                self.isLoading = false
+            } catch {
+                print("Error fetching teams standings: \(error)")
+                self.isLoading = false
             }
         }
     }
@@ -76,6 +93,23 @@ final class IChampionshipViewModel: ChampionshipViewModel {
                     }
                 } catch {
                     print("Error fetching driver's avatar: \(error)")
+                }
+            }
+        }
+    }
+    
+    private func fetchTeamsPhotos() {
+        Task {
+            for team in teams {
+                do {
+                    let path = "teams/\(team.constructor.constructorID).jpg"
+                    let imageData = try await imageRepository.fetchImageData(imageID: team.constructor.constructorID, path: path)
+                    
+                    DispatchQueue.main.async {
+                        self.constructorPhotos[team.constructor.constructorID] = UIImage(data: imageData) ?? UIImage()
+                    }
+                } catch {
+                    print("Error fetching team's avatar: \(error)")
                 }
             }
         }

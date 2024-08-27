@@ -49,7 +49,13 @@ struct ChampionshipView<ViewModel>: View where ViewModel: ChampionshipViewModel 
                                 )
                             }
                         } else {
-                            ConstructorsChampionshipView()
+                            ForEach(viewModel.teams) { team in
+                                ConstructorsChampionshipView(
+                                    championshipPlace: team.position,
+                                    teamName: team.constructor.name,
+                                    points: team.points,
+                                    image: viewModel.constructorPhotos[team.constructor.constructorID] ?? UIImage(systemName: "person.fill"))
+                            }
                         }
                     }
                     .padding(.top, 8)
