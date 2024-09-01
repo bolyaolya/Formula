@@ -207,43 +207,50 @@ final class IRaceViewModel: RaceViewModel {
     }
     
     func calculateTimeUntilRaceStart() {
-            guard let race = race else {
-                print("Race not set.")
-                return
-            }
-    
-            let dateFormatter = ISO8601DateFormatter()
-            dateFormatter.formatOptions = [.withInternetDateTime]
-            dateFormatter.timeZone = TimeZone(identifier: "UTC")
-    
-            let raceDateTimeString = "\(race.date)T\(race.time)"
-            guard let raceDate = dateFormatter.date(from: raceDateTimeString) else {
-                print("Failed to parse race start date: \(raceDateTimeString)")
-                return
-            }
-    
-            let currentDate = Date()
-    
-            if currentDate < raceDate {
-                let calendar = Calendar.current
-                let components = calendar.dateComponents([.day, .hour, .minute], from: currentDate, to: raceDate)
-    
-                guard let days = components.day,
-                      let hours = components.hour,
-                      let minutes = components.minute else {
-                    print("Failed to calculate countdown components.")
-                    return
-                }
-    
-                DispatchQueue.main.async {
-                    self.daysLeft = days
-                    self.hoursLeft = hours
-                    self.minutesLeft = minutes
-                }
-            } else {
-                print("Race already started or start time is in the past.")
-            }
+        guard let race = race else {
+            print("Race not set.")
+            return
         }
+        
+        let dateFormatter = ISO8601DateFormatter()
+        dateFormatter.formatOptions = [.withInternetDateTime]
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        
+        let raceDateTimeString = "\(race.date)T\(race.time)"
+        guard let raceDate = dateFormatter.date(from: raceDateTimeString) else {
+            print("Failed to parse race start date: \(raceDateTimeString)")
+            return
+        }
+        
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let endOfRaceDay = calendar.date(bySettingHour: 23, minute: 59, second: 59, of: raceDate) ?? raceDate
+        
+        if currentDate < raceDate {
+            let components = calendar.dateComponents([.day, .hour, .minute], from: currentDate, to: raceDate)
+            
+            guard let days = components.day,
+                  let hours = components.hour,
+                  let minutes = components.minute else {
+                print("Failed to calculate countdown components.")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.daysLeft = days
+                self.hoursLeft = hours
+                self.minutesLeft = minutes
+            }
+        } else if currentDate <= endOfRaceDay {
+            DispatchQueue.main.async {
+                self.daysLeft = 0
+                self.hoursLeft = 0
+                self.minutesLeft = 0
+            }
+        } else {
+            print("Race day is over.")
+        }
+    }
     
     private func fetchEventsTime(from race: Race) async {
         let eventsTimes = [
