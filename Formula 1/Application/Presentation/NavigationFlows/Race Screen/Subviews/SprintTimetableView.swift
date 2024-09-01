@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SprintTimetableView: View {    
-    var sprintQualyDate: String
-    var sprintQualyTime: String
+    var sprintQualificationDate: String
+    var sprintQualificationTime: String
     
     var sprintDate: String
     var sprintTime: String
@@ -19,8 +19,8 @@ struct SprintTimetableView: View {
     var body: some View {
         VStack(spacing: 15) {
             SprintSessionView(sessionName: "Квалификация",
-                              day: dateExt.dayOfWeek(for: sprintQualyDate),
-                              time: sprintQualyTime)
+                              day: dateExt.dayOfWeek(for: sprintQualificationDate),
+                              time: sprintQualificationTime)
             SprintSessionView(sessionName: "Спринт", 
                               day: dateExt.dayOfWeek(for: sprintDate),
                               time: sprintTime)

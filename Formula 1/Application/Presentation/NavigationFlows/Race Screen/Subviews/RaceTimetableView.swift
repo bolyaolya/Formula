@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct RaceTimetableView: View {    
-    var qualyDate: String
+    var qualificationDate: String
     var raceDate: String
-    var qualyTime: String
+    var qualificationTime: String
     var raceTime: String
     
     var dateExt = Date()
     
     var body: some View {
         VStack(spacing: 15) {
-            RaceSessionView(sessionName: "Квалификация", day: dateExt.dayOfWeek(for: qualyDate), time: qualyTime)
+            RaceSessionView(sessionName: "Квалификация", day: dateExt.dayOfWeek(for: qualificationDate), time: qualificationTime)
             RaceSessionView(sessionName: "Гонка", day: dateExt.dayOfWeek(for: raceDate), time: raceTime)
         }
         .padding(10)
