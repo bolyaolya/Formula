@@ -45,13 +45,14 @@ struct RaceView<ViewModel>: View where ViewModel: RaceViewModel {
                                           thirdPracticeTime: viewModel.thirdPracticeTime)
                         
                         if let sprintDate = viewModel.sprintDate,
-                            let sprintTime = viewModel.sprintTime,
+                           let sprintTime = viewModel.sprintTime,
                            let sprintQualificationDate = viewModel.sprintQualificationDate,
                            let sprintQualificationTime = viewModel.sprintQualificationTime {
                             SprintTimetableView(sprintQualificationDate: sprintQualificationDate,
                                                 sprintQualificationTime: sprintQualificationTime,
                                                 sprintDate: sprintDate, sprintTime: sprintTime)
                         }
+
                         
                         RaceTimetableView(qualificationDate: viewModel.qualificationDate,
                                       raceDate: viewModel.raceDate,

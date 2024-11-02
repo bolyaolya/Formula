@@ -19,7 +19,7 @@ final class RootCoordinator: TabsCoordinator {
         let calendarCoordinator = CalendarCoordinator()
         let settingsCoordinator = SettingsCoordinator()
         setupTabBarAppearance()
-        setCoordinatedTabs([mainCoordinator, championshipCoordinator, calendarCoordinator, settingsCoordinator])
+        setCoordinatedTabs([mainCoordinator, championshipCoordinator, calendarCoordinator])
     }
     
     private func setupTabBarAppearance() {

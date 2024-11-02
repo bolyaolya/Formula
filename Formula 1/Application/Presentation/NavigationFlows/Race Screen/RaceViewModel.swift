@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: - RaceViewModel Protocol
 
-protocol RaceViewModel: ObservableObject, HostedViewConfigurable {
+protocol RaceViewModel: ObservableObject {
     var dateStart: String { get set }
     var dateEnd: String { get set }
     var raceName: String { get set }
@@ -172,9 +172,9 @@ final class IRaceViewModel: RaceViewModel {
                 self.thirdPracticeDate = thirdPractice
             }
             
-            if let sprint = race.sprint {
-                self.sprintDate = sprint.date
-                self.sprintQualificationDate = race.secondPractice?.date
+            if let sprint = race.sprint?.date {
+                self.sprintDate = sprint
+                self.sprintQualificationDate = race.sprintQualy?.date
             }
             
             self.qualificationDate = race.qualifying.date
